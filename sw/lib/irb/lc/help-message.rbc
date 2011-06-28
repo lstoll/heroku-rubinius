@@ -1,0 +1,71 @@
+!RBIX
+4472690874163217065
+18
+M
+1
+n
+n
+x
+10
+__script__
+i
+6
+7
+0
+64
+15
+2
+11
+I
+1
+I
+0
+I
+0
+I
+0
+I
+0
+n
+p
+1
+s
+1120
+Usage:  irb.rb [options] [programfile] [arguments]
+  -f		    Suppress read of ~/.irbrc 
+  -m		    Bc mode (load mathn, fraction or matrix are available)
+  -d                Set $DEBUG to true (same as `ruby -d')
+  -r load-module    Same as `ruby -r'
+  -I path           Specify $LOAD_PATH directory
+  --inspect	    Use `inspect' for output (default except for bc mode)
+  --noinspect	    Don't use inspect for output
+  --readline	    Use Readline extension module
+  --noreadline	    Don't use Readline extension module
+  --prompt prompt-mode
+  --prompt-mode prompt-mode
+		    Switch prompt mode. Pre-defined prompt modes are
+		    `default', `simple', `xmp' and `inf-ruby'
+  --inf-ruby-mode   Use prompt appropriate for inf-ruby-mode on emacs. 
+		    Suppresses --readline. 
+  --simple-prompt   Simple prompt mode
+  --noprompt	    No prompt mode
+  --tracer	    Display trace for each execution of commands.
+  --back-trace-limit n
+		    Display backtrace top n and tail n. The default
+		    value is 16. 
+  --irb_debug n	    Set internal debug level to n (not for popular use)
+  -v, --version	    Print the version of irb
+
+p
+3
+I
+0
+I
+c
+I
+6
+x
+26
+lib/irb/lc/help-message.rb
+p
+0
