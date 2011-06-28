@@ -2,7 +2,7 @@ require 'sinatra'
 
 get '/' do
   <<EOF
-Hello world, from rubinius!.<br>
+Hello world, from rubinius/sinatra!.<br>
 <br>
 sw/bin/rbx -v: <br>
 <pre>
