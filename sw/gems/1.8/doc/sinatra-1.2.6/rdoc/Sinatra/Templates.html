@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Sinatra::Templates</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/sinatra/base_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sinatra/base.rb">lib/sinatra/base.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="Templates/ContentTyped.html">Sinatra::Templates::ContentTyped</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000035">#builder</a></li>
+					
+					<li><a href="#M000042">#coffee</a></li>
+					
+					<li><a href="#M000048">#compile_template</a></li>
+					
+					<li><a href="#M000029">#erb</a></li>
+					
+					<li><a href="#M000030">#erubis</a></li>
+					
+					<li><a href="#M000045">#find_template</a></li>
+					
+					<li><a href="#M000031">#haml</a></li>
+					
+					<li><a href="#M000034">#less</a></li>
+					
+					<li><a href="#M000036">#liquid</a></li>
+					
+					<li><a href="#M000041">#markaby</a></li>
+					
+					<li><a href="#M000037">#markdown</a></li>
+					
+					<li><a href="#M000043">#nokogiri</a></li>
+					
+					<li><a href="#M000040">#radius</a></li>
+					
+					<li><a href="#M000039">#rdoc</a></li>
+					
+					<li><a href="#M000047">#render</a></li>
+					
+					<li><a href="#M000046">#render_ruby</a></li>
+					
+					<li><a href="#M000032">#sass</a></li>
+					
+					<li><a href="#M000033">#scss</a></li>
+					
+					<li><a href="#M000044">#slim</a></li>
+					
+					<li><a href="#M000038">#textile</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_de_rdoc.html">README.de.rdoc</a></li>
+				
+					<li class="file"><a href="../README_es_rdoc.html">README.es.rdoc</a></li>
+				
+					<li class="file"><a href="../README_fr_rdoc.html">README.fr.rdoc</a></li>
+				
+					<li class="file"><a href="../README_hu_rdoc.html">README.hu.rdoc</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Sinatra.html">Sinatra</a></li>
+				
+					<li><a href="../Sinatra/Application.html">Sinatra::Application</a></li>
+				
+					<li><a href="../Sinatra/Base.html">Sinatra::Base</a></li>
+				
+					<li><a href="../Sinatra/Helpers.html">Sinatra::Helpers</a></li>
+				
+					<li><a href="../Sinatra/Request.html">Sinatra::Request</a></li>
+				
+					<li><a href="../Sinatra/Response.html">Sinatra::Response</a></li>
+				
+					<li><a href="../Sinatra/ShowExceptions.html">Sinatra::ShowExceptions</a></li>
+				
+					<li><a href="../Sinatra/Templates.html">Sinatra::Templates</a></li>
+				
+					<li><a href="../Sinatra/Templates/ContentTyped.html">Sinatra::Templates::ContentTyped</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Sinatra::Templates</h1>
+
+		<div id="description">
+			<p>
+Template rendering methods. Each method takes the name of a template to
+render as a Symbol and returns a String with the rendered output, as well
+as an optional hash with additional options.
+</p>
+<p>
+`template` is either the name or path of the template as symbol (Use
+`:&#8217;subdir/myview&#8217;` for views in subdirectories), or a string
+that will be rendered.
+</p>
+<p>
+Possible options are:
+</p>
+<pre>
+  :content_type   The content type to use, same arguments as content_type.
+  :layout         If set to false, no layout is rendered, otherwise
+                  the specified layout is used (Ignored for `sass` and `less`)
+  :layout_engine  Engine to use for rendering the layout.
+  :locals         A hash with local variables that should be available
+                  in the template
+  :scope          If set, template is evaluate with the binding of the given
+                  object rather than the application instance.
+  :views          Views directory to use.</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="compile-template-method" class="method-detail ">
+				<a name="M000048"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_template</span><span
+						class="method-args">(engine, data, options, views)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-template-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 576</span>
+576:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile_template</span>(<span class="ruby-identifier">engine</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">views</span>)
+577:       <span class="ruby-identifier">eat_errors</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span> <span class="ruby-value">:eat_errors</span>
+578:       <span class="ruby-identifier">template_cache</span>.<span class="ruby-identifier">fetch</span> <span class="ruby-identifier">engine</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">options</span> <span class="ruby-keyword kw">do</span>
+579:         <span class="ruby-identifier">template</span> = <span class="ruby-constant">Tilt</span>[<span class="ruby-identifier">engine</span>]
+580:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Template engine not found: #{engine}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">template</span>.<span class="ruby-identifier">nil?</span>
+581: 
+582:         <span class="ruby-keyword kw">case</span>
+583:         <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+584:           <span class="ruby-identifier">body</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">line</span> = <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">templates</span>[<span class="ruby-identifier">data</span>]
+585:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">body</span>
+586:             <span class="ruby-identifier">body</span> = <span class="ruby-identifier">body</span>.<span class="ruby-identifier">call</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">body</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:call</span>)
+587:             <span class="ruby-identifier">template</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">line</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">options</span>) { <span class="ruby-identifier">body</span> }
+588:           <span class="ruby-keyword kw">else</span>
+589:             <span class="ruby-identifier">found</span> = <span class="ruby-keyword kw">false</span>
+590:             <span class="ruby-ivar">@preferred_extension</span> = <span class="ruby-identifier">engine</span>.<span class="ruby-identifier">to_s</span>
+591:             <span class="ruby-identifier">find_template</span>(<span class="ruby-identifier">views</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">template</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+592:               <span class="ruby-identifier">path</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">file</span> <span class="ruby-comment cmt"># keep the initial path rather than the last one</span>
+593:               <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">found</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">file</span>)
+594:                 <span class="ruby-identifier">path</span> = <span class="ruby-identifier">file</span>
+595:                 <span class="ruby-keyword kw">break</span>
+596:               <span class="ruby-keyword kw">end</span>
+597:             <span class="ruby-keyword kw">end</span>
+598:             <span class="ruby-identifier">throw</span> <span class="ruby-value">:layout_missing</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">eat_errors</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> <span class="ruby-identifier">found</span>
+599:             <span class="ruby-identifier">template</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path</span>, <span class="ruby-value">1</span>, <span class="ruby-identifier">options</span>)
+600:           <span class="ruby-keyword kw">end</span>
+601:         <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Proc</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+602:           <span class="ruby-identifier">body</span> = <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> { <span class="ruby-identifier">data</span> } <span class="ruby-operator">:</span> <span class="ruby-identifier">data</span>
+603:           <span class="ruby-identifier">path</span>, <span class="ruby-identifier">line</span> = <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">caller_locations</span>.<span class="ruby-identifier">first</span>
+604:           <span class="ruby-identifier">template</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">line</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">options</span>, &amp;<span class="ruby-identifier">body</span>)
+605:         <span class="ruby-keyword kw">else</span>
+606:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>
+607:         <span class="ruby-keyword kw">end</span>
+608:       <span class="ruby-keyword kw">end</span>
+609:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="render-method" class="method-detail ">
+				<a name="M000047"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">render</span><span
+						class="method-args">(engine, data, options={}, locals={}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="render-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 542</span>
+542:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render</span>(<span class="ruby-identifier">engine</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={}, &amp;<span class="ruby-identifier">block</span>)
+543:       <span class="ruby-comment cmt"># merge app-level options</span>
+544:       <span class="ruby-identifier">options</span> = <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">engine</span>).<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">engine</span>)
+545:       <span class="ruby-identifier">options</span>[<span class="ruby-value">:outvar</span>]           <span class="ruby-operator">||=</span> <span class="ruby-value str">'@_out_buf'</span>
+546:       <span class="ruby-identifier">options</span>[<span class="ruby-value">:default_encoding</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">default_encoding</span>
+547: 
+548:       <span class="ruby-comment cmt"># extract generic options</span>
+549:       <span class="ruby-identifier">locals</span>          = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:locals</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">locals</span>         <span class="ruby-operator">||</span> {}
+550:       <span class="ruby-identifier">views</span>           = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:views</span>)  <span class="ruby-operator">||</span> <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">views</span> <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;./views&quot;</span>
+551:       <span class="ruby-ivar">@default_layout</span> = <span class="ruby-value">:layout</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@default_layout</span>.<span class="ruby-identifier">nil?</span>
+552:       <span class="ruby-identifier">layout</span>          = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:layout</span>)
+553:       <span class="ruby-identifier">eat_errors</span>      = <span class="ruby-identifier">layout</span>.<span class="ruby-identifier">nil?</span>
+554:       <span class="ruby-identifier">layout</span>          = <span class="ruby-ivar">@default_layout</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">layout</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">layout</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span>
+555:       <span class="ruby-identifier">content_type</span>    = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:content_type</span>)  <span class="ruby-operator">||</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:default_content_type</span>)
+556:       <span class="ruby-identifier">layout_engine</span>   = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:layout_engine</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">engine</span>
+557:       <span class="ruby-identifier">scope</span>           = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:scope</span>)         <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>
+558: 
+559:       <span class="ruby-comment cmt"># compile and render template</span>
+560:       <span class="ruby-identifier">layout_was</span>      = <span class="ruby-ivar">@default_layout</span>
+561:       <span class="ruby-ivar">@default_layout</span> = <span class="ruby-keyword kw">false</span>
+562:       <span class="ruby-identifier">template</span>        = <span class="ruby-identifier">compile_template</span>(<span class="ruby-identifier">engine</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">views</span>)
+563:       <span class="ruby-identifier">output</span>          = <span class="ruby-identifier">template</span>.<span class="ruby-identifier">render</span>(<span class="ruby-identifier">scope</span>, <span class="ruby-identifier">locals</span>, &amp;<span class="ruby-identifier">block</span>)
+564:       <span class="ruby-ivar">@default_layout</span> = <span class="ruby-identifier">layout_was</span>
+565: 
+566:       <span class="ruby-comment cmt"># render layout</span>
+567:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">layout</span>
+568:         <span class="ruby-identifier">options</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">:views</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">views</span>, <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>, <span class="ruby-value">:eat_errors</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">eat_errors</span>, <span class="ruby-value">:scope</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">scope</span>)
+569:         <span class="ruby-identifier">catch</span>(<span class="ruby-value">:layout_missing</span>) { <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">render</span>(<span class="ruby-identifier">layout_engine</span>, <span class="ruby-identifier">layout</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>) { <span class="ruby-identifier">output</span> } }
+570:       <span class="ruby-keyword kw">end</span>
+571: 
+572:       <span class="ruby-identifier">output</span>.<span class="ruby-identifier">extend</span>(<span class="ruby-constant">ContentTyped</span>).<span class="ruby-identifier">content_type</span> = <span class="ruby-identifier">content_type</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">content_type</span>
+573:       <span class="ruby-identifier">output</span>
+574:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="render-ruby-method" class="method-detail ">
+				<a name="M000046"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">render_ruby</span><span
+						class="method-args">(engine, template, options={}, locals={}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+logic shared between builder and nokogiri
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="render-ruby-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 536</span>
+536:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render_ruby</span>(<span class="ruby-identifier">engine</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={}, &amp;<span class="ruby-identifier">block</span>)
+537:       <span class="ruby-identifier">options</span>, <span class="ruby-identifier">template</span> = <span class="ruby-identifier">template</span>, <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">template</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+538:       <span class="ruby-identifier">template</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> { <span class="ruby-identifier">block</span> } <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">template</span>.<span class="ruby-identifier">nil?</span>
+539:       <span class="ruby-identifier">render</span> <span class="ruby-identifier">engine</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+540:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="builder-method" class="method-detail ">
+				<a name="M000035"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">builder</span><span
+						class="method-args">(template=nil, options={}, locals={}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="builder-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 481</span>
+481:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">builder</span>(<span class="ruby-identifier">template</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={}, &amp;<span class="ruby-identifier">block</span>)
+482:       <span class="ruby-identifier">options</span>[<span class="ruby-value">:default_content_type</span>] = <span class="ruby-value">:xml</span>
+483:       <span class="ruby-identifier">render_ruby</span>(<span class="ruby-value">:builder</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>, &amp;<span class="ruby-identifier">block</span>)
+484:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="coffee-method" class="method-detail ">
+				<a name="M000042"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">coffee</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="coffee-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 510</span>
+510:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">coffee</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+511:       <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge!</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>, <span class="ruby-value">:default_content_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:js</span>
+512:       <span class="ruby-identifier">render</span> <span class="ruby-value">:coffee</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+513:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="erb-method" class="method-detail ">
+				<a name="M000029"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">erb</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="erb-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 454</span>
+454:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">erb</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+455:       <span class="ruby-identifier">render</span> <span class="ruby-value">:erb</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+456:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="erubis-method" class="method-detail ">
+				<a name="M000030"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">erubis</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="erubis-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 458</span>
+458:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">erubis</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+459:       <span class="ruby-identifier">render</span> <span class="ruby-value">:erubis</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+460:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-template-method" class="method-detail ">
+				<a name="M000045"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_template</span><span
+						class="method-args">(views, name, engine)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calls the given block for every possible template file in views, named
+name.ext, where ext is registered on engine.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="find-template-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 526</span>
+526:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_template</span>(<span class="ruby-identifier">views</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">engine</span>)
+527:       <span class="ruby-keyword kw">yield</span> <span class="ruby-operator">::</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">views</span>, <span class="ruby-node">&quot;#{name}.#{@preferred_extension}&quot;</span>)
+528:       <span class="ruby-constant">Tilt</span>.<span class="ruby-identifier">mappings</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ext</span>, <span class="ruby-identifier">engines</span><span class="ruby-operator">|</span>
+529:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">ext</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@preferred_extension</span> <span class="ruby-keyword kw">and</span> <span class="ruby-constant">Array</span>(<span class="ruby-identifier">engines</span>).<span class="ruby-identifier">include?</span> <span class="ruby-identifier">engine</span>
+530:         <span class="ruby-keyword kw">yield</span> <span class="ruby-operator">::</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">views</span>, <span class="ruby-node">&quot;#{name}.#{ext}&quot;</span>)
+531:       <span class="ruby-keyword kw">end</span>
+532:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="haml-method" class="method-detail ">
+				<a name="M000031"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">haml</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="haml-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 462</span>
+462:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">haml</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+463:       <span class="ruby-identifier">render</span> <span class="ruby-value">:haml</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+464:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="less-method" class="method-detail ">
+				<a name="M000034"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">less</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="less-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 476</span>
+476:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">less</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+477:       <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge!</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>, <span class="ruby-value">:default_content_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:css</span>
+478:       <span class="ruby-identifier">render</span> <span class="ruby-value">:less</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+479:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="liquid-method" class="method-detail ">
+				<a name="M000036"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">liquid</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="liquid-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 486</span>
+486:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">liquid</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+487:       <span class="ruby-identifier">render</span> <span class="ruby-value">:liquid</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+488:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="markaby-method" class="method-detail ">
+				<a name="M000041"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">markaby</span><span
+						class="method-args">(template=nil, options={}, locals={}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="markaby-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 506</span>
+506:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">markaby</span>(<span class="ruby-identifier">template</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={}, &amp;<span class="ruby-identifier">block</span>)
+507:       <span class="ruby-identifier">render_ruby</span>(<span class="ruby-value">:mab</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>, &amp;<span class="ruby-identifier">block</span>)
+508:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="markdown-method" class="method-detail ">
+				<a name="M000037"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">markdown</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="markdown-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 490</span>
+490:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">markdown</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+491:       <span class="ruby-identifier">render</span> <span class="ruby-value">:markdown</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+492:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="nokogiri-method" class="method-detail ">
+				<a name="M000043"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">nokogiri</span><span
+						class="method-args">(template=nil, options={}, locals={}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="nokogiri-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 515</span>
+515:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nokogiri</span>(<span class="ruby-identifier">template</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={}, &amp;<span class="ruby-identifier">block</span>)
+516:       <span class="ruby-identifier">options</span>[<span class="ruby-value">:default_content_type</span>] = <span class="ruby-value">:xml</span>
+517:       <span class="ruby-identifier">render_ruby</span>(<span class="ruby-value">:nokogiri</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>, &amp;<span class="ruby-identifier">block</span>)
+518:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="radius-method" class="method-detail ">
+				<a name="M000040"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">radius</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="radius-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 502</span>
+502:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">radius</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+503:       <span class="ruby-identifier">render</span> <span class="ruby-value">:radius</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+504:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rdoc-method" class="method-detail ">
+				<a name="M000039"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rdoc</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="rdoc-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 498</span>
+498:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rdoc</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+499:       <span class="ruby-identifier">render</span> <span class="ruby-value">:rdoc</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+500:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="sass-method" class="method-detail ">
+				<a name="M000032"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sass</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="sass-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 466</span>
+466:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sass</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+467:       <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge!</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>, <span class="ruby-value">:default_content_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:css</span>
+468:       <span class="ruby-identifier">render</span> <span class="ruby-value">:sass</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+469:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="scss-method" class="method-detail ">
+				<a name="M000033"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">scss</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="scss-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 471</span>
+471:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scss</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+472:       <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge!</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>, <span class="ruby-value">:default_content_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:css</span>
+473:       <span class="ruby-identifier">render</span> <span class="ruby-value">:scss</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+474:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="slim-method" class="method-detail ">
+				<a name="M000044"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">slim</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="slim-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 520</span>
+520:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">slim</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+521:       <span class="ruby-identifier">render</span> <span class="ruby-value">:slim</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+522:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="textile-method" class="method-detail ">
+				<a name="M000038"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">textile</span><span
+						class="method-args">(template, options={}, locals={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="textile-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 494</span>
+494:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">textile</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-identifier">locals</span>={})
+495:       <span class="ruby-identifier">render</span> <span class="ruby-value">:textile</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">locals</span>
+496:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

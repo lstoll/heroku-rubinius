@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Daemons::Pid</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/daemons/pid_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/daemons/pid.rb">lib/daemons/pid.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000059">::dir</a></li>
+					
+					<li><a href="#M000060">::new</a></li>
+					
+					<li><a href="#M000058">::running?</a></li>
+					
+					<li><a href="#M000064">#cleanup</a></li>
+					
+					<li><a href="#M000065">#exist?</a></li>
+					
+					<li><a href="#M000061">#pid</a></li>
+					
+					<li><a href="#M000062">#pid=</a></li>
+					
+					<li><a href="#M000063">#running?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Daemons.html">Daemons</a></li>
+				
+					<li><a href="../Daemons/Application.html">Daemons::Application</a></li>
+				
+					<li><a href="../Daemons/ApplicationGroup.html">Daemons::ApplicationGroup</a></li>
+				
+					<li><a href="../Daemons/CmdException.html">Daemons::CmdException</a></li>
+				
+					<li><a href="../Daemons/Controller.html">Daemons::Controller</a></li>
+				
+					<li><a href="../Daemons/Error.html">Daemons::Error</a></li>
+				
+					<li><a href="../Daemons/Exception.html">Daemons::Exception</a></li>
+				
+					<li><a href="../Daemons/Monitor.html">Daemons::Monitor</a></li>
+				
+					<li><a href="../Daemons/Optparse.html">Daemons::Optparse</a></li>
+				
+					<li><a href="../Daemons/Pid.html">Daemons::Pid</a></li>
+				
+					<li><a href="../Daemons/PidFile.html">Daemons::PidFile</a></li>
+				
+					<li><a href="../Daemons/PidMem.html">Daemons::PidMem</a></li>
+				
+					<li><a href="../Daemons/RuntimeException.html">Daemons::RuntimeException</a></li>
+				
+					<li><a href="../Daemons/SystemError.html">Daemons::SystemError</a></li>
+				
+					<li><a href="../CurrentProcess.html">CurrentProcess</a></li>
+				
+					<li><a href="../Daemonize.html">Daemonize</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Daemons::Pid</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="cleanup-method" class="method-detail ">
+				<a name="M000064"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cleanup</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Cleanup method
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="cleanup-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/daemons/pid.rb, line 98</span>
+98:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cleanup</span>
+99:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="exist--method" class="method-detail ">
+				<a name="M000065"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exist?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Exist? method
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="exist--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/daemons/pid.rb, line 102</span>
+102:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exist?</span>
+103:       <span class="ruby-keyword kw">true</span>
+104:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pid-method" class="method-detail ">
+				<a name="M000061"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pid</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Get method
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pid-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/daemons/pid.rb, line 85</span>
+85:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pid</span>
+86:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pid--method" class="method-detail ">
+				<a name="M000062"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pid=</span><span
+						class="method-args">(p)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Set method
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pid--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/daemons/pid.rb, line 89</span>
+89:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pid=</span>(<span class="ruby-identifier">p</span>)
+90:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="running--method" class="method-detail ">
+				<a name="M000063"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">running?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Check whether the process is running
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="running--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/daemons/pid.rb, line 93</span>
+93:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">running?</span>
+94:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Pid</span>.<span class="ruby-identifier">running?</span>(<span class="ruby-identifier">pid</span>())
+95:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="dir-method" class="method-detail ">
+				<a name="M000059"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dir</span><span
+						class="method-args">(dir_mode, dir, script)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the directory that should be used to write the pid file to
+depending on the given mode.
+</p>
+<p>
+Some modes may require an additionaly hint, others may determine  the
+directory automatically.
+</p>
+<p>
+If no valid directory is found, returns nil.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="dir-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/daemons/pid.rb, line 63</span>
+63:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Pid</span>.<span class="ruby-identifier">dir</span>(<span class="ruby-identifier">dir_mode</span>, <span class="ruby-identifier">dir</span>, <span class="ruby-identifier">script</span>)
+64:       <span class="ruby-comment cmt"># nil script parameter is allowed as long as dir_mode is not :script</span>
+65:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">dir_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:script</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">script</span>.<span class="ruby-identifier">nil?</span>                         
+66:       
+67:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">dir_mode</span>
+68:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:normal</span>
+69:           <span class="ruby-keyword kw">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">dir</span>)
+70:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:script</span>
+71:           <span class="ruby-keyword kw">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">script</span>),<span class="ruby-identifier">dir</span>))
+72:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:system</span>  
+73:           <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'/var/run'</span>
+74:         <span class="ruby-keyword kw">else</span>
+75:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;pid file mode '#{dir_mode}' not implemented&quot;</span>)
+76:       <span class="ruby-keyword kw">end</span>
+77:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000060"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initialization method
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/daemons/pid.rb, line 80</span>
+80:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+81:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="running--method" class="method-detail ">
+				<a name="M000058"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">running?</span><span
+						class="method-args">(pid)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="running--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/daemons/pid.rb, line 8</span>
+ 8:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Pid</span>.<span class="ruby-identifier">running?</span>(<span class="ruby-identifier">pid</span>)
+ 9:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">pid</span>
+10:       
+11:       <span class="ruby-comment cmt"># Check if process is in existence</span>
+12:       <span class="ruby-comment cmt"># The simplest way to do this is to send signal '0'</span>
+13:       <span class="ruby-comment cmt"># (which is a single system call) that doesn't actually</span>
+14:       <span class="ruby-comment cmt"># send a signal</span>
+15:       <span class="ruby-keyword kw">begin</span>
+16:         <span class="ruby-constant">Process</span>.<span class="ruby-identifier">kill</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">pid</span>)
+17:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+18:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ESRCH</span>
+19:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+20:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-operator">::</span><span class="ruby-constant">Exception</span>   <span class="ruby-comment cmt"># for example on EPERM (process exists but does not belong to us)</span>
+21:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+22:       <span class="ruby-comment cmt">#rescue Errno::EPERM</span>
+23:       <span class="ruby-comment cmt">#  return false</span>
+24:       <span class="ruby-keyword kw">end</span>
+25:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Thin::Request</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/thin/request_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/thin/request.rb">lib/thin/request.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000145">::new</a></li>
+					
+					<li><a href="#M000152">#async_callback=</a></li>
+					
+					<li><a href="#M000153">#async_close</a></li>
+					
+					<li><a href="#M000154">#close</a></li>
+					
+					<li><a href="#M000148">#content_length</a></li>
+					
+					<li><a href="#M000147">#finished?</a></li>
+					
+					<li><a href="#M000155">#move_body_to_tempfile</a></li>
+					
+					<li><a href="#M000146">#parse</a></li>
+					
+					<li><a href="#M000149">#persistent?</a></li>
+					
+					<li><a href="#M000150">#remote_address=</a></li>
+					
+					<li><a href="#M000151">#threaded=</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Thin.html">Thin</a></li>
+				
+					<li><a href="../Thin/Backends.html">Thin::Backends</a></li>
+				
+					<li><a href="../Thin/Backends/Base.html">Thin::Backends::Base</a></li>
+				
+					<li><a href="../Thin/Backends/SwiftiplyClient.html">Thin::Backends::SwiftiplyClient</a></li>
+				
+					<li><a href="../Thin/Backends/TcpServer.html">Thin::Backends::TcpServer</a></li>
+				
+					<li><a href="../Thin/Backends/UnixServer.html">Thin::Backends::UnixServer</a></li>
+				
+					<li><a href="../Thin/Command.html">Thin::Command</a></li>
+				
+					<li><a href="../Thin/Connection.html">Thin::Connection</a></li>
+				
+					<li><a href="../Thin/Controllers.html">Thin::Controllers</a></li>
+				
+					<li><a href="../Thin/Controllers/Cluster.html">Thin::Controllers::Cluster</a></li>
+				
+					<li><a href="../Thin/Controllers/Controller.html">Thin::Controllers::Controller</a></li>
+				
+					<li><a href="../Thin/Controllers/Service.html">Thin::Controllers::Service</a></li>
+				
+					<li><a href="../Thin/Daemonizable.html">Thin::Daemonizable</a></li>
+				
+					<li><a href="../Thin/Daemonizable/ClassMethods.html">Thin::Daemonizable::ClassMethods</a></li>
+				
+					<li><a href="../Thin/Headers.html">Thin::Headers</a></li>
+				
+					<li><a href="../Thin/InvalidOption.html">Thin::InvalidOption</a></li>
+				
+					<li><a href="../Thin/InvalidRequest.html">Thin::InvalidRequest</a></li>
+				
+					<li><a href="../Thin/Logging.html">Thin::Logging</a></li>
+				
+					<li><a href="../Thin/OptionRequired.html">Thin::OptionRequired</a></li>
+				
+					<li><a href="../Thin/PidFileExist.html">Thin::PidFileExist</a></li>
+				
+					<li><a href="../Thin/PlatformNotSupported.html">Thin::PlatformNotSupported</a></li>
+				
+					<li><a href="../Thin/Request.html">Thin::Request</a></li>
+				
+					<li><a href="../Thin/Response.html">Thin::Response</a></li>
+				
+					<li><a href="../Thin/RestartTimeout.html">Thin::RestartTimeout</a></li>
+				
+					<li><a href="../Thin/Runner.html">Thin::Runner</a></li>
+				
+					<li><a href="../Thin/RunnerError.html">Thin::RunnerError</a></li>
+				
+					<li><a href="../Thin/Server.html">Thin::Server</a></li>
+				
+					<li><a href="../Thin/Stats.html">Thin::Stats</a></li>
+				
+					<li><a href="../Thin/Stats/Adapter.html">Thin::Stats::Adapter</a></li>
+				
+					<li><a href="../Thin/SwiftiplyConnection.html">Thin::SwiftiplyConnection</a></li>
+				
+					<li><a href="../Thin/UnixConnection.html">Thin::UnixConnection</a></li>
+				
+					<li><a href="../Rack.html">Rack</a></li>
+				
+					<li><a href="../Rack/Adapter.html">Rack::Adapter</a></li>
+				
+					<li><a href="../Rack/Adapter/Rails.html">Rack::Adapter::Rails</a></li>
+				
+					<li><a href="../Rack/Adapter/Rails/CGIWrapper.html">Rack::Adapter::Rails::CGIWrapper</a></li>
+				
+					<li><a href="../Rack/Adapter/Rails/CgiApp.html">Rack::Adapter::Rails::CgiApp</a></li>
+				
+					<li><a href="../Rack/AdapterNotFound.html">Rack::AdapterNotFound</a></li>
+				
+					<li><a href="../Process.html">Process</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Thin::Request</h1>
+
+		<div id="description">
+			<p>
+A request sent by the client to the server.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="MAX_BODY">MAX_BODY</a></dt>
+				
+				<dd class="description"><p>
+Maximum request body size before it is moved out of memory and into a
+tempfile for reading.
+</p></dd>
+				
+			
+				<dt><a name="BODY_TMPFILE">BODY_TMPFILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MAX_HEADER">MAX_HEADER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="INITIAL_BODY">INITIAL_BODY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVER_SOFTWARE">SERVER_SOFTWARE</a></dt>
+				
+				<dd class="description"><p>
+Freeze some HTTP header names &amp; values
+</p></dd>
+				
+			
+				<dt><a name="SERVER_NAME">SERVER_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALHOST">LOCALHOST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="HTTP_VERSION">HTTP_VERSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="HTTP_1_0">HTTP_1_0</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="REMOTE_ADDR">REMOTE_ADDR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CONTENT_LENGTH">CONTENT_LENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CONNECTION">CONNECTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="KEEP_ALIVE_REGEXP">KEEP_ALIVE_REGEXP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CLOSE_REGEXP">CLOSE_REGEXP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="RACK_INPUT">RACK_INPUT</a></dt>
+				
+				<dd class="description"><p>
+Freeze some <a href="../Rack.html">Rack</a> header names
+</p></dd>
+				
+			
+				<dt><a name="RACK_VERSION">RACK_VERSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="RACK_ERRORS">RACK_ERRORS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="RACK_MULTITHREAD">RACK_MULTITHREAD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="RACK_MULTIPROCESS">RACK_MULTIPROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="RACK_RUN_ONCE">RACK_RUN_ONCE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ASYNC_CALLBACK">ASYNC_CALLBACK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ASYNC_CLOSE">ASYNC_CLOSE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="env-attribute-method" class="method-detail">
+				<a name="env"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">env</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+CGI-like request environment variables
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="data-attribute-method" class="method-detail">
+				<a name="data"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">data</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Unparsed data of the request
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="body-attribute-method" class="method-detail">
+				<a name="body"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">body</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+<a href="Request.html">Request</a> body
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="move-body-to-tempfile-method" class="method-detail ">
+				<a name="M000155"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">move_body_to_tempfile</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="move-body-to-tempfile-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/request.rb, line 147</span>
+147:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">move_body_to_tempfile</span>
+148:         <span class="ruby-identifier">current_body</span> = <span class="ruby-ivar">@body</span>
+149:         <span class="ruby-identifier">current_body</span>.<span class="ruby-identifier">rewind</span>
+150:         <span class="ruby-ivar">@body</span> = <span class="ruby-constant">Tempfile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">BODY_TMPFILE</span>)
+151:         <span class="ruby-ivar">@body</span>.<span class="ruby-identifier">binmode</span>
+152:         <span class="ruby-ivar">@body</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">current_body</span>.<span class="ruby-identifier">read</span>
+153:         <span class="ruby-ivar">@env</span>[<span class="ruby-constant">RACK_INPUT</span>] = <span class="ruby-ivar">@body</span>
+154:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="async-callback--method" class="method-detail ">
+				<a name="M000152"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">async_callback=</span><span
+						class="method-args">(callback)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="async-callback--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/request.rb, line 132</span>
+132:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">async_callback=</span>(<span class="ruby-identifier">callback</span>)
+133:       <span class="ruby-ivar">@env</span>[<span class="ruby-constant">ASYNC_CALLBACK</span>] = <span class="ruby-identifier">callback</span>
+134:       <span class="ruby-ivar">@env</span>[<span class="ruby-constant">ASYNC_CLOSE</span>] = <span class="ruby-constant">EventMachine</span><span class="ruby-operator">::</span><span class="ruby-constant">DefaultDeferrable</span>.<span class="ruby-identifier">new</span>
+135:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="async-close-method" class="method-detail ">
+				<a name="M000153"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">async_close</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="async-close-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/request.rb, line 137</span>
+137:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">async_close</span>
+138:       <span class="ruby-ivar">@async_close</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@env</span>[<span class="ruby-constant">ASYNC_CLOSE</span>]
+139:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="close-method" class="method-detail ">
+				<a name="M000154"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">close</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Close any resource used by the request
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="close-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/request.rb, line 142</span>
+142:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
+143:       <span class="ruby-ivar">@body</span>.<span class="ruby-identifier">delete</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@body</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Tempfile</span>
+144:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="content-length-method" class="method-detail ">
+				<a name="M000148"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">content_length</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Expected size of the body
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="content-length-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/request.rb, line 104</span>
+104:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">content_length</span>
+105:       <span class="ruby-ivar">@env</span>[<span class="ruby-constant">CONTENT_LENGTH</span>].<span class="ruby-identifier">to_i</span>
+106:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="finished--method" class="method-detail ">
+				<a name="M000147"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">finished?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+<tt>true</tt> if headers and body are finished parsing
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="finished--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/request.rb, line 99</span>
+ 99:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">finished?</span>
+100:       <span class="ruby-ivar">@parser</span>.<span class="ruby-identifier">finished?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@body</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">content_length</span>
+101:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="M000146"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">(data)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parse a chunk of data into the request environment Raises a
+<tt>InvalidRequest</tt> if invalid. Returns <tt>true</tt> if the parsing is
+complete.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/request.rb, line 75</span>
+75:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">data</span>)
+76:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@parser</span>.<span class="ruby-identifier">finished?</span>  <span class="ruby-comment cmt"># Header finished, can only be some more body</span>
+77:         <span class="ruby-identifier">body</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">data</span>
+78:       <span class="ruby-keyword kw">else</span>                  <span class="ruby-comment cmt"># Parse more header using the super parser</span>
+79:         <span class="ruby-ivar">@data</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">data</span>
+80:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidRequest</span>, <span class="ruby-value str">'Header longer than allowed'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@data</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">MAX_HEADER</span>
+81: 
+82:         <span class="ruby-ivar">@nparsed</span> = <span class="ruby-ivar">@parser</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-ivar">@env</span>, <span class="ruby-ivar">@data</span>, <span class="ruby-ivar">@nparsed</span>)
+83: 
+84:         <span class="ruby-comment cmt"># Transfert to a tempfile if body is very big</span>
+85:         <span class="ruby-identifier">move_body_to_tempfile</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@parser</span>.<span class="ruby-identifier">finished?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">content_length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">MAX_BODY</span>
+86:       <span class="ruby-keyword kw">end</span>
+87: 
+88: 
+89:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">finished?</span>   <span class="ruby-comment cmt"># Check if header and body are complete</span>
+90:         <span class="ruby-ivar">@data</span> = <span class="ruby-keyword kw">nil</span>
+91:         <span class="ruby-ivar">@body</span>.<span class="ruby-identifier">rewind</span>
+92:         <span class="ruby-keyword kw">true</span>         <span class="ruby-comment cmt"># Request is fully parsed</span>
+93:       <span class="ruby-keyword kw">else</span>
+94:         <span class="ruby-keyword kw">false</span>        <span class="ruby-comment cmt"># Not finished, need more data</span>
+95:       <span class="ruby-keyword kw">end</span>
+96:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="persistent--method" class="method-detail ">
+				<a name="M000149"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">persistent?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns <tt>true</tt> if the client expect the connection to be persistent.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="persistent--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/request.rb, line 109</span>
+109:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">persistent?</span>
+110:       <span class="ruby-comment cmt"># Clients and servers SHOULD NOT assume that a persistent connection</span>
+111:       <span class="ruby-comment cmt"># is maintained for HTTP versions less than 1.1 unless it is explicitly</span>
+112:       <span class="ruby-comment cmt"># signaled. (http://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html)</span>
+113:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@env</span>[<span class="ruby-constant">HTTP_VERSION</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">HTTP_1_0</span>
+114:         <span class="ruby-ivar">@env</span>[<span class="ruby-constant">CONNECTION</span>] <span class="ruby-operator">=~</span> <span class="ruby-constant">KEEP_ALIVE_REGEXP</span>
+115: 
+116:       <span class="ruby-comment cmt"># HTTP/1.1 client intends to maintain a persistent connection unless</span>
+117:       <span class="ruby-comment cmt"># a Connection header including the connection-token &quot;close&quot; was sent</span>
+118:       <span class="ruby-comment cmt"># in the request</span>
+119:       <span class="ruby-keyword kw">else</span>
+120:         <span class="ruby-ivar">@env</span>[<span class="ruby-constant">CONNECTION</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@env</span>[<span class="ruby-constant">CONNECTION</span>] <span class="ruby-operator">!~</span> <span class="ruby-constant">CLOSE_REGEXP</span>
+121:       <span class="ruby-keyword kw">end</span>
+122:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="remote-address--method" class="method-detail ">
+				<a name="M000150"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">remote_address=</span><span
+						class="method-args">(address)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="remote-address--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/request.rb, line 124</span>
+124:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remote_address=</span>(<span class="ruby-identifier">address</span>)
+125:       <span class="ruby-ivar">@env</span>[<span class="ruby-constant">REMOTE_ADDR</span>] = <span class="ruby-identifier">address</span>
+126:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="threaded--method" class="method-detail ">
+				<a name="M000151"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">threaded=</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="threaded--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/request.rb, line 128</span>
+128:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">threaded=</span>(<span class="ruby-identifier">value</span>)
+129:       <span class="ruby-ivar">@env</span>[<span class="ruby-constant">RACK_MULTITHREAD</span>] = <span class="ruby-identifier">value</span>
+130:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000145"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/request.rb, line 51</span>
+51:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+52:       <span class="ruby-ivar">@parser</span>   = <span class="ruby-constant">Thin</span><span class="ruby-operator">::</span><span class="ruby-constant">HttpParser</span>.<span class="ruby-identifier">new</span>
+53:       <span class="ruby-ivar">@data</span>     = <span class="ruby-value str">''</span>
+54:       <span class="ruby-ivar">@nparsed</span>  = <span class="ruby-value">0</span>
+55:       <span class="ruby-ivar">@body</span>     = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">INITIAL_BODY</span>.<span class="ruby-identifier">dup</span>)
+56:       <span class="ruby-ivar">@env</span>      = {
+57:         <span class="ruby-constant">SERVER_SOFTWARE</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">SERVER</span>,
+58:         <span class="ruby-constant">SERVER_NAME</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">LOCALHOST</span>,
+59: 
+60:         <span class="ruby-comment cmt"># Rack stuff</span>
+61:         <span class="ruby-constant">RACK_INPUT</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@body</span>,
+62: 
+63:         <span class="ruby-constant">RACK_VERSION</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">VERSION</span><span class="ruby-operator">::</span><span class="ruby-constant">RACK</span>,
+64:         <span class="ruby-constant">RACK_ERRORS</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">STDERR</span>,
+65: 
+66:         <span class="ruby-constant">RACK_MULTITHREAD</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>,
+67:         <span class="ruby-constant">RACK_MULTIPROCESS</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>,
+68:         <span class="ruby-constant">RACK_RUN_ONCE</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+69:       }
+70:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

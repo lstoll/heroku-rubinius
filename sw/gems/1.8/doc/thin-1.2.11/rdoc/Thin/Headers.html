@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Thin::Headers</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/thin/headers_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/thin/headers.rb">lib/thin/headers.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000132">::new</a></li>
+					
+					<li><a href="#M000133">#[]=</a></li>
+					
+					<li><a href="#M000134">#has_key?</a></li>
+					
+					<li><a href="#M000135">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Thin.html">Thin</a></li>
+				
+					<li><a href="../Thin/Backends.html">Thin::Backends</a></li>
+				
+					<li><a href="../Thin/Backends/Base.html">Thin::Backends::Base</a></li>
+				
+					<li><a href="../Thin/Backends/SwiftiplyClient.html">Thin::Backends::SwiftiplyClient</a></li>
+				
+					<li><a href="../Thin/Backends/TcpServer.html">Thin::Backends::TcpServer</a></li>
+				
+					<li><a href="../Thin/Backends/UnixServer.html">Thin::Backends::UnixServer</a></li>
+				
+					<li><a href="../Thin/Command.html">Thin::Command</a></li>
+				
+					<li><a href="../Thin/Connection.html">Thin::Connection</a></li>
+				
+					<li><a href="../Thin/Controllers.html">Thin::Controllers</a></li>
+				
+					<li><a href="../Thin/Controllers/Cluster.html">Thin::Controllers::Cluster</a></li>
+				
+					<li><a href="../Thin/Controllers/Controller.html">Thin::Controllers::Controller</a></li>
+				
+					<li><a href="../Thin/Controllers/Service.html">Thin::Controllers::Service</a></li>
+				
+					<li><a href="../Thin/Daemonizable.html">Thin::Daemonizable</a></li>
+				
+					<li><a href="../Thin/Daemonizable/ClassMethods.html">Thin::Daemonizable::ClassMethods</a></li>
+				
+					<li><a href="../Thin/Headers.html">Thin::Headers</a></li>
+				
+					<li><a href="../Thin/InvalidOption.html">Thin::InvalidOption</a></li>
+				
+					<li><a href="../Thin/InvalidRequest.html">Thin::InvalidRequest</a></li>
+				
+					<li><a href="../Thin/Logging.html">Thin::Logging</a></li>
+				
+					<li><a href="../Thin/OptionRequired.html">Thin::OptionRequired</a></li>
+				
+					<li><a href="../Thin/PidFileExist.html">Thin::PidFileExist</a></li>
+				
+					<li><a href="../Thin/PlatformNotSupported.html">Thin::PlatformNotSupported</a></li>
+				
+					<li><a href="../Thin/Request.html">Thin::Request</a></li>
+				
+					<li><a href="../Thin/Response.html">Thin::Response</a></li>
+				
+					<li><a href="../Thin/RestartTimeout.html">Thin::RestartTimeout</a></li>
+				
+					<li><a href="../Thin/Runner.html">Thin::Runner</a></li>
+				
+					<li><a href="../Thin/RunnerError.html">Thin::RunnerError</a></li>
+				
+					<li><a href="../Thin/Server.html">Thin::Server</a></li>
+				
+					<li><a href="../Thin/Stats.html">Thin::Stats</a></li>
+				
+					<li><a href="../Thin/Stats/Adapter.html">Thin::Stats::Adapter</a></li>
+				
+					<li><a href="../Thin/SwiftiplyConnection.html">Thin::SwiftiplyConnection</a></li>
+				
+					<li><a href="../Thin/UnixConnection.html">Thin::UnixConnection</a></li>
+				
+					<li><a href="../Rack.html">Rack</a></li>
+				
+					<li><a href="../Rack/Adapter.html">Rack::Adapter</a></li>
+				
+					<li><a href="../Rack/Adapter/Rails.html">Rack::Adapter::Rails</a></li>
+				
+					<li><a href="../Rack/Adapter/Rails/CGIWrapper.html">Rack::Adapter::Rails::CGIWrapper</a></li>
+				
+					<li><a href="../Rack/Adapter/Rails/CgiApp.html">Rack::Adapter::Rails::CgiApp</a></li>
+				
+					<li><a href="../Rack/AdapterNotFound.html">Rack::AdapterNotFound</a></li>
+				
+					<li><a href="../Process.html">Process</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Thin::Headers</h1>
+
+		<div id="description">
+			<p>
+Store HTTP header name-value pairs direcly to a string and allow duplicated
+entries on some names.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="HEADER_FORMAT">HEADER_FORMAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ALLOWED_DUPLICATES">ALLOWED_DUPLICATES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="M000133"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">[]=</span><span
+						class="method-args">(key, value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add <tt>key: value</tt> pair to the headers. Ignore if already sent and no
+duplicates are allowed for this <tt>key</tt>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/headers.rb, line 16</span>
+16:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]=</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+17:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@sent</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">ALLOWED_DUPLICATES</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">key</span>)
+18:         <span class="ruby-ivar">@sent</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-keyword kw">true</span>
+19:         <span class="ruby-identifier">value</span> = <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">value</span>
+20:                 <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Time</span>
+21:                   <span class="ruby-identifier">value</span>.<span class="ruby-identifier">httpdate</span>
+22:                 <span class="ruby-keyword kw">when</span> <span class="ruby-constant">NilClass</span>
+23:                   <span class="ruby-keyword kw">return</span>
+24:                 <span class="ruby-keyword kw">else</span>
+25:                   <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>
+26:                 <span class="ruby-keyword kw">end</span>
+27:         <span class="ruby-ivar">@out</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">HEADER_FORMAT</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>]
+28:       <span class="ruby-keyword kw">end</span>
+29:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="has-key--method" class="method-detail ">
+				<a name="M000134"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">has_key?</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="has-key--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/headers.rb, line 31</span>
+31:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>)
+32:       <span class="ruby-ivar">@sent</span>[<span class="ruby-identifier">key</span>]
+33:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="M000135"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/headers.rb, line 35</span>
+35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+36:       <span class="ruby-ivar">@out</span>.<span class="ruby-identifier">join</span>
+37:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000132"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/headers.rb, line 8</span>
+ 8:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+ 9:       <span class="ruby-ivar">@sent</span> = {}
+10:       <span class="ruby-ivar">@out</span> = []
+11:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

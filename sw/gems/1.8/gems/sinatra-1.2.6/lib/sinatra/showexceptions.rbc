@@ -1,0 +1,1527 @@
+!RBIX
+4472690874163217065
+18
+M
+1
+n
+n
+x
+10
+__script__
+i
+37
+5
+7
+0
+64
+47
+49
+1
+1
+15
+99
+7
+2
+65
+49
+3
+2
+13
+99
+12
+7
+4
+12
+7
+5
+12
+65
+12
+49
+6
+4
+15
+49
+4
+0
+15
+2
+11
+I
+6
+I
+0
+I
+0
+I
+0
+I
+0
+n
+p
+7
+s
+19
+rack/showexceptions
+x
+7
+require
+x
+7
+Sinatra
+x
+11
+open_module
+x
+15
+__module_init__
+M
+1
+n
+n
+x
+7
+Sinatra
+i
+33
+5
+66
+99
+7
+0
+45
+1
+2
+43
+0
+65
+49
+3
+3
+13
+99
+12
+7
+4
+12
+7
+5
+12
+65
+12
+49
+6
+4
+15
+49
+4
+0
+11
+I
+6
+I
+0
+I
+0
+I
+0
+I
+0
+n
+p
+7
+x
+14
+ShowExceptions
+x
+4
+Rack
+n
+x
+10
+open_class
+x
+14
+__class_init__
+M
+1
+n
+n
+x
+14
+ShowExceptions
+i
+121
+5
+66
+5
+7
+0
+45
+1
+2
+13
+71
+3
+47
+9
+26
+47
+49
+4
+0
+13
+47
+49
+5
+0
+15
+8
+29
+49
+3
+0
+49
+6
+2
+15
+99
+7
+7
+7
+8
+65
+5
+7
+0
+49
+9
+1
+49
+10
+4
+15
+99
+7
+11
+7
+12
+65
+5
+7
+0
+49
+9
+1
+49
+10
+4
+15
+99
+7
+5
+7
+13
+65
+67
+49
+14
+0
+49
+15
+4
+15
+99
+7
+16
+7
+17
+65
+67
+49
+14
+0
+49
+15
+4
+15
+5
+48
+18
+15
+99
+7
+19
+7
+20
+65
+67
+49
+14
+0
+49
+15
+4
+15
+65
+7
+21
+7
+22
+64
+49
+23
+2
+11
+I
+6
+I
+0
+I
+0
+I
+0
+I
+0
+n
+p
+24
+x
+13
+@@eats_errors
+x
+6
+Object
+n
+x
+3
+new
+x
+8
+allocate
+x
+10
+initialize
+x
+18
+class_variable_set
+x
+5
+flush
+M
+1
+n
+n
+x
+5
+flush
+i
+2
+1
+11
+I
+2
+I
+1
+I
+0
+I
+0
+I
+0
+I
+0
+p
+0
+p
+3
+I
+-1
+I
+c
+I
+2
+x
+65
+/app/sw/gems/1.8/gems/sinatra-1.2.6/lib/sinatra/showexceptions.rb
+p
+1
+x
+14
+@unnamed_splat
+x
+18
+class_variable_get
+x
+13
+attach_method
+x
+4
+puts
+M
+1
+n
+n
+x
+4
+puts
+i
+2
+1
+11
+I
+2
+I
+1
+I
+0
+I
+0
+I
+0
+I
+0
+p
+0
+p
+3
+I
+-1
+I
+d
+I
+2
+x
+65
+/app/sw/gems/1.8/gems/sinatra-1.2.6/lib/sinatra/showexceptions.rb
+p
+1
+x
+14
+@unnamed_splat
+M
+1
+n
+n
+x
+10
+initialize
+i
+38
+20
+0
+38
+0
+15
+45
+1
+2
+13
+71
+3
+47
+9
+29
+47
+49
+4
+0
+13
+45
+5
+6
+47
+49
+7
+1
+15
+8
+35
+45
+5
+8
+49
+3
+1
+38
+9
+11
+I
+4
+I
+1
+I
+1
+I
+0
+I
+1
+n
+p
+10
+x
+4
+@app
+x
+3
+ERB
+n
+x
+3
+new
+x
+8
+allocate
+x
+8
+TEMPLATE
+n
+x
+10
+initialize
+n
+x
+9
+@template
+p
+7
+I
+-1
+I
+f
+I
+0
+I
+10
+I
+5
+I
+11
+I
+26
+x
+65
+/app/sw/gems/1.8/gems/sinatra-1.2.6/lib/sinatra/showexceptions.rb
+p
+1
+x
+3
+app
+x
+17
+method_visibility
+x
+15
+add_defn_method
+x
+4
+call
+M
+1
+n
+n
+x
+4
+call
+i
+202
+26
+93
+0
+15
+29
+17
+0
+39
+0
+20
+0
+49
+1
+1
+30
+8
+198
+26
+93
+1
+15
+24
+13
+45
+2
+3
+12
+49
+4
+1
+10
+34
+8
+193
+15
+24
+19
+1
+15
+20
+0
+7
+5
+64
+49
+6
+1
+65
+7
+7
+49
+8
+1
+17
+2
+19
+2
+15
+20
+0
+12
+7
+5
+64
+12
+49
+9
+2
+15
+2
+15
+5
+7
+10
+47
+49
+11
+1
+13
+9
+89
+15
+5
+20
+0
+47
+49
+10
+1
+9
+110
+7
+12
+64
+19
+3
+15
+5
+20
+1
+47
+49
+13
+1
+35
+1
+19
+4
+8
+127
+7
+14
+64
+19
+3
+15
+5
+20
+0
+20
+1
+47
+49
+15
+2
+19
+4
+15
+20
+0
+7
+5
+64
+20
+2
+13
+18
+3
+49
+9
+2
+15
+15
+7
+16
+44
+43
+17
+80
+49
+18
+1
+13
+7
+19
+64
+20
+3
+49
+9
+2
+15
+13
+7
+20
+64
+45
+21
+22
+43
+23
+20
+4
+49
+24
+0
+49
+25
+1
+49
+26
+0
+49
+9
+2
+15
+20
+4
+35
+3
+25
+8
+198
+15
+92
+1
+27
+34
+92
+0
+27
+11
+I
+d
+I
+5
+I
+1
+I
+0
+I
+1
+n
+p
+27
+x
+4
+@app
+x
+4
+call
+x
+9
+Exception
+n
+x
+3
+===
+s
+11
+rack.errors
+x
+2
+[]
+x
+13
+@@eats_errors
+x
+18
+class_variable_get
+x
+3
+[]=
+x
+19
+prefers_plain_text?
+x
+11
+respond_to?
+s
+10
+text/plain
+x
+14
+dump_exception
+s
+9
+text/html
+x
+6
+pretty
+I
+1f4
+x
+4
+Hash
+x
+16
+new_from_literal
+s
+12
+Content-Type
+s
+14
+Content-Length
+x
+4
+Rack
+n
+x
+5
+Utils
+x
+4
+join
+x
+8
+bytesize
+x
+4
+to_s
+p
+41
+I
+-1
+I
+14
+I
+0
+I
+15
+I
+11
+I
+0
+I
+16
+I
+16
+I
+23
+I
+27
+I
+24
+I
+16
+I
+27
+I
+17
+I
+47
+I
+19
+I
+5b
+I
+1a
+I
+61
+I
+1b
+I
+6e
+I
+1d
+I
+74
+I
+1e
+I
+7f
+I
+0
+I
+80
+I
+21
+I
+8f
+I
+23
+I
+91
+I
+25
+I
+99
+I
+24
+I
+a3
+I
+25
+I
+ba
+I
+26
+I
+c6
+I
+0
+I
+ca
+x
+65
+/app/sw/gems/1.8/gems/sinatra-1.2.6/lib/sinatra/showexceptions.rb
+p
+5
+x
+3
+env
+x
+1
+e
+x
+6
+errors
+x
+12
+content_type
+x
+4
+body
+x
+7
+private
+x
+11
+frame_class
+M
+1
+n
+n
+x
+11
+frame_class
+i
+119
+20
+0
+49
+0
+0
+7
+1
+13
+70
+9
+23
+15
+44
+43
+2
+7
+3
+78
+49
+4
+2
+6
+1
+49
+5
+1
+9
+33
+7
+6
+64
+8
+118
+26
+93
+0
+15
+29
+48
+0
+7
+7
+98
+8
+1
+30
+8
+54
+25
+92
+0
+27
+8
+59
+15
+7
+9
+8
+60
+1
+13
+9
+78
+15
+20
+0
+49
+0
+0
+45
+7
+10
+49
+11
+0
+49
+12
+1
+13
+10
+108
+15
+20
+0
+49
+0
+0
+7
+13
+13
+70
+9
+105
+15
+44
+43
+2
+7
+14
+78
+49
+4
+2
+6
+13
+49
+5
+1
+9
+115
+7
+15
+64
+8
+118
+7
+16
+64
+11
+I
+6
+I
+1
+I
+1
+I
+0
+I
+1
+n
+p
+17
+x
+8
+filename
+n
+x
+6
+Regexp
+s
+18
+lib\/sinatra.*\.rb
+x
+3
+new
+x
+2
+=~
+s
+9
+framework
+x
+3
+Gem
+x
+16
+vm_const_defined
+s
+8
+constant
+n
+x
+3
+dir
+x
+8
+include?
+n
+s
+13
+\/bin\/(\w+)$
+s
+6
+system
+s
+3
+app
+p
+17
+I
+-1
+I
+2b
+I
+0
+I
+2c
+I
+1c
+I
+2d
+I
+21
+I
+2e
+I
+52
+I
+2f
+I
+6e
+I
+30
+I
+73
+I
+32
+I
+76
+I
+0
+I
+77
+x
+65
+/app/sw/gems/1.8/gems/sinatra-1.2.6/lib/sinatra/showexceptions.rb
+p
+1
+x
+5
+frame
+x
+8
+TEMPLATE
+s
+10149
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title><%=h exception.class %> at <%=h path %></title>
+
+  <script type="text/javascript">
+  //<!--
+  function toggle(id) {
+    var pre  = document.getElementById("pre-" + id);
+    var post = document.getElementById("post-" + id);
+    var context = document.getElementById("context-" + id);
+
+    if (pre.style.display == 'block') {
+      pre.style.display = 'none';
+      post.style.display = 'none';
+      context.style.background = "none";
+    } else {
+      pre.style.display = 'block';
+      post.style.display = 'block';
+      context.style.background = "#fffed9";
+    }
+  }
+
+  function toggleBacktrace(){
+    var bt = document.getElementById("backtrace");
+    var toggler = document.getElementById("expando");
+
+    if (bt.className == 'condensed') {
+      bt.className = 'expanded';
+      toggler.innerHTML = "(condense)";
+    } else {
+      bt.className = 'condensed';
+      toggler.innerHTML = "(expand)";
+    }
+  }
+  //-->
+  </script>
+
+<style type="text/css" media="screen">
+  *                   {margin: 0; padding: 0; border: 0; outline: 0;}
+  div.clear           {clear: both;}
+  body                {background: #EEEEEE; margin: 0; padding: 0;
+                       font-family: 'Lucida Grande', 'Lucida Sans Unicode',
+                       'Garuda';}
+  code                {font-family: 'Lucida Console', monospace;
+                       font-size: 12px;}
+  li                  {height: 18px;}
+  ul                  {list-style: none; margin: 0; padding: 0;}
+  ol:hover            {cursor: pointer;}
+  ol li               {white-space: pre;}
+  #explanation        {font-size: 12px; color: #666666;
+                       margin: 20px 0 0 100px;}
+/* WRAP */
+  #wrap               {width: 1000px; background: #FFFFFF; margin: 0 auto;
+                       padding: 30px 50px 20px 50px;
+                       border-left: 1px solid #DDDDDD;
+                       border-right: 1px solid #DDDDDD;}
+/* HEADER */
+  #header             {margin: 0 auto 25px auto;}
+  #header img         {float: left;}
+  #header #summary    {float: left; margin: 12px 0 0 20px; width:660px;
+                       font-family: 'Lucida Grande', 'Lucida Sans Unicode';}
+  h1                  {margin: 0; font-size: 36px; color: #981919;}
+  h2                  {margin: 0; font-size: 22px; color: #333333;}
+  #header ul          {margin: 0; font-size: 12px; color: #666666;}
+  #header ul li strong{color: #444444;}
+  #header ul li       {display: inline; padding: 0 10px;}
+  #header ul li.first {padding-left: 0;}
+  #header ul li.last  {border: 0; padding-right: 0;}
+/* BODY */
+  #backtrace,
+  #get,
+  #post,
+  #cookies,
+  #rack               {width: 980px; margin: 0 auto 10px auto;}
+  p#nav               {float: right; font-size: 14px;}
+/* BACKTRACE */
+  a#expando           {float: left; padding-left: 5px; color: #666666;
+                      font-size: 14px; text-decoration: none; cursor: pointer;}
+  a#expando:hover     {text-decoration: underline;}
+  h3                  {float: left; width: 100px; margin-bottom: 10px;
+                       color: #981919; font-size: 14px; font-weight: bold;}
+  #nav a              {color: #666666; text-decoration: none; padding: 0 5px;}
+  #backtrace li.frame-info {background: #f7f7f7; padding-left: 10px;
+                           font-size: 12px; color: #333333;}
+  #backtrace ul       {list-style-position: outside; border: 1px solid #E9E9E9;
+                       border-bottom: 0;}
+  #backtrace ol       {width: 920px; margin-left: 50px;
+                       font: 10px 'Lucida Console', monospace; color: #666666;}
+  #backtrace ol li    {border: 0; border-left: 1px solid #E9E9E9;
+                       padding: 2px 0;}
+  #backtrace ol code  {font-size: 10px; color: #555555; padding-left: 5px;}
+  #backtrace-ul li    {border-bottom: 1px solid #E9E9E9; height: auto;
+                       padding: 3px 0;}
+  #backtrace-ul .code {padding: 6px 0 4px 0;}
+  #backtrace.condensed .system,
+  #backtrace.condensed .framework {display:none;}
+/* REQUEST DATA */
+  p.no-data           {padding-top: 2px; font-size: 12px; color: #666666;}
+  table.req           {width: 980px; text-align: left; font-size: 12px;
+                       color: #666666; padding: 0; border-spacing: 0;
+                       border: 1px solid #EEEEEE; border-bottom: 0;
+                       border-left: 0;
+                       clear:both}
+  table.req tr th     {padding: 2px 10px; font-weight: bold;
+                       background: #F7F7F7; border-bottom: 1px solid #EEEEEE;
+                       border-left: 1px solid #EEEEEE;}
+  table.req tr td     {padding: 2px 20px 2px 10px;
+                       border-bottom: 1px solid #EEEEEE;
+                       border-left: 1px solid #EEEEEE;}
+/* HIDE PRE/POST CODE AT START */
+  .pre-context,
+  .post-context       {display: none;}
+
+  table td.code       {width:750px}
+  table td.code div   {width:750px;overflow:hidden}
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <img src="<%= env['SCRIPT_NAME'] %>/__sinatra__/500.png" alt="application error" height="161" width="313" />
+      <div id="summary">
+        <h1><strong><%=h exception.class %></strong> at <strong><%=h path %>
+          </strong></h1>
+        <h2><%=h exception.message %></h2>
+        <ul>
+          <li class="first"><strong>file:</strong> <code>
+            <%=h frames.first.filename.split("/").last %></code></li>
+          <li><strong>location:</strong> <code><%=h frames.first.function %>
+            </code></li>
+          <li class="last"><strong>line:
+            </strong> <%=h frames.first.lineno %></li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <div id="backtrace" class='condensed'>
+      <h3>BACKTRACE</h3>
+      <p><a href="#" id="expando"
+            onclick="toggleBacktrace(); return false">(expand)</a></p>
+      <p id="nav"><strong>JUMP TO:</strong>
+         <a href="#get-info">GET</a>
+         <a href="#post-info">POST</a>
+         <a href="#cookie-info">COOKIES</a>
+         <a href="#env-info">ENV</a>
+      </p>
+      <div class="clear"></div>
+
+      <ul id="backtrace-ul">
+
+      <% id = 1 %>
+      <% frames.each do |frame| %>
+          <% if frame.context_line && frame.context_line != "#" %>
+
+            <li class="frame-info <%= frame_class(frame) %>">
+              <code><%=h frame.filename %></code> in
+                <code><strong><%=h frame.function %></strong></code>
+            </li>
+
+            <li class="code <%= frame_class(frame) %>">
+              <% if frame.pre_context %>
+              <ol start="<%=h frame.pre_context_lineno + 1 %>"
+                  class="pre-context" id="pre-<%= id %>"
+                  onclick="toggle(<%= id %>);">
+                <% frame.pre_context.each do |line| %>
+                <li class="pre-context-line"><code><%=h line %></code></li>
+                <% end %>
+              </ol>
+              <% end %>
+
+              <ol start="<%= frame.lineno %>" class="context" id="<%= id %>"
+                  onclick="toggle(<%= id %>);">
+                <li class="context-line" id="context-<%= id %>"><code><%=
+                  h frame.context_line %></code></li>
+              </ol>
+
+              <% if frame.post_context %>
+              <ol start="<%=h frame.lineno + 1 %>" class="post-context"
+                  id="post-<%= id %>" onclick="toggle(<%= id %>);">
+                <% frame.post_context.each do |line| %>
+                <li class="post-context-line"><code><%=h line %></code></li>
+                <% end %>
+              </ol>
+              <% end %>
+              <div class="clear"></div>
+            </li>
+
+          <% end %>
+
+        <% id += 1 %>
+      <% end %>
+
+      </ul>
+    </div> <!-- /BACKTRACE -->
+
+    <div id="get">
+      <h3 id="get-info">GET</h3>
+      <% unless req.GET.empty? %>
+        <table class="req">
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+           <% req.GET.sort_by { |k, v| k.to_s }.each { |key, val| %>
+          <tr>
+            <td><%=h key %></td>
+            <td class="code"><div><%=h val.inspect %></div></td>
+          </tr>
+          <% } %>
+        </table>
+      <% else %>
+        <p class="no-data">No GET data.</p>
+      <% end %>
+      <div class="clear"></div>
+    </div> <!-- /GET -->
+
+    <div id="post">
+      <h3 id="post-info">POST</h3>
+      <% unless req.POST.empty? %>
+        <table class="req">
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+          <% req.POST.sort_by { |k, v| k.to_s }.each { |key, val| %>
+          <tr>
+            <td><%=h key %></td>
+            <td class="code"><div><%=h val.inspect %></div></td>
+          </tr>
+          <% } %>
+        </table>
+      <% else %>
+        <p class="no-data">No POST data.</p>
+      <% end %>
+      <div class="clear"></div>
+    </div> <!-- /POST -->
+
+    <div id="cookies">
+      <h3 id="cookie-info">COOKIES</h3>
+      <% unless req.cookies.empty? %>
+        <table class="req">
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+          <% req.cookies.each { |key, val| %>
+            <tr>
+              <td><%=h key %></td>
+              <td class="code"><div><%=h val.inspect %></div></td>
+            </tr>
+          <% } %>
+        </table>
+      <% else %>
+        <p class="no-data">No cookie data.</p>
+      <% end %>
+      <div class="clear"></div>
+    </div> <!-- /COOKIES -->
+
+    <div id="rack">
+      <h3 id="env-info">Rack ENV</h3>
+      <table class="req">
+        <tr>
+          <th>Variable</th>
+          <th>Value</th>
+        </tr>
+         <% env.sort_by { |k, v| k.to_s }.each { |key, val| %>
+         <tr>
+           <td><%=h key %></td>
+           <td class="code"><div><%=h val %></div></td>
+         </tr>
+         <% } %>
+      </table>
+      <div class="clear"></div>
+    </div> <!-- /RACK ENV -->
+
+    <p id="explanation">You're seeing this error because you have
+enabled the <code>show_exceptions</code> setting.</p>
+  </div> <!-- /WRAP -->
+  </body>
+</html>
+
+x
+9
+const_set
+p
+17
+I
+2
+I
+b
+I
+21
+I
+c
+I
+31
+I
+d
+I
+41
+I
+f
+I
+4f
+I
+14
+I
+5d
+I
+29
+I
+61
+I
+2b
+I
+6f
+I
+36
+I
+79
+x
+65
+/app/sw/gems/1.8/gems/sinatra-1.2.6/lib/sinatra/showexceptions.rb
+p
+0
+x
+13
+attach_method
+p
+3
+I
+2
+I
+a
+I
+21
+x
+65
+/app/sw/gems/1.8/gems/sinatra-1.2.6/lib/sinatra/showexceptions.rb
+p
+0
+x
+13
+attach_method
+p
+5
+I
+0
+I
+1
+I
+9
+I
+3
+I
+25
+x
+65
+/app/sw/gems/1.8/gems/sinatra-1.2.6/lib/sinatra/showexceptions.rb
+p
+0

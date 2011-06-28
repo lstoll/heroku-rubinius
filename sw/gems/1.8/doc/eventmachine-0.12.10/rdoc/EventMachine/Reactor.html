@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: EventMachine::Reactor</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/pr_eventmachine_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/pr_eventmachine.rb">lib/pr_eventmachine.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000344">::new</a></li>
+					
+					<li><a href="#M000347">#add_selectable</a></li>
+					
+					<li><a href="#M000355">#close_loopbreaker</a></li>
+					
+					<li><a href="#M000352">#crank_selectables</a></li>
+					
+					<li><a href="#M000348">#get_selectable</a></li>
+					
+					<li><a href="#M000346">#initialize_for_run</a></li>
+					
+					<li><a href="#M000345">#install_oneshot_timer</a></li>
+					
+					<li><a href="#M000354">#open_loopbreaker</a></li>
+					
+					<li><a href="#M000349">#run</a></li>
+					
+					<li><a href="#M000351">#run_heartbeats</a></li>
+					
+					<li><a href="#M000350">#run_timers</a></li>
+					
+					<li><a href="#M000357">#set_timer_quantum</a></li>
+					
+					<li><a href="#M000356">#signal_loopbreak</a></li>
+					
+					<li><a href="#M000353">#stop</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">Singleton</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../EventMachine/Channel.html">EventMachine::Channel</a></li>
+				
+					<li><a href="../EventMachine/Connection.html">EventMachine::Connection</a></li>
+				
+					<li><a href="../EventMachine/ConnectionNotBound.html">EventMachine::ConnectionNotBound</a></li>
+				
+					<li><a href="../EventMachine/DatagramObject.html">EventMachine::DatagramObject</a></li>
+				
+					<li><a href="../EventMachine/DefaultDeferrable.html">EventMachine::DefaultDeferrable</a></li>
+				
+					<li><a href="../EventMachine/Deferrable.html">EventMachine::Deferrable</a></li>
+				
+					<li><a href="../EventMachine/DeferrableChildProcess.html">EventMachine::DeferrableChildProcess</a></li>
+				
+					<li><a href="../EventMachine/Error.html">EventMachine::Error</a></li>
+				
+					<li><a href="../EventMachine/EvmaKeyboard.html">EventMachine::EvmaKeyboard</a></li>
+				
+					<li><a href="../EventMachine/EvmaTCPClient.html">EventMachine::EvmaTCPClient</a></li>
+				
+					<li><a href="../EventMachine/EvmaTCPServer.html">EventMachine::EvmaTCPServer</a></li>
+				
+					<li><a href="../EventMachine/EvmaUDPSocket.html">EventMachine::EvmaUDPSocket</a></li>
+				
+					<li><a href="../EventMachine/EvmaUNIXClient.html">EventMachine::EvmaUNIXClient</a></li>
+				
+					<li><a href="../EventMachine/EvmaUNIXServer.html">EventMachine::EvmaUNIXServer</a></li>
+				
+					<li><a href="../EventMachine/FileStreamer.html">EventMachine::FileStreamer</a></li>
+				
+					<li><a href="../EventMachine/FileWatch.html">EventMachine::FileWatch</a></li>
+				
+					<li><a href="../EventMachine/JEM.html">EventMachine::JEM</a></li>
+				
+					<li><a href="../EventMachine/LoopbreakReader.html">EventMachine::LoopbreakReader</a></li>
+				
+					<li><a href="../EventMachine/PeriodicTimer.html">EventMachine::PeriodicTimer</a></li>
+				
+					<li><a href="../EventMachine/ProcessWatch.html">EventMachine::ProcessWatch</a></li>
+				
+					<li><a href="../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../EventMachine/Protocols/HeaderAndContentProtocol.html">EventMachine::Protocols::HeaderAndContentProtocol</a></li>
+				
+					<li><a href="../EventMachine/Protocols/HttpClient.html">EventMachine::Protocols::HttpClient</a></li>
+				
+					<li><a href="../EventMachine/Protocols/HttpClient2.html">EventMachine::Protocols::HttpClient2</a></li>
+				
+					<li><a href="../EventMachine/Protocols/LineAndTextProtocol.html">EventMachine::Protocols::LineAndTextProtocol</a></li>
+				
+					<li><a href="../EventMachine/Protocols/LineText2.html">EventMachine::Protocols::LineText2</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Memcache.html">EventMachine::Protocols::Memcache</a></li>
+				
+					<li><a href="../EventMachine/Protocols/ObjectProtocol.html">EventMachine::Protocols::ObjectProtocol</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Postgres3.html">EventMachine::Protocols::Postgres3</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SASLauth.html">EventMachine::Protocols::SASLauth</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SASLauthclient.html">EventMachine::Protocols::SASLauthclient</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SmtpClient.html">EventMachine::Protocols::SmtpClient</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SmtpServer.html">EventMachine::Protocols::SmtpServer</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Socks4.html">EventMachine::Protocols::Socks4</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Stomp.html">EventMachine::Protocols::Stomp</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Stomp/Message.html">EventMachine::Protocols::Stomp::Message</a></li>
+				
+					<li><a href="../EventMachine/Queue.html">EventMachine::Queue</a></li>
+				
+					<li><a href="../EventMachine/Reactor.html">EventMachine::Reactor</a></li>
+				
+					<li><a href="../EventMachine/Selectable.html">EventMachine::Selectable</a></li>
+				
+					<li><a href="../EventMachine/SpawnedProcess.html">EventMachine::SpawnedProcess</a></li>
+				
+					<li><a href="../EventMachine/StreamObject.html">EventMachine::StreamObject</a></li>
+				
+					<li><a href="../EventMachine/Timer.html">EventMachine::Timer</a></li>
+				
+					<li><a href="../EventMachine/UnknownTimerFired.html">EventMachine::UnknownTimerFired</a></li>
+				
+					<li><a href="../EventMachine/Unsupported.html">EventMachine::Unsupported</a></li>
+				
+					<li><a href="../EventMachine/UuidGenerator.html">EventMachine::UuidGenerator</a></li>
+				
+					<li><a href="../Evma.html">Evma</a></li>
+				
+					<li><a href="../Evma/Container.html">Evma::Container</a></li>
+				
+					<li><a href="../Evma/ContainerHasObject.html">Evma::ContainerHasObject</a></li>
+				
+					<li><a href="../Evma/DatagramProtocol.html">Evma::DatagramProtocol</a></li>
+				
+					<li><a href="../Evma/Protocol.html">Evma::Protocol</a></li>
+				
+					<li><a href="../Evma/ProtocolFactory.html">Evma::ProtocolFactory</a></li>
+				
+					<li><a href="../Evma/Reactor.html">Evma::Reactor</a></li>
+				
+					<li><a href="../Evma/StreamProtocol.html">Evma::StreamProtocol</a></li>
+				
+					<li><a href="../Evma/TcpServerFactory.html">Evma::TcpServerFactory</a></li>
+				
+					<li><a href="../Evma/TcpSocket.html">Evma::TcpSocket</a></li>
+				
+					<li><a href="../Evma/UnknownTarget.html">Evma::UnknownTarget</a></li>
+				
+					<li><a href="../Evma/UnsupportedCallback.html">Evma::UnsupportedCallback</a></li>
+				
+					<li><a href="../BufferedTokenizer.html">BufferedTokenizer</a></li>
+				
+					<li><a href="../IO.html">IO</a></li>
+				
+					<li><a href="../JavaFields.html">JavaFields</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">EventMachine::Reactor</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="HeartbeatInterval">HeartbeatInterval</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="current-loop-time-attribute-method" class="method-detail">
+				<a name="current_loop_time"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">current_loop_time</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-selectable-method" class="method-detail ">
+				<a name="M000347"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_selectable</span><span
+						class="method-args">(io)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="add-selectable-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 303</span>
+303:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_selectable</span> <span class="ruby-identifier">io</span>
+304:     <span class="ruby-ivar">@selectables</span>[<span class="ruby-identifier">io</span>.<span class="ruby-identifier">uuid</span>] = <span class="ruby-identifier">io</span>
+305:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="close-loopbreaker-method" class="method-detail ">
+				<a name="M000355"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">close_loopbreaker</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="close-loopbreaker-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 406</span>
+406:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close_loopbreaker</span>
+407:     <span class="ruby-ivar">@loopbreak_writer</span>.<span class="ruby-identifier">close</span>
+408:     <span class="ruby-ivar">@loopbreak_writer</span> = <span class="ruby-keyword kw">nil</span>
+409:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="crank-selectables-method" class="method-detail ">
+				<a name="M000352"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">crank_selectables</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="crank-selectables-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 360</span>
+360:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">crank_selectables</span>
+361:       <span class="ruby-comment cmt">#$stderr.write 'R'</span>
+362: 
+363:       <span class="ruby-identifier">readers</span> = <span class="ruby-ivar">@selectables</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">select_for_reading?</span>}
+364:       <span class="ruby-identifier">writers</span> = <span class="ruby-ivar">@selectables</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">select_for_writing?</span>}
+365: 
+366:       <span class="ruby-identifier">s</span> = <span class="ruby-identifier">select</span>( <span class="ruby-identifier">readers</span>, <span class="ruby-identifier">writers</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-ivar">@timer_quantum</span>)
+367: 
+368:       <span class="ruby-identifier">s</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">1</span>] <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-identifier">w</span>.<span class="ruby-identifier">eventable_write</span> }
+369:       <span class="ruby-identifier">s</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">eventable_read</span> }
+370: 
+371:       <span class="ruby-ivar">@selectables</span>.<span class="ruby-identifier">delete_if</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">io</span><span class="ruby-operator">|</span>
+372:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">close_scheduled?</span>
+373:           <span class="ruby-identifier">io</span>.<span class="ruby-identifier">close</span>
+374:           <span class="ruby-keyword kw">true</span>
+375:         <span class="ruby-keyword kw">end</span>
+376:       }
+377:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-selectable-method" class="method-detail ">
+				<a name="M000348"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_selectable</span><span
+						class="method-args">(uuid)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-selectable-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 307</span>
+307:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_selectable</span> <span class="ruby-identifier">uuid</span>
+308:     <span class="ruby-ivar">@selectables</span>[<span class="ruby-identifier">uuid</span>]
+309:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="initialize-for-run-method" class="method-detail ">
+				<a name="M000346"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">initialize_for_run</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Called before run, this is a good place to clear out arrays with cruft that
+may be left over from a previous run.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="initialize-for-run-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 293</span>
+293:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_for_run</span>
+294:     <span class="ruby-ivar">@running</span> = <span class="ruby-keyword kw">false</span>
+295:     <span class="ruby-ivar">@stop_scheduled</span> = <span class="ruby-keyword kw">false</span>
+296:     <span class="ruby-ivar">@selectables</span> <span class="ruby-operator">||=</span> {}; <span class="ruby-ivar">@selectables</span>.<span class="ruby-identifier">clear</span>
+297:     <span class="ruby-ivar">@timers</span> = <span class="ruby-constant">SortedSet</span>.<span class="ruby-identifier">new</span> <span class="ruby-comment cmt"># []</span>
+298:     <span class="ruby-identifier">set_timer_quantum</span>(<span class="ruby-value">0.1</span>)
+299:     <span class="ruby-ivar">@current_loop_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+300:     <span class="ruby-ivar">@next_heartbeat</span> = <span class="ruby-ivar">@current_loop_time</span> <span class="ruby-operator">+</span> <span class="ruby-constant">HeartbeatInterval</span>
+301:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="install-oneshot-timer-method" class="method-detail ">
+				<a name="M000345"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">install_oneshot_timer</span><span
+						class="method-args">(interval)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="install-oneshot-timer-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 283</span>
+283:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">install_oneshot_timer</span> <span class="ruby-identifier">interval</span>
+284:     <span class="ruby-identifier">uuid</span> = <span class="ruby-constant">UuidGenerator</span><span class="ruby-operator">::</span><span class="ruby-identifier">generate</span>
+285:     <span class="ruby-comment cmt">#@timers &lt;&lt; [Time.now + interval, uuid]</span>
+286:     <span class="ruby-comment cmt">#@timers.sort! {|a,b| a.first &lt;=&gt; b.first}</span>
+287:     <span class="ruby-ivar">@timers</span>.<span class="ruby-identifier">add</span>([<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">interval</span>, <span class="ruby-identifier">uuid</span>])
+288:     <span class="ruby-identifier">uuid</span>
+289:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="open-loopbreaker-method" class="method-detail ">
+				<a name="M000354"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">open_loopbreaker</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="open-loopbreaker-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 385</span>
+385:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open_loopbreaker</span>
+386:     <span class="ruby-comment cmt"># Can't use an IO.pipe because they can't be set nonselectable in Windows.</span>
+387:     <span class="ruby-comment cmt"># Pick a random localhost UDP port.</span>
+388:     <span class="ruby-comment cmt">#@loopbreak_writer.close if @loopbreak_writer</span>
+389:     <span class="ruby-comment cmt">#rd,@loopbreak_writer = IO.pipe</span>
+390:     <span class="ruby-ivar">@loopbreak_reader</span> = <span class="ruby-constant">UDPSocket</span>.<span class="ruby-identifier">new</span>
+391:     <span class="ruby-ivar">@loopbreak_writer</span> = <span class="ruby-constant">UDPSocket</span>.<span class="ruby-identifier">new</span>
+392:     <span class="ruby-identifier">bound</span> = <span class="ruby-keyword kw">false</span>
+393:     <span class="ruby-value">100</span>.<span class="ruby-identifier">times</span> {
+394:       <span class="ruby-ivar">@loopbreak_port</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-value">10000</span>) <span class="ruby-operator">+</span> <span class="ruby-value">40000</span>
+395:       <span class="ruby-keyword kw">begin</span>
+396:         <span class="ruby-ivar">@loopbreak_reader</span>.<span class="ruby-identifier">bind</span> <span class="ruby-value str">&quot;localhost&quot;</span>, <span class="ruby-ivar">@loopbreak_port</span>
+397:         <span class="ruby-identifier">bound</span> = <span class="ruby-keyword kw">true</span>
+398:         <span class="ruby-keyword kw">break</span>
+399:       <span class="ruby-keyword kw">rescue</span>
+400:       <span class="ruby-keyword kw">end</span>
+401:     }
+402:     <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Unable to bind Loopbreaker&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">bound</span>
+403:     <span class="ruby-constant">LoopbreakReader</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@loopbreak_reader</span>)
+404:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="run-method" class="method-detail ">
+				<a name="M000349"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="run-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 311</span>
+311:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run</span>
+312:     <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value str">&quot;already running&quot;</span> ) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@running</span>
+313:     <span class="ruby-ivar">@running</span> = <span class="ruby-keyword kw">true</span>
+314: 
+315:     <span class="ruby-keyword kw">begin</span>
+316:       <span class="ruby-identifier">open_loopbreaker</span>
+317: 
+318:       <span class="ruby-identifier">loop</span> {
+319:         <span class="ruby-ivar">@current_loop_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+320: 
+321:         <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@stop_scheduled</span>
+322:         <span class="ruby-identifier">run_timers</span>
+323:         <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@stop_scheduled</span>
+324:         <span class="ruby-identifier">crank_selectables</span>
+325:         <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@stop_scheduled</span>
+326:         <span class="ruby-identifier">run_heartbeats</span>
+327:       }
+328:     <span class="ruby-keyword kw">ensure</span>
+329:       <span class="ruby-identifier">close_loopbreaker</span>
+330:       <span class="ruby-ivar">@selectables</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">io</span><span class="ruby-operator">|</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">close</span>}
+331:       <span class="ruby-ivar">@selectables</span>.<span class="ruby-identifier">clear</span>
+332: 
+333:       <span class="ruby-ivar">@running</span> = <span class="ruby-keyword kw">false</span>
+334:     <span class="ruby-keyword kw">end</span>
+335: 
+336:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="run-heartbeats-method" class="method-detail ">
+				<a name="M000351"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run_heartbeats</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="run-heartbeats-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 353</span>
+353:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run_heartbeats</span>
+354:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@next_heartbeat</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-ivar">@current_loop_time</span>
+355:       <span class="ruby-ivar">@next_heartbeat</span> = <span class="ruby-ivar">@current_loop_time</span> <span class="ruby-operator">+</span> <span class="ruby-constant">HeartbeatInterval</span>
+356:       <span class="ruby-ivar">@selectables</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">io</span><span class="ruby-operator">|</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">heartbeat</span>}
+357:     <span class="ruby-keyword kw">end</span>
+358:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="run-timers-method" class="method-detail ">
+				<a name="M000350"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run_timers</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="run-timers-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 338</span>
+338:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run_timers</span>
+339:     <span class="ruby-ivar">@timers</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+340:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-ivar">@current_loop_time</span>
+341:         <span class="ruby-ivar">@timers</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">t</span>
+342:         <span class="ruby-constant">EventMachine</span><span class="ruby-operator">::</span><span class="ruby-identifier">event_callback</span> <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-constant">TimerFired</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">last</span>
+343:       <span class="ruby-keyword kw">else</span>
+344:         <span class="ruby-keyword kw">break</span>
+345:       <span class="ruby-keyword kw">end</span>
+346:     }
+347:     <span class="ruby-comment cmt">#while @timers.length &gt; 0 and @timers.first.first &lt;= now</span>
+348:     <span class="ruby-comment cmt">#  t = @timers.shift</span>
+349:     <span class="ruby-comment cmt">#  EventMachine::event_callback &quot;&quot;, TimerFired, t.last</span>
+350:     <span class="ruby-comment cmt">#end</span>
+351:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-timer-quantum-method" class="method-detail ">
+				<a name="M000357"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_timer_quantum</span><span
+						class="method-args">(interval_in_seconds)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="set-timer-quantum-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 416</span>
+416:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_timer_quantum</span> <span class="ruby-identifier">interval_in_seconds</span>
+417:     <span class="ruby-ivar">@timer_quantum</span> = <span class="ruby-identifier">interval_in_seconds</span>
+418:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="signal-loopbreak-method" class="method-detail ">
+				<a name="M000356"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">signal_loopbreak</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="signal-loopbreak-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 411</span>
+411:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">signal_loopbreak</span>
+412:     <span class="ruby-comment cmt">#@loopbreak_writer.write '+' if @loopbreak_writer</span>
+413:     <span class="ruby-ivar">@loopbreak_writer</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value str">'+'</span>,<span class="ruby-value">0</span>,<span class="ruby-value str">&quot;localhost&quot;</span>,<span class="ruby-ivar">@loopbreak_port</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@loopbreak_writer</span>
+414:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stop-method" class="method-detail ">
+				<a name="M000353"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stop</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+stop
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="stop-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 380</span>
+380:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stop</span>
+381:     <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value str">&quot;not running&quot;</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@running</span>
+382:     <span class="ruby-ivar">@stop_scheduled</span> = <span class="ruby-keyword kw">true</span>
+383:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000344"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 277</span>
+277:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+278:     <span class="ruby-identifier">initialize_for_run</span>
+279:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

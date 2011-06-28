@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: EventMachine::EvmaUNIXServer</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/pr_eventmachine_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/pr_eventmachine.rb">lib/pr_eventmachine.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Selectable.html">EventMachine::Selectable</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000395">::new</a></li>
+					
+					<li><a href="#M000394">::start_server</a></li>
+					
+					<li><a href="#M000397">#eventable_read</a></li>
+					
+					<li><a href="#M000398">#schedule_close</a></li>
+					
+					<li><a href="#M000396">#select_for_reading?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../EventMachine/Channel.html">EventMachine::Channel</a></li>
+				
+					<li><a href="../EventMachine/Connection.html">EventMachine::Connection</a></li>
+				
+					<li><a href="../EventMachine/ConnectionNotBound.html">EventMachine::ConnectionNotBound</a></li>
+				
+					<li><a href="../EventMachine/DatagramObject.html">EventMachine::DatagramObject</a></li>
+				
+					<li><a href="../EventMachine/DefaultDeferrable.html">EventMachine::DefaultDeferrable</a></li>
+				
+					<li><a href="../EventMachine/Deferrable.html">EventMachine::Deferrable</a></li>
+				
+					<li><a href="../EventMachine/DeferrableChildProcess.html">EventMachine::DeferrableChildProcess</a></li>
+				
+					<li><a href="../EventMachine/Error.html">EventMachine::Error</a></li>
+				
+					<li><a href="../EventMachine/EvmaKeyboard.html">EventMachine::EvmaKeyboard</a></li>
+				
+					<li><a href="../EventMachine/EvmaTCPClient.html">EventMachine::EvmaTCPClient</a></li>
+				
+					<li><a href="../EventMachine/EvmaTCPServer.html">EventMachine::EvmaTCPServer</a></li>
+				
+					<li><a href="../EventMachine/EvmaUDPSocket.html">EventMachine::EvmaUDPSocket</a></li>
+				
+					<li><a href="../EventMachine/EvmaUNIXClient.html">EventMachine::EvmaUNIXClient</a></li>
+				
+					<li><a href="../EventMachine/EvmaUNIXServer.html">EventMachine::EvmaUNIXServer</a></li>
+				
+					<li><a href="../EventMachine/FileStreamer.html">EventMachine::FileStreamer</a></li>
+				
+					<li><a href="../EventMachine/FileWatch.html">EventMachine::FileWatch</a></li>
+				
+					<li><a href="../EventMachine/JEM.html">EventMachine::JEM</a></li>
+				
+					<li><a href="../EventMachine/LoopbreakReader.html">EventMachine::LoopbreakReader</a></li>
+				
+					<li><a href="../EventMachine/PeriodicTimer.html">EventMachine::PeriodicTimer</a></li>
+				
+					<li><a href="../EventMachine/ProcessWatch.html">EventMachine::ProcessWatch</a></li>
+				
+					<li><a href="../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../EventMachine/Protocols/HeaderAndContentProtocol.html">EventMachine::Protocols::HeaderAndContentProtocol</a></li>
+				
+					<li><a href="../EventMachine/Protocols/HttpClient.html">EventMachine::Protocols::HttpClient</a></li>
+				
+					<li><a href="../EventMachine/Protocols/HttpClient2.html">EventMachine::Protocols::HttpClient2</a></li>
+				
+					<li><a href="../EventMachine/Protocols/LineAndTextProtocol.html">EventMachine::Protocols::LineAndTextProtocol</a></li>
+				
+					<li><a href="../EventMachine/Protocols/LineText2.html">EventMachine::Protocols::LineText2</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Memcache.html">EventMachine::Protocols::Memcache</a></li>
+				
+					<li><a href="../EventMachine/Protocols/ObjectProtocol.html">EventMachine::Protocols::ObjectProtocol</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Postgres3.html">EventMachine::Protocols::Postgres3</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SASLauth.html">EventMachine::Protocols::SASLauth</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SASLauthclient.html">EventMachine::Protocols::SASLauthclient</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SmtpClient.html">EventMachine::Protocols::SmtpClient</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SmtpServer.html">EventMachine::Protocols::SmtpServer</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Socks4.html">EventMachine::Protocols::Socks4</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Stomp.html">EventMachine::Protocols::Stomp</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Stomp/Message.html">EventMachine::Protocols::Stomp::Message</a></li>
+				
+					<li><a href="../EventMachine/Queue.html">EventMachine::Queue</a></li>
+				
+					<li><a href="../EventMachine/Reactor.html">EventMachine::Reactor</a></li>
+				
+					<li><a href="../EventMachine/Selectable.html">EventMachine::Selectable</a></li>
+				
+					<li><a href="../EventMachine/SpawnedProcess.html">EventMachine::SpawnedProcess</a></li>
+				
+					<li><a href="../EventMachine/StreamObject.html">EventMachine::StreamObject</a></li>
+				
+					<li><a href="../EventMachine/Timer.html">EventMachine::Timer</a></li>
+				
+					<li><a href="../EventMachine/UnknownTimerFired.html">EventMachine::UnknownTimerFired</a></li>
+				
+					<li><a href="../EventMachine/Unsupported.html">EventMachine::Unsupported</a></li>
+				
+					<li><a href="../EventMachine/UuidGenerator.html">EventMachine::UuidGenerator</a></li>
+				
+					<li><a href="../Evma.html">Evma</a></li>
+				
+					<li><a href="../Evma/Container.html">Evma::Container</a></li>
+				
+					<li><a href="../Evma/ContainerHasObject.html">Evma::ContainerHasObject</a></li>
+				
+					<li><a href="../Evma/DatagramProtocol.html">Evma::DatagramProtocol</a></li>
+				
+					<li><a href="../Evma/Protocol.html">Evma::Protocol</a></li>
+				
+					<li><a href="../Evma/ProtocolFactory.html">Evma::ProtocolFactory</a></li>
+				
+					<li><a href="../Evma/Reactor.html">Evma::Reactor</a></li>
+				
+					<li><a href="../Evma/StreamProtocol.html">Evma::StreamProtocol</a></li>
+				
+					<li><a href="../Evma/TcpServerFactory.html">Evma::TcpServerFactory</a></li>
+				
+					<li><a href="../Evma/TcpSocket.html">Evma::TcpSocket</a></li>
+				
+					<li><a href="../Evma/UnknownTarget.html">Evma::UnknownTarget</a></li>
+				
+					<li><a href="../Evma/UnsupportedCallback.html">Evma::UnsupportedCallback</a></li>
+				
+					<li><a href="../BufferedTokenizer.html">BufferedTokenizer</a></li>
+				
+					<li><a href="../IO.html">IO</a></li>
+				
+					<li><a href="../JavaFields.html">JavaFields</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">EventMachine::EvmaUNIXServer</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="eventable-read-method" class="method-detail ">
+				<a name="M000397"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eventable_read</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="eventable-read-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 865</span>
+865:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eventable_read</span>
+866:       <span class="ruby-keyword kw">begin</span>
+867:         <span class="ruby-value">10</span>.<span class="ruby-identifier">times</span> {
+868:           <span class="ruby-identifier">descriptor</span>,<span class="ruby-identifier">peername</span> = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">accept_nonblock</span>
+869:           <span class="ruby-identifier">sd</span> = <span class="ruby-constant">StreamObject</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">descriptor</span>
+870:           <span class="ruby-constant">EventMachine</span><span class="ruby-operator">::</span><span class="ruby-identifier">event_callback</span> <span class="ruby-identifier">uuid</span>, <span class="ruby-constant">ConnectionAccepted</span>, <span class="ruby-identifier">sd</span>.<span class="ruby-identifier">uuid</span>
+871:         }
+872:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EWOULDBLOCK</span>, <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EAGAIN</span>
+873:       <span class="ruby-keyword kw">end</span>
+874:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="schedule-close-method" class="method-detail ">
+				<a name="M000398"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">schedule_close</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="schedule-close-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 878</span>
+878:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">schedule_close</span>
+879:       <span class="ruby-ivar">@close_scheduled</span> = <span class="ruby-keyword kw">true</span>
+880:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="select-for-reading--method" class="method-detail ">
+				<a name="M000396"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">select_for_reading?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="select-for-reading--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 857</span>
+857:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select_for_reading?</span>
+858:       <span class="ruby-keyword kw">true</span>
+859:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000395"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(io)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 852</span>
+852:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">io</span>
+853:       <span class="ruby-keyword kw">super</span> <span class="ruby-identifier">io</span>
+854:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="start-server-method" class="method-detail ">
+				<a name="M000394"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">start_server</span><span
+						class="method-args">(chain)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Versions of ruby 1.8.4 later than May 26 2006 will work properly with an
+object of type TCPServer. Prior versions won&#8217;t so we play it safe and
+just build a socket.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="start-server-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/pr_eventmachine.rb, line 843</span>
+843:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">start_server</span> <span class="ruby-identifier">chain</span>
+844:         <span class="ruby-identifier">sd</span> = <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">new</span>( <span class="ruby-constant">Socket</span><span class="ruby-operator">::</span><span class="ruby-constant">AF_LOCAL</span>, <span class="ruby-constant">Socket</span><span class="ruby-operator">::</span><span class="ruby-constant">SOCK_STREAM</span>, <span class="ruby-value">0</span> )
+845:         <span class="ruby-identifier">sd</span>.<span class="ruby-identifier">setsockopt</span>( <span class="ruby-constant">Socket</span><span class="ruby-operator">::</span><span class="ruby-constant">SOL_SOCKET</span>, <span class="ruby-constant">Socket</span><span class="ruby-operator">::</span><span class="ruby-constant">SO_REUSEADDR</span>, <span class="ruby-keyword kw">true</span> )
+846:         <span class="ruby-identifier">sd</span>.<span class="ruby-identifier">bind</span>( <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">pack_sockaddr_un</span>( <span class="ruby-identifier">chain</span> ))
+847:         <span class="ruby-identifier">sd</span>.<span class="ruby-identifier">listen</span>( <span class="ruby-value">50</span> ) <span class="ruby-comment cmt"># 5 is what you see in all the books. Ain't enough.</span>
+848:         <span class="ruby-constant">EvmaUNIXServer</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">sd</span>
+849:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

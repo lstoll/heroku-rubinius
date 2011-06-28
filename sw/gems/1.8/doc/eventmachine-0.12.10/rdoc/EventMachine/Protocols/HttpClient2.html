@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: EventMachine::Protocols::HttpClient2</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/em/protocols/httpclient2_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/em/protocols/httpclient2.rb">lib/em/protocols/httpclient2.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../Connection.html">EventMachine::Connection</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="HttpClient2/Request.html">EventMachine::Protocols::HttpClient2::Request</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000114">::connect</a></li>
+					
+					<li><a href="#M000113">::new</a></li>
+					
+					<li><a href="#M000115">#get</a></li>
+					
+					<li><a href="#M000116">#post</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">LineText2</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../../EventMachine/Channel.html">EventMachine::Channel</a></li>
+				
+					<li><a href="../../EventMachine/Connection.html">EventMachine::Connection</a></li>
+				
+					<li><a href="../../EventMachine/ConnectionNotBound.html">EventMachine::ConnectionNotBound</a></li>
+				
+					<li><a href="../../EventMachine/DatagramObject.html">EventMachine::DatagramObject</a></li>
+				
+					<li><a href="../../EventMachine/DefaultDeferrable.html">EventMachine::DefaultDeferrable</a></li>
+				
+					<li><a href="../../EventMachine/Deferrable.html">EventMachine::Deferrable</a></li>
+				
+					<li><a href="../../EventMachine/DeferrableChildProcess.html">EventMachine::DeferrableChildProcess</a></li>
+				
+					<li><a href="../../EventMachine/Error.html">EventMachine::Error</a></li>
+				
+					<li><a href="../../EventMachine/EvmaKeyboard.html">EventMachine::EvmaKeyboard</a></li>
+				
+					<li><a href="../../EventMachine/EvmaTCPClient.html">EventMachine::EvmaTCPClient</a></li>
+				
+					<li><a href="../../EventMachine/EvmaTCPServer.html">EventMachine::EvmaTCPServer</a></li>
+				
+					<li><a href="../../EventMachine/EvmaUDPSocket.html">EventMachine::EvmaUDPSocket</a></li>
+				
+					<li><a href="../../EventMachine/EvmaUNIXClient.html">EventMachine::EvmaUNIXClient</a></li>
+				
+					<li><a href="../../EventMachine/EvmaUNIXServer.html">EventMachine::EvmaUNIXServer</a></li>
+				
+					<li><a href="../../EventMachine/FileStreamer.html">EventMachine::FileStreamer</a></li>
+				
+					<li><a href="../../EventMachine/FileWatch.html">EventMachine::FileWatch</a></li>
+				
+					<li><a href="../../EventMachine/JEM.html">EventMachine::JEM</a></li>
+				
+					<li><a href="../../EventMachine/LoopbreakReader.html">EventMachine::LoopbreakReader</a></li>
+				
+					<li><a href="../../EventMachine/PeriodicTimer.html">EventMachine::PeriodicTimer</a></li>
+				
+					<li><a href="../../EventMachine/ProcessWatch.html">EventMachine::ProcessWatch</a></li>
+				
+					<li><a href="../../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/HeaderAndContentProtocol.html">EventMachine::Protocols::HeaderAndContentProtocol</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/HttpClient.html">EventMachine::Protocols::HttpClient</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/HttpClient2.html">EventMachine::Protocols::HttpClient2</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/LineAndTextProtocol.html">EventMachine::Protocols::LineAndTextProtocol</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/LineText2.html">EventMachine::Protocols::LineText2</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Memcache.html">EventMachine::Protocols::Memcache</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/ObjectProtocol.html">EventMachine::Protocols::ObjectProtocol</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Postgres3.html">EventMachine::Protocols::Postgres3</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SASLauth.html">EventMachine::Protocols::SASLauth</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SASLauthclient.html">EventMachine::Protocols::SASLauthclient</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SmtpClient.html">EventMachine::Protocols::SmtpClient</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SmtpServer.html">EventMachine::Protocols::SmtpServer</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Socks4.html">EventMachine::Protocols::Socks4</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Stomp.html">EventMachine::Protocols::Stomp</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Stomp/Message.html">EventMachine::Protocols::Stomp::Message</a></li>
+				
+					<li><a href="../../EventMachine/Queue.html">EventMachine::Queue</a></li>
+				
+					<li><a href="../../EventMachine/Reactor.html">EventMachine::Reactor</a></li>
+				
+					<li><a href="../../EventMachine/Selectable.html">EventMachine::Selectable</a></li>
+				
+					<li><a href="../../EventMachine/SpawnedProcess.html">EventMachine::SpawnedProcess</a></li>
+				
+					<li><a href="../../EventMachine/StreamObject.html">EventMachine::StreamObject</a></li>
+				
+					<li><a href="../../EventMachine/Timer.html">EventMachine::Timer</a></li>
+				
+					<li><a href="../../EventMachine/UnknownTimerFired.html">EventMachine::UnknownTimerFired</a></li>
+				
+					<li><a href="../../EventMachine/Unsupported.html">EventMachine::Unsupported</a></li>
+				
+					<li><a href="../../EventMachine/UuidGenerator.html">EventMachine::UuidGenerator</a></li>
+				
+					<li><a href="../../Evma.html">Evma</a></li>
+				
+					<li><a href="../../Evma/Container.html">Evma::Container</a></li>
+				
+					<li><a href="../../Evma/ContainerHasObject.html">Evma::ContainerHasObject</a></li>
+				
+					<li><a href="../../Evma/DatagramProtocol.html">Evma::DatagramProtocol</a></li>
+				
+					<li><a href="../../Evma/Protocol.html">Evma::Protocol</a></li>
+				
+					<li><a href="../../Evma/ProtocolFactory.html">Evma::ProtocolFactory</a></li>
+				
+					<li><a href="../../Evma/Reactor.html">Evma::Reactor</a></li>
+				
+					<li><a href="../../Evma/StreamProtocol.html">Evma::StreamProtocol</a></li>
+				
+					<li><a href="../../Evma/TcpServerFactory.html">Evma::TcpServerFactory</a></li>
+				
+					<li><a href="../../Evma/TcpSocket.html">Evma::TcpSocket</a></li>
+				
+					<li><a href="../../Evma/UnknownTarget.html">Evma::UnknownTarget</a></li>
+				
+					<li><a href="../../Evma/UnsupportedCallback.html">Evma::UnsupportedCallback</a></li>
+				
+					<li><a href="../../BufferedTokenizer.html">BufferedTokenizer</a></li>
+				
+					<li><a href="../../IO.html">IO</a></li>
+				
+					<li><a href="../../JavaFields.html">JavaFields</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">EventMachine::Protocols::HttpClient2</h1>
+
+		<div id="description">
+			<h3>Usage</h3>
+<pre>
+ EM.run{
+   conn = EM::Protocols::HttpClient2.connect 'google.com', 80
+
+   req = conn.get('/')
+   req.callback{ |response|
+     p(response.status)
+     p(response.headers)
+     p(response.content)
+   }
+ }</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="get-method" class="method-detail ">
+				<a name="M000115"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Get a url
+</p>
+<pre>
+ req = conn.get(:uri =&gt; '/')
+ req.callback{|response| puts response.content }</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="get-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/protocols/httpclient2.rb, line 260</span>
+260:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get</span> <span class="ruby-identifier">args</span>
+261:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+262:           <span class="ruby-identifier">args</span> = {<span class="ruby-value">:uri=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">args</span>}
+263:         <span class="ruby-keyword kw">end</span>
+264:         <span class="ruby-identifier">args</span>[<span class="ruby-value">:verb</span>] = <span class="ruby-value str">&quot;GET&quot;</span>
+265:         <span class="ruby-identifier">request</span> <span class="ruby-identifier">args</span>
+266:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="post-method" class="method-detail ">
+				<a name="M000116"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">post</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Post to a url
+</p>
+<pre>
+ req = conn.post('/data')
+ req.callback{|response| puts response.content }</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="post-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/protocols/httpclient2.rb, line 274</span>
+274:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">post</span> <span class="ruby-identifier">args</span>
+275:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+276:           <span class="ruby-identifier">args</span> = {<span class="ruby-value">:uri=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">args</span>}
+277:         <span class="ruby-keyword kw">end</span>
+278:         <span class="ruby-identifier">args</span>[<span class="ruby-value">:verb</span>] = <span class="ruby-value str">&quot;POST&quot;</span>
+279:         <span class="ruby-identifier">request</span> <span class="ruby-identifier">args</span>
+280:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="connect-method" class="method-detail ">
+				<a name="M000114"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">connect</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Make a connection to a remote HTTP server. Can take either a pair of
+arguments (which will be interpreted as a hostname/ip-address and a port),
+or a hash. If the arguments are a hash, then supported values include:
+</p>
+<pre>
+ :host =&gt; a hostname or ip-address
+ :port =&gt; a port number
+ :ssl =&gt; true to enable ssl</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="connect-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/protocols/httpclient2.rb, line 241</span>
+241:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">connect</span> *<span class="ruby-identifier">args</span>
+242:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+243:           <span class="ruby-identifier">args</span> = {<span class="ruby-value">:host=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>], <span class="ruby-value">:port=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>]}
+244:         <span class="ruby-keyword kw">else</span>
+245:           <span class="ruby-identifier">args</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>
+246:         <span class="ruby-keyword kw">end</span>
+247: 
+248:         <span class="ruby-identifier">h</span>,<span class="ruby-identifier">prt</span>,<span class="ruby-identifier">ssl</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:host</span>], <span class="ruby-constant">Integer</span>(<span class="ruby-identifier">args</span>[<span class="ruby-value">:port</span>]), (<span class="ruby-identifier">args</span>[<span class="ruby-value">:tls</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:ssl</span>])
+249:         <span class="ruby-identifier">conn</span> = <span class="ruby-constant">EM</span>.<span class="ruby-identifier">connect</span>( <span class="ruby-identifier">h</span>, <span class="ruby-identifier">prt</span>, <span class="ruby-keyword kw">self</span> )
+250:         <span class="ruby-identifier">conn</span>.<span class="ruby-identifier">start_tls</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ssl</span>
+251:         <span class="ruby-identifier">conn</span>.<span class="ruby-identifier">set_default_host_header</span>( <span class="ruby-identifier">h</span>, <span class="ruby-identifier">prt</span>, <span class="ruby-identifier">ssl</span> )
+252:         <span class="ruby-identifier">conn</span>
+253:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000113"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/em/protocols/httpclient2.rb, line 44</span>
+44:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+45:         <span class="ruby-ivar">@authorization</span> = <span class="ruby-keyword kw">nil</span>
+46:         <span class="ruby-ivar">@closed</span> = <span class="ruby-keyword kw">nil</span>
+47:         <span class="ruby-ivar">@requests</span> = <span class="ruby-keyword kw">nil</span>
+48:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

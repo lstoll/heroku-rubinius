@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Thin::Daemonizable</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/thin/daemonizing_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/thin/daemonizing.rb">lib/thin/daemonizing.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="Daemonizable/ClassMethods.html">Thin::Daemonizable::ClassMethods</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000118">::included</a></li>
+					
+					<li><a href="#M000121">#change_privilege</a></li>
+					
+					<li><a href="#M000120">#daemonize</a></li>
+					
+					<li><a href="#M000122">#on_restart</a></li>
+					
+					<li><a href="#M000119">#pid</a></li>
+					
+					<li><a href="#M000129">#remove_pid_file</a></li>
+					
+					<li><a href="#M000131">#remove_stale_pid_file</a></li>
+					
+					<li><a href="#M000123">#restart</a></li>
+					
+					<li><a href="#M000130">#write_pid_file</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Thin.html">Thin</a></li>
+				
+					<li><a href="../Thin/Backends.html">Thin::Backends</a></li>
+				
+					<li><a href="../Thin/Backends/Base.html">Thin::Backends::Base</a></li>
+				
+					<li><a href="../Thin/Backends/SwiftiplyClient.html">Thin::Backends::SwiftiplyClient</a></li>
+				
+					<li><a href="../Thin/Backends/TcpServer.html">Thin::Backends::TcpServer</a></li>
+				
+					<li><a href="../Thin/Backends/UnixServer.html">Thin::Backends::UnixServer</a></li>
+				
+					<li><a href="../Thin/Command.html">Thin::Command</a></li>
+				
+					<li><a href="../Thin/Connection.html">Thin::Connection</a></li>
+				
+					<li><a href="../Thin/Controllers.html">Thin::Controllers</a></li>
+				
+					<li><a href="../Thin/Controllers/Cluster.html">Thin::Controllers::Cluster</a></li>
+				
+					<li><a href="../Thin/Controllers/Controller.html">Thin::Controllers::Controller</a></li>
+				
+					<li><a href="../Thin/Controllers/Service.html">Thin::Controllers::Service</a></li>
+				
+					<li><a href="../Thin/Daemonizable.html">Thin::Daemonizable</a></li>
+				
+					<li><a href="../Thin/Daemonizable/ClassMethods.html">Thin::Daemonizable::ClassMethods</a></li>
+				
+					<li><a href="../Thin/Headers.html">Thin::Headers</a></li>
+				
+					<li><a href="../Thin/InvalidOption.html">Thin::InvalidOption</a></li>
+				
+					<li><a href="../Thin/InvalidRequest.html">Thin::InvalidRequest</a></li>
+				
+					<li><a href="../Thin/Logging.html">Thin::Logging</a></li>
+				
+					<li><a href="../Thin/OptionRequired.html">Thin::OptionRequired</a></li>
+				
+					<li><a href="../Thin/PidFileExist.html">Thin::PidFileExist</a></li>
+				
+					<li><a href="../Thin/PlatformNotSupported.html">Thin::PlatformNotSupported</a></li>
+				
+					<li><a href="../Thin/Request.html">Thin::Request</a></li>
+				
+					<li><a href="../Thin/Response.html">Thin::Response</a></li>
+				
+					<li><a href="../Thin/RestartTimeout.html">Thin::RestartTimeout</a></li>
+				
+					<li><a href="../Thin/Runner.html">Thin::Runner</a></li>
+				
+					<li><a href="../Thin/RunnerError.html">Thin::RunnerError</a></li>
+				
+					<li><a href="../Thin/Server.html">Thin::Server</a></li>
+				
+					<li><a href="../Thin/Stats.html">Thin::Stats</a></li>
+				
+					<li><a href="../Thin/Stats/Adapter.html">Thin::Stats::Adapter</a></li>
+				
+					<li><a href="../Thin/SwiftiplyConnection.html">Thin::SwiftiplyConnection</a></li>
+				
+					<li><a href="../Thin/UnixConnection.html">Thin::UnixConnection</a></li>
+				
+					<li><a href="../Rack.html">Rack</a></li>
+				
+					<li><a href="../Rack/Adapter.html">Rack::Adapter</a></li>
+				
+					<li><a href="../Rack/Adapter/Rails.html">Rack::Adapter::Rails</a></li>
+				
+					<li><a href="../Rack/Adapter/Rails/CGIWrapper.html">Rack::Adapter::Rails::CGIWrapper</a></li>
+				
+					<li><a href="../Rack/Adapter/Rails/CgiApp.html">Rack::Adapter::Rails::CgiApp</a></li>
+				
+					<li><a href="../Rack/AdapterNotFound.html">Rack::AdapterNotFound</a></li>
+				
+					<li><a href="../Process.html">Process</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Thin::Daemonizable</h1>
+
+		<div id="description">
+			<p>
+Module included in classes that can be turned into a daemon. Handle stuff
+like:
+</p>
+<ul>
+<li><p>
+storing the PID in a file
+</p>
+</li>
+<li><p>
+redirecting output to the log file
+</p>
+</li>
+<li><p>
+changing processs privileges
+</p>
+</li>
+<li><p>
+killing the process gracefully
+</p>
+</li>
+</ul>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="pid-file-attribute-method" class="method-detail">
+				<a name="pid_file"></a>
+				
+				<a name="pid_file="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">pid_file</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="log-file-attribute-method" class="method-detail">
+				<a name="log_file"></a>
+				
+				<a name="log_file="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">log_file</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="change-privilege-method" class="method-detail ">
+				<a name="M000121"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">change_privilege</span><span
+						class="method-args">(user, group=user)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Change privileges of the process to the specified user and group.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="change-privilege-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/daemonizing.rb, line 65</span>
+65:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">change_privilege</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">group</span>=<span class="ruby-identifier">user</span>)
+66:       <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;&gt;&gt; Changing process privilege to #{user}:#{group}&quot;</span>
+67:       
+68:       <span class="ruby-identifier">uid</span>, <span class="ruby-identifier">gid</span> = <span class="ruby-constant">Process</span>.<span class="ruby-identifier">euid</span>, <span class="ruby-constant">Process</span>.<span class="ruby-identifier">egid</span>
+69:       <span class="ruby-identifier">target_uid</span> = <span class="ruby-constant">Etc</span>.<span class="ruby-identifier">getpwnam</span>(<span class="ruby-identifier">user</span>).<span class="ruby-identifier">uid</span>
+70:       <span class="ruby-identifier">target_gid</span> = <span class="ruby-constant">Etc</span>.<span class="ruby-identifier">getgrnam</span>(<span class="ruby-identifier">group</span>).<span class="ruby-identifier">gid</span>
+71: 
+72:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">uid</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">target_uid</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">gid</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">target_gid</span>
+73:         <span class="ruby-comment cmt"># Change process ownership</span>
+74:         <span class="ruby-constant">Process</span>.<span class="ruby-identifier">initgroups</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">target_gid</span>)
+75:         <span class="ruby-constant">Process</span><span class="ruby-operator">::</span><span class="ruby-constant">GID</span>.<span class="ruby-identifier">change_privilege</span>(<span class="ruby-identifier">target_gid</span>)
+76:         <span class="ruby-constant">Process</span><span class="ruby-operator">::</span><span class="ruby-constant">UID</span>.<span class="ruby-identifier">change_privilege</span>(<span class="ruby-identifier">target_uid</span>)
+77:       <span class="ruby-keyword kw">end</span>
+78:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EPERM</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+79:       <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;Couldn't change user and group to #{user}:#{group}: #{e}&quot;</span>
+80:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="daemonize-method" class="method-detail ">
+				<a name="M000120"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">daemonize</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Turns the current script into a daemon process that detaches from the
+console.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="daemonize-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/daemonizing.rb, line 38</span>
+38:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">daemonize</span>
+39:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">PlatformNotSupported</span>, <span class="ruby-value str">'Daemonizing is not supported on Windows'</span>     <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Thin</span>.<span class="ruby-identifier">win?</span>
+40:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>,        <span class="ruby-value str">'You must specify a pid_file to daemonize'</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@pid_file</span>
+41:       
+42:       <span class="ruby-identifier">remove_stale_pid_file</span>
+43:       
+44:       <span class="ruby-identifier">pwd</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span> <span class="ruby-comment cmt"># Current directory is changed during daemonization, so store it</span>
+45:       
+46:       <span class="ruby-comment cmt"># HACK we need to create the directory before daemonization to prevent a bug under 1.9</span>
+47:       <span class="ruby-comment cmt">#      ignoring all signals when the directory is created after daemonization.</span>
+48:       <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-ivar">@pid_file</span>)
+49:       <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-ivar">@log_file</span>)
+50:       
+51:       <span class="ruby-constant">Daemonize</span>.<span class="ruby-identifier">daemonize</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-ivar">@log_file</span>), <span class="ruby-identifier">name</span>)
+52:       
+53:       <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-identifier">pwd</span>)
+54:       
+55:       <span class="ruby-identifier">write_pid_file</span>
+56:       
+57:       <span class="ruby-identifier">at_exit</span> <span class="ruby-keyword kw">do</span>
+58:         <span class="ruby-identifier">log</span> <span class="ruby-value str">&quot;&gt;&gt; Exiting!&quot;</span>
+59:         <span class="ruby-identifier">remove_pid_file</span>
+60:       <span class="ruby-keyword kw">end</span>
+61:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="on-restart-method" class="method-detail ">
+				<a name="M000122"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">on_restart</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Register a proc to be called to restart the server.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="on-restart-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/daemonizing.rb, line 83</span>
+83:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_restart</span>(&amp;<span class="ruby-identifier">block</span>)
+84:       <span class="ruby-ivar">@on_restart</span> = <span class="ruby-identifier">block</span>
+85:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pid-method" class="method-detail ">
+				<a name="M000119"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pid</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="pid-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/daemonizing.rb, line 33</span>
+33:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pid</span>
+34:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">pid_file</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">open</span>(<span class="ruby-identifier">pid_file</span>).<span class="ruby-identifier">read</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+35:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="restart-method" class="method-detail ">
+				<a name="M000123"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">restart</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Restart the server.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="restart-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/daemonizing.rb, line 88</span>
+88:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">restart</span>
+89:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@on_restart</span>
+90:         <span class="ruby-identifier">log</span> <span class="ruby-value str">'&gt;&gt; Restarting ...'</span>
+91:         <span class="ruby-identifier">stop</span>
+92:         <span class="ruby-identifier">remove_pid_file</span>
+93:         <span class="ruby-ivar">@on_restart</span>.<span class="ruby-identifier">call</span>
+94:         <span class="ruby-identifier">exit!</span>
+95:       <span class="ruby-keyword kw">end</span>
+96:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="remove-pid-file-method" class="method-detail ">
+				<a name="M000129"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">remove_pid_file</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="remove-pid-file-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/daemonizing.rb, line 157</span>
+157:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_pid_file</span>
+158:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@pid_file</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@pid_file</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-ivar">@pid_file</span>)
+159:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="remove-stale-pid-file-method" class="method-detail ">
+				<a name="M000131"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">remove_stale_pid_file</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+If PID file is stale, remove it.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="remove-stale-pid-file-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/daemonizing.rb, line 168</span>
+168:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_stale_pid_file</span>
+169:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-ivar">@pid_file</span>)
+170:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">pid</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Process</span>.<span class="ruby-identifier">running?</span>(<span class="ruby-identifier">pid</span>)
+171:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">PidFileExist</span>, <span class="ruby-node">&quot;#{@pid_file} already exists, seems like it's already running (process ID: #{pid}). &quot;</span> <span class="ruby-operator">+</span>
+172:                                 <span class="ruby-node">&quot;Stop the process or delete #{@pid_file}.&quot;</span>
+173:           <span class="ruby-keyword kw">else</span>
+174:             <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;&gt;&gt; Deleting stale PID file #{@pid_file}&quot;</span>
+175:             <span class="ruby-identifier">remove_pid_file</span>
+176:           <span class="ruby-keyword kw">end</span>
+177:         <span class="ruby-keyword kw">end</span>
+178:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-pid-file-method" class="method-detail ">
+				<a name="M000130"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_pid_file</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-pid-file-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/thin/daemonizing.rb, line 161</span>
+161:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_pid_file</span>
+162:         <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;&gt;&gt; Writing PID to #{@pid_file}&quot;</span>
+163:         <span class="ruby-identifier">open</span>(<span class="ruby-ivar">@pid_file</span>,<span class="ruby-value str">&quot;w&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>) }
+164:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">chmod</span>(<span class="ruby-value">0644</span>, <span class="ruby-ivar">@pid_file</span>)
+165:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="included-method" class="method-detail ">
+				<a name="M000118"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">included</span><span
+						class="method-args">(base)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="included-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/thin/daemonizing.rb, line 29</span>
+29:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">included</span>(<span class="ruby-identifier">base</span>)
+30:       <span class="ruby-identifier">base</span>.<span class="ruby-identifier">extend</span> <span class="ruby-constant">ClassMethods</span>
+31:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

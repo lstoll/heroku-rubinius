@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: EventMachine::Protocols::LineAndTextProtocol</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/em/protocols/line_and_text_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/em/protocols/line_and_text.rb">lib/em/protocols/line_and_text.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../Connection.html">EventMachine::Connection</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000117">::new</a></li>
+					
+					<li><a href="#M000121">#lbp_init_line_state</a></li>
+					
+					<li><a href="#M000118">#receive_data</a></li>
+					
+					<li><a href="#M000120">#set_binary_mode</a></li>
+					
+					<li><a href="#M000119">#unbind</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../../EventMachine/Channel.html">EventMachine::Channel</a></li>
+				
+					<li><a href="../../EventMachine/Connection.html">EventMachine::Connection</a></li>
+				
+					<li><a href="../../EventMachine/ConnectionNotBound.html">EventMachine::ConnectionNotBound</a></li>
+				
+					<li><a href="../../EventMachine/DatagramObject.html">EventMachine::DatagramObject</a></li>
+				
+					<li><a href="../../EventMachine/DefaultDeferrable.html">EventMachine::DefaultDeferrable</a></li>
+				
+					<li><a href="../../EventMachine/Deferrable.html">EventMachine::Deferrable</a></li>
+				
+					<li><a href="../../EventMachine/DeferrableChildProcess.html">EventMachine::DeferrableChildProcess</a></li>
+				
+					<li><a href="../../EventMachine/Error.html">EventMachine::Error</a></li>
+				
+					<li><a href="../../EventMachine/EvmaKeyboard.html">EventMachine::EvmaKeyboard</a></li>
+				
+					<li><a href="../../EventMachine/EvmaTCPClient.html">EventMachine::EvmaTCPClient</a></li>
+				
+					<li><a href="../../EventMachine/EvmaTCPServer.html">EventMachine::EvmaTCPServer</a></li>
+				
+					<li><a href="../../EventMachine/EvmaUDPSocket.html">EventMachine::EvmaUDPSocket</a></li>
+				
+					<li><a href="../../EventMachine/EvmaUNIXClient.html">EventMachine::EvmaUNIXClient</a></li>
+				
+					<li><a href="../../EventMachine/EvmaUNIXServer.html">EventMachine::EvmaUNIXServer</a></li>
+				
+					<li><a href="../../EventMachine/FileStreamer.html">EventMachine::FileStreamer</a></li>
+				
+					<li><a href="../../EventMachine/FileWatch.html">EventMachine::FileWatch</a></li>
+				
+					<li><a href="../../EventMachine/JEM.html">EventMachine::JEM</a></li>
+				
+					<li><a href="../../EventMachine/LoopbreakReader.html">EventMachine::LoopbreakReader</a></li>
+				
+					<li><a href="../../EventMachine/PeriodicTimer.html">EventMachine::PeriodicTimer</a></li>
+				
+					<li><a href="../../EventMachine/ProcessWatch.html">EventMachine::ProcessWatch</a></li>
+				
+					<li><a href="../../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/HeaderAndContentProtocol.html">EventMachine::Protocols::HeaderAndContentProtocol</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/HttpClient.html">EventMachine::Protocols::HttpClient</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/HttpClient2.html">EventMachine::Protocols::HttpClient2</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/LineAndTextProtocol.html">EventMachine::Protocols::LineAndTextProtocol</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/LineText2.html">EventMachine::Protocols::LineText2</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Memcache.html">EventMachine::Protocols::Memcache</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/ObjectProtocol.html">EventMachine::Protocols::ObjectProtocol</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Postgres3.html">EventMachine::Protocols::Postgres3</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SASLauth.html">EventMachine::Protocols::SASLauth</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SASLauthclient.html">EventMachine::Protocols::SASLauthclient</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SmtpClient.html">EventMachine::Protocols::SmtpClient</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SmtpServer.html">EventMachine::Protocols::SmtpServer</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Socks4.html">EventMachine::Protocols::Socks4</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Stomp.html">EventMachine::Protocols::Stomp</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Stomp/Message.html">EventMachine::Protocols::Stomp::Message</a></li>
+				
+					<li><a href="../../EventMachine/Queue.html">EventMachine::Queue</a></li>
+				
+					<li><a href="../../EventMachine/Reactor.html">EventMachine::Reactor</a></li>
+				
+					<li><a href="../../EventMachine/Selectable.html">EventMachine::Selectable</a></li>
+				
+					<li><a href="../../EventMachine/SpawnedProcess.html">EventMachine::SpawnedProcess</a></li>
+				
+					<li><a href="../../EventMachine/StreamObject.html">EventMachine::StreamObject</a></li>
+				
+					<li><a href="../../EventMachine/Timer.html">EventMachine::Timer</a></li>
+				
+					<li><a href="../../EventMachine/UnknownTimerFired.html">EventMachine::UnknownTimerFired</a></li>
+				
+					<li><a href="../../EventMachine/Unsupported.html">EventMachine::Unsupported</a></li>
+				
+					<li><a href="../../EventMachine/UuidGenerator.html">EventMachine::UuidGenerator</a></li>
+				
+					<li><a href="../../Evma.html">Evma</a></li>
+				
+					<li><a href="../../Evma/Container.html">Evma::Container</a></li>
+				
+					<li><a href="../../Evma/ContainerHasObject.html">Evma::ContainerHasObject</a></li>
+				
+					<li><a href="../../Evma/DatagramProtocol.html">Evma::DatagramProtocol</a></li>
+				
+					<li><a href="../../Evma/Protocol.html">Evma::Protocol</a></li>
+				
+					<li><a href="../../Evma/ProtocolFactory.html">Evma::ProtocolFactory</a></li>
+				
+					<li><a href="../../Evma/Reactor.html">Evma::Reactor</a></li>
+				
+					<li><a href="../../Evma/StreamProtocol.html">Evma::StreamProtocol</a></li>
+				
+					<li><a href="../../Evma/TcpServerFactory.html">Evma::TcpServerFactory</a></li>
+				
+					<li><a href="../../Evma/TcpSocket.html">Evma::TcpSocket</a></li>
+				
+					<li><a href="../../Evma/UnknownTarget.html">Evma::UnknownTarget</a></li>
+				
+					<li><a href="../../Evma/UnsupportedCallback.html">Evma::UnsupportedCallback</a></li>
+				
+					<li><a href="../../BufferedTokenizer.html">BufferedTokenizer</a></li>
+				
+					<li><a href="../../IO.html">IO</a></li>
+				
+					<li><a href="../../JavaFields.html">JavaFields</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">EventMachine::Protocols::LineAndTextProtocol</h1>
+
+		<div id="description">
+			<p>
+A protocol that handles line-oriented data with interspersed binary text.
+</p>
+<p>
+This version is optimized for performance. See <a
+href="LineText2.html">EventMachine::Protocols::LineText2</a> for a version
+which is optimized for correctness with regard to binary text blocks that
+can switch back to line mode.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="MaxLineLength">MaxLineLength</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MaxBinaryLength">MaxBinaryLength</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="lbp-init-line-state-method" class="method-detail ">
+				<a name="M000121"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lbp_init_line_state</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="lbp-init-line-state-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/protocols/line_and_text.rb, line 118</span>
+118:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lbp_init_line_state</span>
+119:         <span class="ruby-ivar">@lpb_buffer</span> = <span class="ruby-constant">BufferedTokenizer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;\n&quot;</span>, <span class="ruby-constant">MaxLineLength</span>)
+120:         <span class="ruby-ivar">@lbp_mode</span> = <span class="ruby-value">:lines</span>
+121:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="receive-data-method" class="method-detail ">
+				<a name="M000118"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">receive_data</span><span
+						class="method-args">(data)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="receive-data-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/em/protocols/line_and_text.rb, line 42</span>
+42:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">receive_data</span> <span class="ruby-identifier">data</span>
+43:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@lbp_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:lines</span>
+44:           <span class="ruby-keyword kw">begin</span>
+45:             <span class="ruby-ivar">@lpb_buffer</span>.<span class="ruby-identifier">extract</span>(<span class="ruby-identifier">data</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> 
+46:               <span class="ruby-identifier">receive_line</span>(<span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:receive_line</span>)
+47:             <span class="ruby-keyword kw">end</span>
+48:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span>
+49:             <span class="ruby-identifier">receive_error</span>(<span class="ruby-value str">'overlength line'</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:receive_error</span>)
+50:             <span class="ruby-identifier">close_connection</span>
+51:             <span class="ruby-keyword kw">return</span>
+52:           <span class="ruby-keyword kw">end</span>
+53:         <span class="ruby-keyword kw">else</span>
+54:           <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@lbp_binary_limit</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+55:             <span class="ruby-identifier">wanted</span> = <span class="ruby-ivar">@lbp_binary_limit</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@lbp_binary_bytes_received</span>
+56:             <span class="ruby-identifier">chunk</span> = <span class="ruby-keyword kw">nil</span>
+57:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">wanted</span>
+58:               <span class="ruby-identifier">chunk</span> = <span class="ruby-identifier">data</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">wanted</span>)
+59:             <span class="ruby-keyword kw">else</span>
+60:               <span class="ruby-identifier">chunk</span> = <span class="ruby-identifier">data</span>
+61:               <span class="ruby-identifier">data</span> = <span class="ruby-value str">&quot;&quot;</span>
+62:             <span class="ruby-keyword kw">end</span>
+63:             <span class="ruby-ivar">@lbp_binary_buffer</span>[<span class="ruby-ivar">@lbp_binary_bytes_received</span><span class="ruby-operator">...</span>(<span class="ruby-ivar">@lbp_binary_bytes_received</span><span class="ruby-operator">+</span><span class="ruby-identifier">chunk</span>.<span class="ruby-identifier">length</span>)] = <span class="ruby-identifier">chunk</span>
+64:             <span class="ruby-ivar">@lbp_binary_bytes_received</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">chunk</span>.<span class="ruby-identifier">length</span>
+65:             <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@lbp_binary_bytes_received</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@lbp_binary_limit</span>
+66:               <span class="ruby-identifier">receive_binary_data</span>(<span class="ruby-ivar">@lbp_binary_buffer</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:receive_binary_data</span>)
+67:               <span class="ruby-identifier">lbp_init_line_state</span>
+68:             <span class="ruby-keyword kw">end</span>
+69:             <span class="ruby-identifier">receive_data</span>(<span class="ruby-identifier">data</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+70:           <span class="ruby-keyword kw">else</span>
+71:             <span class="ruby-identifier">receive_binary_data</span>(<span class="ruby-identifier">data</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:receive_binary_data</span>)
+72:             <span class="ruby-identifier">data</span> = <span class="ruby-value str">&quot;&quot;</span>
+73:           <span class="ruby-keyword kw">end</span>
+74:         <span class="ruby-keyword kw">end</span>
+75:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-binary-mode-method" class="method-detail ">
+				<a name="M000120"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_binary_mode</span><span
+						class="method-args">(size = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Set up to read the supplied number of binary bytes. This recycles all the
+data currently waiting in the line buffer, if any. If the limit is nil,
+then ALL subsequent data will be treated as binary data and passed to the
+upstream protocol handler as we receive it. If a limit is given,
+we&#8217;ll hold the incoming binary data and not pass it upstream until
+we&#8217;ve seen it all, or until there is an unbind (in which case
+we&#8217;ll pass up a partial). Specifying nil for the limit (the default)
+means there is no limit. Specifiyng zero for the limit will cause an
+immediate transition back to line mode.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-binary-mode-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/protocols/line_and_text.rb, line 95</span>
+ 95:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_binary_mode</span> <span class="ruby-identifier">size</span> = <span class="ruby-keyword kw">nil</span>
+ 96:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@lbp_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:lines</span>
+ 97:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+ 98:             <span class="ruby-identifier">receive_binary_data</span>(<span class="ruby-value str">&quot;&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:receive_binary_data</span>)
+ 99:             <span class="ruby-comment cmt"># Do no more work here. Stay in line mode and keep consuming data.</span>
+100:           <span class="ruby-keyword kw">else</span>
+101:             <span class="ruby-ivar">@lbp_binary_limit</span> = <span class="ruby-identifier">size</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-comment cmt"># (nil will be stored as zero)</span>
+102:             <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@lbp_binary_limit</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+103:               <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Overlength&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@lbp_binary_limit</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">MaxBinaryLength</span> <span class="ruby-comment cmt"># arbitrary sanity check</span>
+104:               <span class="ruby-ivar">@lbp_binary_buffer</span> = <span class="ruby-value str">&quot;\00&quot;&quot;</span> * <span class="ruby-ivar">@lbp_binary_limit</span>
+105:               <span class="ruby-ivar">@lbp_binary_bytes_received</span> = <span class="ruby-value">0</span>
+106:             <span class="ruby-keyword kw">end</span>
+107: 
+108:             <span class="ruby-ivar">@lbp_mode</span> = <span class="ruby-value">:binary</span>
+109:             <span class="ruby-identifier">receive_data</span> <span class="ruby-ivar">@lpb_buffer</span>.<span class="ruby-identifier">flush</span>
+110:           <span class="ruby-keyword kw">end</span>
+111:         <span class="ruby-keyword kw">else</span>
+112:           <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;invalid operation&quot;</span>
+113:         <span class="ruby-keyword kw">end</span>
+114:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="unbind-method" class="method-detail ">
+				<a name="M000119"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">unbind</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="unbind-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/em/protocols/line_and_text.rb, line 77</span>
+77:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">unbind</span>
+78:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@lbp_mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:binary</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@lbp_binary_limit</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+79:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:receive_binary_data</span>)
+80:             <span class="ruby-identifier">receive_binary_data</span>( <span class="ruby-ivar">@lbp_binary_buffer</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@lbp_binary_bytes_received</span>] )
+81:           <span class="ruby-keyword kw">end</span>
+82:         <span class="ruby-keyword kw">end</span>
+83:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000117"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/em/protocols/line_and_text.rb, line 38</span>
+38:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span> *<span class="ruby-identifier">args</span>
+39:         <span class="ruby-keyword kw">super</span>
+40:         <span class="ruby-identifier">lbp_init_line_state</span>
+41:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

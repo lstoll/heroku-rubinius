@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: EventMachine::Protocols::HeaderAndContentProtocol</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/em/protocols/header_and_content_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/em/protocols/header_and_content.rb">lib/em/protocols/header_and_content.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../Connection.html">EventMachine::Connection</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000104">::headers_2_hash</a></li>
+					
+					<li><a href="#M000098">::new</a></li>
+					
+					<li><a href="#M000101">#dispatch_request</a></li>
+					
+					<li><a href="#M000103">#headers_2_hash</a></li>
+					
+					<li><a href="#M000102">#init_for_request</a></li>
+					
+					<li><a href="#M000100">#receive_binary_data</a></li>
+					
+					<li><a href="#M000099">#receive_line</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">LineText2</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../../EventMachine/Channel.html">EventMachine::Channel</a></li>
+				
+					<li><a href="../../EventMachine/Connection.html">EventMachine::Connection</a></li>
+				
+					<li><a href="../../EventMachine/ConnectionNotBound.html">EventMachine::ConnectionNotBound</a></li>
+				
+					<li><a href="../../EventMachine/DatagramObject.html">EventMachine::DatagramObject</a></li>
+				
+					<li><a href="../../EventMachine/DefaultDeferrable.html">EventMachine::DefaultDeferrable</a></li>
+				
+					<li><a href="../../EventMachine/Deferrable.html">EventMachine::Deferrable</a></li>
+				
+					<li><a href="../../EventMachine/DeferrableChildProcess.html">EventMachine::DeferrableChildProcess</a></li>
+				
+					<li><a href="../../EventMachine/Error.html">EventMachine::Error</a></li>
+				
+					<li><a href="../../EventMachine/EvmaKeyboard.html">EventMachine::EvmaKeyboard</a></li>
+				
+					<li><a href="../../EventMachine/EvmaTCPClient.html">EventMachine::EvmaTCPClient</a></li>
+				
+					<li><a href="../../EventMachine/EvmaTCPServer.html">EventMachine::EvmaTCPServer</a></li>
+				
+					<li><a href="../../EventMachine/EvmaUDPSocket.html">EventMachine::EvmaUDPSocket</a></li>
+				
+					<li><a href="../../EventMachine/EvmaUNIXClient.html">EventMachine::EvmaUNIXClient</a></li>
+				
+					<li><a href="../../EventMachine/EvmaUNIXServer.html">EventMachine::EvmaUNIXServer</a></li>
+				
+					<li><a href="../../EventMachine/FileStreamer.html">EventMachine::FileStreamer</a></li>
+				
+					<li><a href="../../EventMachine/FileWatch.html">EventMachine::FileWatch</a></li>
+				
+					<li><a href="../../EventMachine/JEM.html">EventMachine::JEM</a></li>
+				
+					<li><a href="../../EventMachine/LoopbreakReader.html">EventMachine::LoopbreakReader</a></li>
+				
+					<li><a href="../../EventMachine/PeriodicTimer.html">EventMachine::PeriodicTimer</a></li>
+				
+					<li><a href="../../EventMachine/ProcessWatch.html">EventMachine::ProcessWatch</a></li>
+				
+					<li><a href="../../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/HeaderAndContentProtocol.html">EventMachine::Protocols::HeaderAndContentProtocol</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/HttpClient.html">EventMachine::Protocols::HttpClient</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/HttpClient2.html">EventMachine::Protocols::HttpClient2</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/LineAndTextProtocol.html">EventMachine::Protocols::LineAndTextProtocol</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/LineText2.html">EventMachine::Protocols::LineText2</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Memcache.html">EventMachine::Protocols::Memcache</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/ObjectProtocol.html">EventMachine::Protocols::ObjectProtocol</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Postgres3.html">EventMachine::Protocols::Postgres3</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SASLauth.html">EventMachine::Protocols::SASLauth</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SASLauthclient.html">EventMachine::Protocols::SASLauthclient</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SmtpClient.html">EventMachine::Protocols::SmtpClient</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/SmtpServer.html">EventMachine::Protocols::SmtpServer</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Socks4.html">EventMachine::Protocols::Socks4</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Stomp.html">EventMachine::Protocols::Stomp</a></li>
+				
+					<li><a href="../../EventMachine/Protocols/Stomp/Message.html">EventMachine::Protocols::Stomp::Message</a></li>
+				
+					<li><a href="../../EventMachine/Queue.html">EventMachine::Queue</a></li>
+				
+					<li><a href="../../EventMachine/Reactor.html">EventMachine::Reactor</a></li>
+				
+					<li><a href="../../EventMachine/Selectable.html">EventMachine::Selectable</a></li>
+				
+					<li><a href="../../EventMachine/SpawnedProcess.html">EventMachine::SpawnedProcess</a></li>
+				
+					<li><a href="../../EventMachine/StreamObject.html">EventMachine::StreamObject</a></li>
+				
+					<li><a href="../../EventMachine/Timer.html">EventMachine::Timer</a></li>
+				
+					<li><a href="../../EventMachine/UnknownTimerFired.html">EventMachine::UnknownTimerFired</a></li>
+				
+					<li><a href="../../EventMachine/Unsupported.html">EventMachine::Unsupported</a></li>
+				
+					<li><a href="../../EventMachine/UuidGenerator.html">EventMachine::UuidGenerator</a></li>
+				
+					<li><a href="../../Evma.html">Evma</a></li>
+				
+					<li><a href="../../Evma/Container.html">Evma::Container</a></li>
+				
+					<li><a href="../../Evma/ContainerHasObject.html">Evma::ContainerHasObject</a></li>
+				
+					<li><a href="../../Evma/DatagramProtocol.html">Evma::DatagramProtocol</a></li>
+				
+					<li><a href="../../Evma/Protocol.html">Evma::Protocol</a></li>
+				
+					<li><a href="../../Evma/ProtocolFactory.html">Evma::ProtocolFactory</a></li>
+				
+					<li><a href="../../Evma/Reactor.html">Evma::Reactor</a></li>
+				
+					<li><a href="../../Evma/StreamProtocol.html">Evma::StreamProtocol</a></li>
+				
+					<li><a href="../../Evma/TcpServerFactory.html">Evma::TcpServerFactory</a></li>
+				
+					<li><a href="../../Evma/TcpSocket.html">Evma::TcpSocket</a></li>
+				
+					<li><a href="../../Evma/UnknownTarget.html">Evma::UnknownTarget</a></li>
+				
+					<li><a href="../../Evma/UnsupportedCallback.html">Evma::UnsupportedCallback</a></li>
+				
+					<li><a href="../../BufferedTokenizer.html">BufferedTokenizer</a></li>
+				
+					<li><a href="../../IO.html">IO</a></li>
+				
+					<li><a href="../../JavaFields.html">JavaFields</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">EventMachine::Protocols::HeaderAndContentProtocol</h1>
+
+		<div id="description">
+			<h3>Usage</h3>
+<pre>
+ class RequestHandler &lt; EM::P::HeaderAndContentProtocol
+   def receive_request headers, content
+     p [:request, headers, content]
+   end
+ end
+
+ EM.run{
+   EM.start_server 'localhost', 80, RequestHandler
+ }</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="ContentLengthPattern">ContentLengthPattern</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="dispatch-request-method" class="method-detail ">
+				<a name="M000101"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dispatch_request</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dispatch-request-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/protocols/header_and_content.rb, line 97</span>
+ 97:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dispatch_request</span>
+ 98:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:receive_request</span>)
+ 99:           <span class="ruby-identifier">receive_request</span> <span class="ruby-ivar">@hc_headers</span>, <span class="ruby-ivar">@hc_content</span>
+100:         <span class="ruby-keyword kw">end</span>
+101:         <span class="ruby-identifier">init_for_request</span>
+102:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="init-for-request-method" class="method-detail ">
+				<a name="M000102"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">init_for_request</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="init-for-request-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/protocols/header_and_content.rb, line 105</span>
+105:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">init_for_request</span>
+106:         <span class="ruby-ivar">@hc_mode</span> = <span class="ruby-value">:discard_blanks</span>
+107:         <span class="ruby-ivar">@hc_headers</span> = []
+108:         <span class="ruby-comment cmt"># originally was @hc_headers ||= []; @hc_headers.clear to get a performance</span>
+109:         <span class="ruby-comment cmt"># boost, but it's counterproductive because a subclassed handler will have to</span>
+110:         <span class="ruby-comment cmt"># call dup to use the header array we pass in receive_headers.</span>
+111: 
+112:         <span class="ruby-ivar">@hc_content_length</span> = <span class="ruby-keyword kw">nil</span>
+113:         <span class="ruby-ivar">@hc_content</span> = <span class="ruby-value str">&quot;&quot;</span>
+114:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="headers-hash-method" class="method-detail ">
+				<a name="M000103"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">headers_2_hash</span><span
+						class="method-args">(hdrs)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Basically a convenience method. We might create a subclass that does this
+automatically. But it&#8217;s such a performance killer.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="headers-hash-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/protocols/header_and_content.rb, line 119</span>
+119:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">headers_2_hash</span> <span class="ruby-identifier">hdrs</span>
+120:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">headers_2_hash</span> <span class="ruby-identifier">hdrs</span>
+121:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="receive-binary-data-method" class="method-detail ">
+				<a name="M000100"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">receive_binary_data</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="receive-binary-data-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/em/protocols/header_and_content.rb, line 92</span>
+92:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">receive_binary_data</span> <span class="ruby-identifier">text</span>
+93:         <span class="ruby-ivar">@hc_content</span> = <span class="ruby-identifier">text</span>
+94:         <span class="ruby-identifier">dispatch_request</span>
+95:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="receive-line-method" class="method-detail ">
+				<a name="M000099"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">receive_line</span><span
+						class="method-args">(line)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="receive-line-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/em/protocols/header_and_content.rb, line 56</span>
+56:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">receive_line</span> <span class="ruby-identifier">line</span>
+57:         <span class="ruby-keyword kw">case</span> <span class="ruby-ivar">@hc_mode</span>
+58:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:discard_blanks</span>
+59:           <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>
+60:             <span class="ruby-ivar">@hc_mode</span> = <span class="ruby-value">:headers</span>
+61:             <span class="ruby-identifier">receive_line</span> <span class="ruby-identifier">line</span>
+62:           <span class="ruby-keyword kw">end</span>
+63:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:headers</span>
+64:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>
+65:             <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;unrecognized state&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@hc_headers</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+66:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:receive_headers</span>)
+67:               <span class="ruby-identifier">receive_headers</span> <span class="ruby-ivar">@hc_headers</span>
+68:             <span class="ruby-keyword kw">end</span>
+69:             <span class="ruby-comment cmt"># @hc_content_length will be nil, not 0, if there was no content-length header.</span>
+70:             <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@hc_content_length</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+71:               <span class="ruby-identifier">set_binary_mode</span> <span class="ruby-ivar">@hc_content_length</span>
+72:             <span class="ruby-keyword kw">else</span>
+73:               <span class="ruby-identifier">dispatch_request</span>
+74:             <span class="ruby-keyword kw">end</span>
+75:           <span class="ruby-keyword kw">else</span>
+76:             <span class="ruby-ivar">@hc_headers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>
+77:             <span class="ruby-keyword kw">if</span> <span class="ruby-constant">ContentLengthPattern</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">line</span>
+78:               <span class="ruby-comment cmt"># There are some attacks that rely on sending multiple content-length</span>
+79:               <span class="ruby-comment cmt"># headers. This is a crude protection, but needs to become tunable.</span>
+80:               <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;extraneous content-length header&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@hc_content_length</span>
+81:               <span class="ruby-ivar">@hc_content_length</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>
+82:             <span class="ruby-keyword kw">end</span>
+83:             <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@hc_headers</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:receive_first_header_line</span>)
+84:               <span class="ruby-identifier">receive_first_header_line</span> <span class="ruby-identifier">line</span>
+85:             <span class="ruby-keyword kw">end</span>
+86:           <span class="ruby-keyword kw">end</span>
+87:         <span class="ruby-keyword kw">else</span>
+88:           <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;internal error, unsupported mode&quot;</span>
+89:         <span class="ruby-keyword kw">end</span>
+90:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="headers-hash-method" class="method-detail ">
+				<a name="M000104"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">headers_2_hash</span><span
+						class="method-args">(hdrs)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="headers-hash-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/protocols/header_and_content.rb, line 124</span>
+124:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">headers_2_hash</span> <span class="ruby-identifier">hdrs</span>
+125:           <span class="ruby-identifier">hash</span> = {}
+126:           <span class="ruby-identifier">hdrs</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+127:             <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/\A([^\s:]+)\s*:\s*/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">h</span>
+128:               <span class="ruby-identifier">tail</span> = <span class="ruby-node">$'</span>.<span class="ruby-identifier">dup</span>
+129:               <span class="ruby-identifier">hash</span>[ <span class="ruby-node">$1</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/-/</span>,<span class="ruby-value str">&quot;_&quot;</span>).<span class="ruby-identifier">intern</span> ] = <span class="ruby-identifier">tail</span>
+130:             <span class="ruby-keyword kw">end</span>
+131:           }
+132:           <span class="ruby-identifier">hash</span>
+133:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000098"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/em/protocols/header_and_content.rb, line 51</span>
+51:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span> *<span class="ruby-identifier">args</span>
+52:         <span class="ruby-keyword kw">super</span>
+53:         <span class="ruby-identifier">init_for_request</span>
+54:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

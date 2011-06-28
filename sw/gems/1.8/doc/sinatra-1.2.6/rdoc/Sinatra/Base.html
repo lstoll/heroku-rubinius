@@ -1,0 +1,3619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sinatra::Base</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/sinatra/base_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sinatra/base.rb">lib/sinatra/base.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000088">::add_filter</a></li>
+					
+					<li><a href="#M000087">::after</a></li>
+					
+					<li><a href="#M000086">::before</a></li>
+					
+					<li><a href="#M000115">::build</a></li>
+					
+					<li><a href="#M000116">::call</a></li>
+					
+					<li><a href="#M000122">::caller_files</a></li>
+					
+					<li><a href="#M000123">::caller_locations</a></li>
+					
+					<li><a href="#M000102">::compile</a></li>
+					
+					<li><a href="#M000101">::compile!</a></li>
+					
+					<li><a href="#M000089">::condition</a></li>
+					
+					<li><a href="#M000108">::configure</a></li>
+					
+					<li><a href="#M000096">::delete</a></li>
+					
+					<li><a href="#M000118">::detect_rack_handler</a></li>
+					
+					<li><a href="#M000105">::development?</a></li>
+					
+					<li><a href="#M000078">::disable</a></li>
+					
+					<li><a href="#M000077">::enable</a></li>
+					
+					<li><a href="#M000079">::error</a></li>
+					
+					<li><a href="#M000074">::extensions</a></li>
+					
+					<li><a href="#M000126">::force_encoding</a></li>
+					
+					<li><a href="#M000125">::force_encoding</a></li>
+					
+					<li><a href="#M000093">::get</a></li>
+					
+					<li><a href="#M000097">::head</a></li>
+					
+					<li><a href="#M000103">::helpers</a></li>
+					
+					<li><a href="#M000090">::host_name</a></li>
+					
+					<li><a href="#M000119">::inherited</a></li>
+					
+					<li><a href="#M000083">::inline_templates=</a></li>
+					
+					<li><a href="#M000100">::invoke_hook</a></li>
+					
+					<li><a href="#M000082">::layout</a></li>
+					
+					<li><a href="#M000121">::metadef</a></li>
+					
+					<li><a href="#M000075">::middleware</a></li>
+					
+					<li><a href="#M000084">::mime_type</a></li>
+					
+					<li><a href="#M000085">::mime_types</a></li>
+					
+					<li><a href="#M000113">::new</a></li>
+					
+					<li><a href="#M000049">::new</a></li>
+					
+					<li><a href="#M000114">::new!</a></li>
+					
+					<li><a href="#M000080">::not_found</a></li>
+					
+					<li><a href="#M000098">::options</a></li>
+					
+					<li><a href="#M000095">::post</a></li>
+					
+					<li><a href="#M000106">::production?</a></li>
+					
+					<li><a href="#M000112">::prototype</a></li>
+					
+					<li><a href="#M000092">::provides</a></li>
+					
+					<li><a href="#M000094">::put</a></li>
+					
+					<li><a href="#M000110">::quit!</a></li>
+					
+					<li><a href="#M000104">::register</a></li>
+					
+					<li><a href="#M000073">::reset!</a></li>
+					
+					<li><a href="#M000099">::route</a></li>
+					
+					<li><a href="#M000111">::run!</a></li>
+					
+					<li><a href="#M000076">::set</a></li>
+					
+					<li><a href="#M000052">::settings</a></li>
+					
+					<li><a href="#M000117">::setup_sessions</a></li>
+					
+					<li><a href="#M000120">::synchronize</a></li>
+					
+					<li><a href="#M000081">::template</a></li>
+					
+					<li><a href="#M000107">::test?</a></li>
+					
+					<li><a href="#M000109">::use</a></li>
+					
+					<li><a href="#M000091">::user_agent</a></li>
+					
+					<li><a href="#M000050">#call</a></li>
+					
+					<li><a href="#M000068">#dispatch!</a></li>
+					
+					<li><a href="#M000072">#dump_errors!</a></li>
+					
+					<li><a href="#M000071">#error_block!</a></li>
+					
+					<li><a href="#M000059">#filter!</a></li>
+					
+					<li><a href="#M000124">#force_encoding</a></li>
+					
+					<li><a href="#M000058">#forward</a></li>
+					
+					<li><a href="#M000056">#halt</a></li>
+					
+					<li><a href="#M000070">#handle_exception!</a></li>
+					
+					<li><a href="#M000069">#handle_not_found!</a></li>
+					
+					<li><a href="#M000066">#indifferent_hash</a></li>
+					
+					<li><a href="#M000065">#indifferent_params</a></li>
+					
+					<li><a href="#M000067">#invoke</a></li>
+					
+					<li><a href="#M000054">#options</a></li>
+					
+					<li><a href="#M000055">#options</a></li>
+					
+					<li><a href="#M000057">#pass</a></li>
+					
+					<li><a href="#M000062">#process_route</a></li>
+					
+					<li><a href="#M000060">#route!</a></li>
+					
+					<li><a href="#M000061">#route_eval</a></li>
+					
+					<li><a href="#M000063">#route_missing</a></li>
+					
+					<li><a href="#M000053">#settings</a></li>
+					
+					<li><a href="#M000064">#static!</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">Rack::Utils</span></li>
+				
+				
+				
+					<li><span class="include">Helpers</span></li>
+				
+				
+				
+					<li><span class="include">Templates</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_de_rdoc.html">README.de.rdoc</a></li>
+				
+					<li class="file"><a href="../README_es_rdoc.html">README.es.rdoc</a></li>
+				
+					<li class="file"><a href="../README_fr_rdoc.html">README.fr.rdoc</a></li>
+				
+					<li class="file"><a href="../README_hu_rdoc.html">README.hu.rdoc</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Sinatra.html">Sinatra</a></li>
+				
+					<li><a href="../Sinatra/Application.html">Sinatra::Application</a></li>
+				
+					<li><a href="../Sinatra/Base.html">Sinatra::Base</a></li>
+				
+					<li><a href="../Sinatra/Helpers.html">Sinatra::Helpers</a></li>
+				
+					<li><a href="../Sinatra/Request.html">Sinatra::Request</a></li>
+				
+					<li><a href="../Sinatra/Response.html">Sinatra::Response</a></li>
+				
+					<li><a href="../Sinatra/ShowExceptions.html">Sinatra::ShowExceptions</a></li>
+				
+					<li><a href="../Sinatra/Templates.html">Sinatra::Templates</a></li>
+				
+					<li><a href="../Sinatra/Templates/ContentTyped.html">Sinatra::Templates::ContentTyped</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sinatra::Base</h1>
+
+		<div id="description">
+			<p>
+<a href="Base.html">Base</a> class for all <a
+href="../Sinatra.html">Sinatra</a> applications and middleware.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="CALLERS_TO_IGNORE">CALLERS_TO_IGNORE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="app-attribute-method" class="method-detail">
+				<a name="app"></a>
+				
+				<a name="app="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">app</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="template-cache-attribute-method" class="method-detail">
+				<a name="template_cache"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">template_cache</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="env-attribute-method" class="method-detail">
+				<a name="env"></a>
+				
+				<a name="env="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">env</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="request-attribute-method" class="method-detail">
+				<a name="request"></a>
+				
+				<a name="request="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">request</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="response-attribute-method" class="method-detail">
+				<a name="response"></a>
+				
+				<a name="response="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">response</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="params-attribute-method" class="method-detail">
+				<a name="params"></a>
+				
+				<a name="params="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">params</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="routes-attribute-method" class="method-detail">
+				<a name="routes"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">routes</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="filters-attribute-method" class="method-detail">
+				<a name="filters"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">filters</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="templates-attribute-method" class="method-detail">
+				<a name="templates"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">templates</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="errors-attribute-method" class="method-detail">
+				<a name="errors"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">errors</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="dispatch--method" class="method-detail ">
+				<a name="M000068"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dispatch!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Dispatch a request with error handling.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="dispatch--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 840</span>
+840:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dispatch!</span>
+841:       <span class="ruby-identifier">static!</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">static?</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">request</span>.<span class="ruby-identifier">get?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">head?</span>)
+842:       <span class="ruby-identifier">filter!</span> <span class="ruby-value">:before</span>
+843:       <span class="ruby-identifier">route!</span>
+844:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">NotFound</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">boom</span>
+845:       <span class="ruby-identifier">handle_not_found!</span>(<span class="ruby-identifier">boom</span>)
+846:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-operator">::</span><span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">boom</span>
+847:       <span class="ruby-identifier">handle_exception!</span>(<span class="ruby-identifier">boom</span>)
+848:     <span class="ruby-keyword kw">ensure</span>
+849:       <span class="ruby-identifier">filter!</span> <span class="ruby-value">:after</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'sinatra.static_file'</span>]
+850:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dump-errors--method" class="method-detail ">
+				<a name="M000072"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dump_errors!</span><span
+						class="method-args">(boom)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dump-errors--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 895</span>
+895:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dump_errors!</span>(<span class="ruby-identifier">boom</span>)
+896:       <span class="ruby-identifier">msg</span> = [<span class="ruby-node">&quot;#{boom.class} - #{boom.message}:&quot;</span>,
+897:         *<span class="ruby-identifier">boom</span>.<span class="ruby-identifier">backtrace</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n &quot;</span>)
+898:       <span class="ruby-ivar">@env</span>[<span class="ruby-value str">'rack.errors'</span>].<span class="ruby-identifier">puts</span>(<span class="ruby-identifier">msg</span>)
+899:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="error-block--method" class="method-detail ">
+				<a name="M000071"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">error_block!</span><span
+						class="method-args">(*keys)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Find an custom error block for the key(s) specified.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="error-block--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 879</span>
+879:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">error_block!</span>(*<span class="ruby-identifier">keys</span>)
+880:       <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+881:         <span class="ruby-identifier">base</span> = <span class="ruby-identifier">settings</span>
+882:         <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">base</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:errors</span>)
+883:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block</span> = <span class="ruby-identifier">base</span>.<span class="ruby-identifier">errors</span>[<span class="ruby-identifier">key</span>]
+884:             <span class="ruby-comment cmt"># found a handler, eval and return result</span>
+885:             <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">instance_eval</span>(&amp;<span class="ruby-identifier">block</span>)
+886:           <span class="ruby-keyword kw">else</span>
+887:             <span class="ruby-identifier">base</span> = <span class="ruby-identifier">base</span>.<span class="ruby-identifier">superclass</span>
+888:           <span class="ruby-keyword kw">end</span>
+889:         <span class="ruby-keyword kw">end</span>
+890:       <span class="ruby-keyword kw">end</span>
+891:       <span class="ruby-identifier">raise</span> <span class="ruby-identifier">boom</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">show_exceptions?</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Exception</span>
+892:       <span class="ruby-keyword kw">nil</span>
+893:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="filter--method" class="method-detail ">
+				<a name="M000059"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">filter!</span><span
+						class="method-args">(type, base = settings)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Run filters defined on the class and all superclasses.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="filter--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 698</span>
+698:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">filter!</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">base</span> = <span class="ruby-identifier">settings</span>)
+699:       <span class="ruby-identifier">filter!</span> <span class="ruby-identifier">type</span>, <span class="ruby-identifier">base</span>.<span class="ruby-identifier">superclass</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">base</span>.<span class="ruby-identifier">superclass</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:filters</span>)
+700:       <span class="ruby-identifier">base</span>.<span class="ruby-identifier">filters</span>[<span class="ruby-identifier">type</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">block</span><span class="ruby-operator">|</span> <span class="ruby-identifier">instance_eval</span>(&amp;<span class="ruby-identifier">block</span>) }
+701:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="force-encoding-method" class="method-detail ">
+				<a name="M000124"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">force_encoding</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Fixes encoding issues by
+</p>
+<ul>
+<li><p>
+defaulting to UTF-8
+</p>
+</li>
+<li><p>
+casting params to Encoding.default_external
+</p>
+</li>
+</ul>
+<p>
+The latter might not be necessary if Rack handles it one day. Keep an eye
+on Rack&#8217;s LH 100.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="force-encoding-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1348</span>
+1348:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">force_encoding</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">force_encoding</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="handle-exception--method" class="method-detail ">
+				<a name="M000070"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">handle_exception!</span><span
+						class="method-args">(boom)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Error handling during requests.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="handle-exception--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 862</span>
+862:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle_exception!</span>(<span class="ruby-identifier">boom</span>)
+863:       <span class="ruby-ivar">@env</span>[<span class="ruby-value str">'sinatra.error'</span>] = <span class="ruby-identifier">boom</span>
+864: 
+865:       <span class="ruby-identifier">dump_errors!</span>(<span class="ruby-identifier">boom</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">dump_errors?</span>
+866:       <span class="ruby-identifier">raise</span> <span class="ruby-identifier">boom</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">show_exceptions?</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">show_exceptions</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:after_handler</span>
+867: 
+868:       <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span> = <span class="ruby-value">500</span>
+869:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">res</span> = <span class="ruby-identifier">error_block!</span>(<span class="ruby-identifier">boom</span>.<span class="ruby-identifier">class</span>)
+870:         <span class="ruby-identifier">res</span>
+871:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">raise_errors?</span>
+872:         <span class="ruby-identifier">raise</span> <span class="ruby-identifier">boom</span>
+873:       <span class="ruby-keyword kw">else</span>
+874:         <span class="ruby-identifier">error_block!</span>(<span class="ruby-constant">Exception</span>)
+875:       <span class="ruby-keyword kw">end</span>
+876:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="handle-not-found--method" class="method-detail ">
+				<a name="M000069"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">handle_not_found!</span><span
+						class="method-args">(boom)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Special treatment for 404s in order to play nice with cascades.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="handle-not-found--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 853</span>
+853:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle_not_found!</span>(<span class="ruby-identifier">boom</span>)
+854:       <span class="ruby-ivar">@env</span>[<span class="ruby-value str">'sinatra.error'</span>]          = <span class="ruby-identifier">boom</span>
+855:       <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>               = <span class="ruby-value">404</span>
+856:       <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">headers</span>[<span class="ruby-value str">'X-Cascade'</span>] = <span class="ruby-value str">'pass'</span>
+857:       <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>                 = [<span class="ruby-value str">'&lt;h1&gt;Not Found&lt;/h1&gt;'</span>]
+858:       <span class="ruby-identifier">error_block!</span> <span class="ruby-identifier">boom</span>.<span class="ruby-identifier">class</span>, <span class="ruby-constant">NotFound</span>
+859:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="indifferent-hash-method" class="method-detail ">
+				<a name="M000066"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">indifferent_hash</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a Hash with indifferent access.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="indifferent-hash-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 802</span>
+802:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">indifferent_hash</span>
+803:       <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">hash</span>,<span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Symbol</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">key</span> }
+804:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="indifferent-params-method" class="method-detail ">
+				<a name="M000065"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">indifferent_params</span><span
+						class="method-args">(params)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Enable string or symbol key access to the nested params hash.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="indifferent-params-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 793</span>
+793:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">indifferent_params</span>(<span class="ruby-identifier">params</span>)
+794:       <span class="ruby-identifier">params</span> = <span class="ruby-identifier">indifferent_hash</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">params</span>)
+795:       <span class="ruby-identifier">params</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+796:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+797:         <span class="ruby-identifier">params</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">indifferent_params</span>(<span class="ruby-identifier">value</span>)
+798:       <span class="ruby-keyword kw">end</span>
+799:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="invoke-method" class="method-detail ">
+				<a name="M000067"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">invoke</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Run the block with &#8216;throw :halt&#8217; support and apply result to
+the response.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="invoke-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 807</span>
+807:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">invoke</span>(&amp;<span class="ruby-identifier">block</span>)
+808:       <span class="ruby-identifier">res</span> = <span class="ruby-identifier">catch</span>(<span class="ruby-value">:halt</span>) { <span class="ruby-identifier">instance_eval</span>(&amp;<span class="ruby-identifier">block</span>) }
+809:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">nil?</span>
+810: 
+811:       <span class="ruby-keyword kw">case</span>
+812:       <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_str</span>)
+813:         <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span> = [<span class="ruby-identifier">res</span>]
+814:       <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_ary</span>)
+815:         <span class="ruby-identifier">res</span> = <span class="ruby-identifier">res</span>.<span class="ruby-identifier">to_ary</span>
+816:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Fixnum</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">first</span>
+817:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>
+818:             <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span>, <span class="ruby-identifier">headers</span>, <span class="ruby-identifier">body</span> = <span class="ruby-identifier">res</span>
+819:             <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span> = <span class="ruby-identifier">body</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">body</span>
+820:             <span class="ruby-identifier">headers</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">headers</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">v</span> } <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">headers</span>
+821:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+822:             <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span> = <span class="ruby-identifier">res</span>.<span class="ruby-identifier">first</span>
+823:             <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span>   = <span class="ruby-identifier">res</span>.<span class="ruby-identifier">last</span>
+824:           <span class="ruby-keyword kw">else</span>
+825:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;#{res.inspect} not supported&quot;</span>
+826:           <span class="ruby-keyword kw">end</span>
+827:         <span class="ruby-keyword kw">else</span>
+828:           <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span> = <span class="ruby-identifier">res</span>
+829:         <span class="ruby-keyword kw">end</span>
+830:       <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:each</span>)
+831:         <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span> = <span class="ruby-identifier">res</span>
+832:       <span class="ruby-keyword kw">when</span> (<span class="ruby-value">100</span><span class="ruby-operator">..</span><span class="ruby-value">599</span>) <span class="ruby-operator">===</span> <span class="ruby-identifier">res</span>
+833:         <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span> = <span class="ruby-identifier">res</span>
+834:       <span class="ruby-keyword kw">end</span>
+835: 
+836:       <span class="ruby-identifier">res</span>
+837:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="process-route-method" class="method-detail ">
+				<a name="M000062"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">process_route</span><span
+						class="method-args">(pattern, keys, conditions)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+If the current request matches pattern and conditions, fill params with
+keys and call the given block. Revert params afterwards.
+</p>
+<p>
+Returns pass block.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="process-route-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 732</span>
+732:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">process_route</span>(<span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">conditions</span>)
+733:       <span class="ruby-ivar">@original_params</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@params</span>
+734:       <span class="ruby-identifier">route</span> = <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">route</span>
+735:       <span class="ruby-identifier">route</span> = <span class="ruby-value str">'/'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">route</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">empty_path_info?</span>
+736:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">match</span> = <span class="ruby-identifier">pattern</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">route</span>)
+737:         <span class="ruby-identifier">values</span> = <span class="ruby-identifier">match</span>.<span class="ruby-identifier">captures</span>.<span class="ruby-identifier">to_a</span>
+738:         <span class="ruby-identifier">params</span> =
+739:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">any?</span>
+740:             <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">values</span>).<span class="ruby-identifier">inject</span>({}) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">hash</span>,(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span>)<span class="ruby-operator">|</span>
+741:               <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'splat'</span>
+742:                 (<span class="ruby-identifier">hash</span>[<span class="ruby-identifier">k</span>] <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>
+743:               <span class="ruby-keyword kw">else</span>
+744:                 <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">v</span>
+745:               <span class="ruby-keyword kw">end</span>
+746:               <span class="ruby-identifier">hash</span>
+747:             <span class="ruby-keyword kw">end</span>
+748:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">any?</span>
+749:             {<span class="ruby-value str">'captures'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">values</span>}
+750:           <span class="ruby-keyword kw">else</span>
+751:             {}
+752:           <span class="ruby-keyword kw">end</span>
+753:         <span class="ruby-ivar">@params</span> = <span class="ruby-ivar">@original_params</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">params</span>)
+754:         <span class="ruby-ivar">@block_params</span> = <span class="ruby-identifier">values</span>
+755:         <span class="ruby-identifier">catch</span>(<span class="ruby-value">:pass</span>) <span class="ruby-keyword kw">do</span>
+756:           <span class="ruby-identifier">conditions</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cond</span><span class="ruby-operator">|</span>
+757:             <span class="ruby-identifier">throw</span> <span class="ruby-value">:pass</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">instance_eval</span>(&amp;<span class="ruby-identifier">cond</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword kw">false</span> }
+758:           <span class="ruby-keyword kw">yield</span>
+759:         <span class="ruby-keyword kw">end</span>
+760:       <span class="ruby-keyword kw">end</span>
+761:     <span class="ruby-keyword kw">ensure</span>
+762:       <span class="ruby-ivar">@params</span> = <span class="ruby-ivar">@original_params</span>
+763:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="route--method" class="method-detail ">
+				<a name="M000060"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">route!</span><span
+						class="method-args">(base = settings, pass_block=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Run routes defined on the class and all superclasses.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="route--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 704</span>
+704:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">route!</span>(<span class="ruby-identifier">base</span> = <span class="ruby-identifier">settings</span>, <span class="ruby-identifier">pass_block</span>=<span class="ruby-keyword kw">nil</span>)
+705:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">routes</span> = <span class="ruby-identifier">base</span>.<span class="ruby-identifier">routes</span>[<span class="ruby-ivar">@request</span>.<span class="ruby-identifier">request_method</span>]
+706:         <span class="ruby-identifier">routes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">conditions</span>, <span class="ruby-identifier">block</span><span class="ruby-operator">|</span>
+707:           <span class="ruby-identifier">pass_block</span> = <span class="ruby-identifier">process_route</span>(<span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">conditions</span>) <span class="ruby-keyword kw">do</span>
+708:             <span class="ruby-identifier">route_eval</span>(&amp;<span class="ruby-identifier">block</span>)
+709:           <span class="ruby-keyword kw">end</span>
+710:         <span class="ruby-keyword kw">end</span>
+711:       <span class="ruby-keyword kw">end</span>
+712: 
+713:       <span class="ruby-comment cmt"># Run routes defined in superclass.</span>
+714:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">base</span>.<span class="ruby-identifier">superclass</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:routes</span>)
+715:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">route!</span>(<span class="ruby-identifier">base</span>.<span class="ruby-identifier">superclass</span>, <span class="ruby-identifier">pass_block</span>)
+716:       <span class="ruby-keyword kw">end</span>
+717: 
+718:       <span class="ruby-identifier">route_eval</span>(&amp;<span class="ruby-identifier">pass_block</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">pass_block</span>
+719:       <span class="ruby-identifier">route_missing</span>
+720:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="route-eval-method" class="method-detail ">
+				<a name="M000061"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">route_eval</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Run a route block and throw :halt with the result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="route-eval-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 723</span>
+723:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">route_eval</span>(&amp;<span class="ruby-identifier">block</span>)
+724:       <span class="ruby-identifier">throw</span> <span class="ruby-value">:halt</span>, <span class="ruby-identifier">instance_eval</span>(&amp;<span class="ruby-identifier">block</span>)
+725:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="route-missing-method" class="method-detail ">
+				<a name="M000063"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">route_missing</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+No matching route was found or all routes passed. The default
+implementation is to forward the request downstream when running as
+middleware (@app is non-nil); when no downstream app is set, raise a
+NotFound exception. Subclasses can override this method to perform custom
+route miss logic.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="route-missing-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 770</span>
+770:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">route_missing</span>
+771:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@app</span>
+772:         <span class="ruby-identifier">forward</span>
+773:       <span class="ruby-keyword kw">else</span>
+774:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotFound</span>
+775:       <span class="ruby-keyword kw">end</span>
+776:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="static--method" class="method-detail ">
+				<a name="M000064"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">static!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Attempt to serve static files from public directory. Throws :halt when a
+matching file is found, returns nil otherwise.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="static--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 780</span>
+780:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">static!</span>
+781:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">public_dir</span> = <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">public</span>).<span class="ruby-identifier">nil?</span>
+782:       <span class="ruby-identifier">public_dir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">public_dir</span>)
+783: 
+784:       <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">public_dir</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">unescape</span>(<span class="ruby-identifier">request</span>.<span class="ruby-identifier">path_info</span>))
+785:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">path</span>[<span class="ruby-value">0</span>, <span class="ruby-identifier">public_dir</span>.<span class="ruby-identifier">length</span>] <span class="ruby-operator">!=</span> <span class="ruby-identifier">public_dir</span>
+786:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span>(<span class="ruby-identifier">path</span>)
+787: 
+788:       <span class="ruby-identifier">env</span>[<span class="ruby-value str">'sinatra.static_file'</span>] = <span class="ruby-identifier">path</span>
+789:       <span class="ruby-identifier">send_file</span> <span class="ruby-identifier">path</span>, <span class="ruby-value">:disposition</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>
+790:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="call-method" class="method-detail ">
+				<a name="M000050"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call</span><span
+						class="method-args">(env)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Rack call interface.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="call-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 628</span>
+628:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call</span>(<span class="ruby-identifier">env</span>)
+629:       <span class="ruby-identifier">dup</span>.<span class="ruby-identifier">call!</span>(<span class="ruby-identifier">env</span>)
+630:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="forward-method" class="method-detail ">
+				<a name="M000058"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">forward</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Forward the request to the downstream app &#8212; middleware only.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="forward-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 687</span>
+687:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">forward</span>
+688:       <span class="ruby-identifier">fail</span> <span class="ruby-value str">&quot;downstream app not set&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:call</span>
+689:       <span class="ruby-identifier">status</span>, <span class="ruby-identifier">headers</span>, <span class="ruby-identifier">body</span> = <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">call</span> <span class="ruby-identifier">env</span>
+690:       <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">status</span> = <span class="ruby-identifier">status</span>
+691:       <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">body</span> = <span class="ruby-identifier">body</span>
+692:       <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">headers</span>.<span class="ruby-identifier">merge!</span> <span class="ruby-identifier">headers</span>
+693:       <span class="ruby-keyword kw">nil</span>
+694:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="halt-method" class="method-detail ">
+				<a name="M000056"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">halt</span><span
+						class="method-args">(*response)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Exit the current block, halts any further processing of the request, and
+returns the specified response.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="halt-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 674</span>
+674:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">halt</span>(*<span class="ruby-identifier">response</span>)
+675:       <span class="ruby-identifier">response</span> = <span class="ruby-identifier">response</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+676:       <span class="ruby-identifier">throw</span> <span class="ruby-value">:halt</span>, <span class="ruby-identifier">response</span>
+677:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="options-method" class="method-detail method-alias">
+				<a name="M000054"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">options</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Base.html#M000053">settings</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="options-method" class="method-detail method-alias">
+				<a name="M000055"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">options</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Base.html#M000053">settings</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="pass-method" class="method-detail ">
+				<a name="M000057"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pass</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Pass control to the next matching route. If there are no more matching
+routes, <a href="../Sinatra.html">Sinatra</a> will return a 404 response.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pass-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 682</span>
+682:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pass</span>(&amp;<span class="ruby-identifier">block</span>)
+683:       <span class="ruby-identifier">throw</span> <span class="ruby-value">:pass</span>, <span class="ruby-identifier">block</span>
+684:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="settings-method" class="method-detail ">
+				<a name="M000053"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">settings</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Access settings defined with <a href="Base.html#M000076">Base.set</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="settings-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 663</span>
+663:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">settings</span>
+664:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">settings</span>
+665:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Base.html#M000054">options</a>, <a href="Base.html#M000055">options</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-class-method-details" class="method-section section">
+			<h3 class="section-header">Private Class Methods</h3>
+
+		
+			<div id="add-filter-method" class="method-detail ">
+				<a name="M000088"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_filter</span><span
+						class="method-args">(type, path = nil, options = {}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+add a filter
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-filter-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1057</span>
+1057:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_filter</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">path</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">options</span> = {}, &amp;<span class="ruby-identifier">block</span>)
+1058:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">filters</span>[<span class="ruby-identifier">type</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">path</span>
+1059:         <span class="ruby-identifier">path</span>, <span class="ruby-identifier">options</span> = <span class="ruby-regexp re">//</span>, <span class="ruby-identifier">path</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:each_pair</span>)
+1060:         <span class="ruby-identifier">block</span>, *<span class="ruby-identifier">arguments</span> = <span class="ruby-identifier">compile!</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">block</span>, <span class="ruby-identifier">options</span>)
+1061:         <span class="ruby-identifier">add_filter</span>(<span class="ruby-identifier">type</span>) <span class="ruby-keyword kw">do</span>
+1062:           <span class="ruby-identifier">process_route</span>(*<span class="ruby-identifier">arguments</span>) { <span class="ruby-identifier">instance_eval</span>(&amp;<span class="ruby-identifier">block</span>) }
+1063:         <span class="ruby-keyword kw">end</span>
+1064:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="after-method" class="method-detail ">
+				<a name="M000087"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">after</span><span
+						class="method-args">(path = nil, options = {}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Define an after filter; runs after all requests within the same context as
+route handlers and may access/modify the request and response.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="after-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1052</span>
+1052:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">after</span>(<span class="ruby-identifier">path</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">options</span> = {}, &amp;<span class="ruby-identifier">block</span>)
+1053:         <span class="ruby-identifier">add_filter</span>(<span class="ruby-value">:after</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">options</span>, &amp;<span class="ruby-identifier">block</span>)
+1054:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="before-method" class="method-detail ">
+				<a name="M000086"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">before</span><span
+						class="method-args">(path = nil, options = {}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Define a before filter; runs before all requests within the same context as
+route handlers and may access/modify the request and response.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="before-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1045</span>
+1045:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">before</span>(<span class="ruby-identifier">path</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">options</span> = {}, &amp;<span class="ruby-identifier">block</span>)
+1046:         <span class="ruby-identifier">add_filter</span>(<span class="ruby-value">:before</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">options</span>, &amp;<span class="ruby-identifier">block</span>)
+1047:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compile-method" class="method-detail ">
+				<a name="M000102"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile</span><span
+						class="method-args">(path)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1156</span>
+1156:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile</span>(<span class="ruby-identifier">path</span>)
+1157:         <span class="ruby-identifier">keys</span> = []
+1158:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:to_str</span>
+1159:           <span class="ruby-identifier">special_chars</span> = <span class="ruby-node">]. + ( ) $}</span>
+1160:           <span class="ruby-identifier">pattern</span> =
+1161:             <span class="ruby-identifier">path</span>.<span class="ruby-identifier">to_str</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-node">/((:\w+)|[\*#{special_chars.join}])/</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">match</span><span class="ruby-operator">|</span>
+1162:               <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">match</span>
+1163:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;*&quot;</span>
+1164:                 <span class="ruby-identifier">keys</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'splat'</span>
+1165:                 <span class="ruby-value str">&quot;(.*?)&quot;</span>
+1166:               <span class="ruby-keyword kw">when</span> *<span class="ruby-identifier">special_chars</span>
+1167:                 <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-identifier">match</span>)
+1168:               <span class="ruby-keyword kw">else</span>
+1169:                 <span class="ruby-identifier">keys</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">$2</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+1170:                 <span class="ruby-node">&quot;([^/?#]+)&quot;</span>
+1171:               <span class="ruby-keyword kw">end</span>
+1172:             <span class="ruby-keyword kw">end</span>
+1173:           [<span class="ruby-node">/^#{pattern}$/</span>, <span class="ruby-identifier">keys</span>]
+1174:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:keys</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:match</span>)
+1175:           [<span class="ruby-identifier">path</span>, <span class="ruby-identifier">path</span>.<span class="ruby-identifier">keys</span>]
+1176:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:names</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:match</span>)
+1177:           [<span class="ruby-identifier">path</span>, <span class="ruby-identifier">path</span>.<span class="ruby-identifier">names</span>]
+1178:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:match</span>
+1179:           [<span class="ruby-identifier">path</span>, <span class="ruby-identifier">keys</span>]
+1180:         <span class="ruby-keyword kw">else</span>
+1181:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-identifier">path</span>
+1182:         <span class="ruby-keyword kw">end</span>
+1183:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compile--method" class="method-detail ">
+				<a name="M000101"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile!</span><span
+						class="method-args">(verb, path, block, options = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile--source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1140</span>
+1140:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile!</span>(<span class="ruby-identifier">verb</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">block</span>, <span class="ruby-identifier">options</span> = {})
+1141:         <span class="ruby-identifier">options</span>.<span class="ruby-identifier">each_pair</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">option</span>, <span class="ruby-identifier">args</span><span class="ruby-operator">|</span> <span class="ruby-identifier">send</span>(<span class="ruby-identifier">option</span>, *<span class="ruby-identifier">args</span>) }
+1142:         <span class="ruby-identifier">method_name</span> = <span class="ruby-node">&quot;#{verb} #{path}&quot;</span>
+1143: 
+1144:         <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">method_name</span>, &amp;<span class="ruby-identifier">block</span>)
+1145:         <span class="ruby-identifier">unbound_method</span>          = <span class="ruby-identifier">instance_method</span> <span class="ruby-identifier">method_name</span>
+1146:         <span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">keys</span>           = <span class="ruby-identifier">compile</span>(<span class="ruby-identifier">path</span>)
+1147:         <span class="ruby-identifier">conditions</span>, <span class="ruby-ivar">@conditions</span> = <span class="ruby-ivar">@conditions</span>, []
+1148:         <span class="ruby-identifier">remove_method</span> <span class="ruby-identifier">method_name</span>
+1149: 
+1150:         [ <span class="ruby-identifier">block</span>.<span class="ruby-identifier">arity</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span>
+1151:             <span class="ruby-identifier">proc</span> { <span class="ruby-identifier">unbound_method</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">call</span>(*<span class="ruby-ivar">@block_params</span>) } <span class="ruby-operator">:</span>
+1152:             <span class="ruby-identifier">proc</span> { <span class="ruby-identifier">unbound_method</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">call</span> },
+1153:           <span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">conditions</span> ]
+1154:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="condition-method" class="method-detail ">
+				<a name="M000089"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">condition</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add a route condition. The route is considered non-matching when the block
+returns false.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="condition-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1068</span>
+1068:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">condition</span>(&amp;<span class="ruby-identifier">block</span>)
+1069:         <span class="ruby-ivar">@conditions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span>
+1070:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="detect-rack-handler-method" class="method-detail ">
+				<a name="M000118"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">detect_rack_handler</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="detect-rack-handler-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1281</span>
+1281:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">detect_rack_handler</span>
+1282:         <span class="ruby-identifier">servers</span> = <span class="ruby-constant">Array</span>(<span class="ruby-identifier">server</span>)
+1283:         <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">server_name</span><span class="ruby-operator">|</span>
+1284:           <span class="ruby-keyword kw">begin</span>
+1285:             <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Handler</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">server_name</span>.<span class="ruby-identifier">downcase</span>)
+1286:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span>
+1287:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">NameError</span>
+1288:           <span class="ruby-keyword kw">end</span>
+1289:         <span class="ruby-keyword kw">end</span>
+1290:         <span class="ruby-identifier">fail</span> <span class="ruby-node">&quot;Server handler (#{servers.join(',')}) not found.&quot;</span>
+1291:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="disable-method" class="method-detail ">
+				<a name="M000078"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">disable</span><span
+						class="method-args">(*opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Same as calling `set :option, false` for each of the given options.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="disable-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 966</span>
+966:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">disable</span>(*<span class="ruby-identifier">opts</span>)
+967:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">set</span>(<span class="ruby-identifier">key</span>, <span class="ruby-keyword kw">false</span>) }
+968:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="enable-method" class="method-detail ">
+				<a name="M000077"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">enable</span><span
+						class="method-args">(*opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Same as calling `set :option, true` for each of the given options.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="enable-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 961</span>
+961:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enable</span>(*<span class="ruby-identifier">opts</span>)
+962:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">set</span>(<span class="ruby-identifier">key</span>, <span class="ruby-keyword kw">true</span>) }
+963:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="error-method" class="method-detail ">
+				<a name="M000079"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">error</span><span
+						class="method-args">(codes=Exception, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Define a custom error handler. Optionally takes either an Exception class,
+or an HTTP status code to specify which errors should be handled.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="error-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 973</span>
+973:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">error</span>(<span class="ruby-identifier">codes</span>=<span class="ruby-constant">Exception</span>, &amp;<span class="ruby-identifier">block</span>)
+974:         <span class="ruby-constant">Array</span>(<span class="ruby-identifier">codes</span>).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">code</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@errors</span>[<span class="ruby-identifier">code</span>] = <span class="ruby-identifier">block</span> }
+975:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extensions-method" class="method-detail ">
+				<a name="M000074"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extensions</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extension modules registered on this class and all superclasses.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="extensions-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 923</span>
+923:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extensions</span>
+924:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">superclass</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:extensions</span>)
+925:           (<span class="ruby-ivar">@extensions</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">superclass</span>.<span class="ruby-identifier">extensions</span>).<span class="ruby-identifier">uniq</span>
+926:         <span class="ruby-keyword kw">else</span>
+927:           <span class="ruby-ivar">@extensions</span>
+928:         <span class="ruby-keyword kw">end</span>
+929:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="force-encoding-method" class="method-detail ">
+				<a name="M000126"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">force_encoding</span><span
+						class="method-args">(data, *)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="force-encoding-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1362</span>
+1362:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">data</span>, *) <span class="ruby-identifier">data</span> <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="force-encoding-method" class="method-detail ">
+				<a name="M000125"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">force_encoding</span><span
+						class="method-args">(data, encoding = default_encoding)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="force-encoding-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1350</span>
+1350:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">encoding</span> = <span class="ruby-identifier">default_encoding</span>)
+1351:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">settings</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Tempfile</span>)
+1352:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:force_encoding</span>
+1353:           <span class="ruby-identifier">data</span>.<span class="ruby-identifier">force_encoding</span> <span class="ruby-identifier">encoding</span>
+1354:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:each_value</span>
+1355:           <span class="ruby-identifier">data</span>.<span class="ruby-identifier">each_value</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">v</span>, <span class="ruby-identifier">encoding</span>) }
+1356:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:each</span>
+1357:           <span class="ruby-identifier">data</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">v</span>, <span class="ruby-identifier">encoding</span>) }
+1358:         <span class="ruby-keyword kw">end</span>
+1359:         <span class="ruby-identifier">data</span>
+1360:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="host-name-method" class="method-detail ">
+				<a name="M000090"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">host_name</span><span
+						class="method-args">(pattern)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Condition for matching host name. Parameter might be String or Regexp.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="host-name-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1074</span>
+1074:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">host_name</span>(<span class="ruby-identifier">pattern</span>)
+1075:         <span class="ruby-identifier">condition</span> { <span class="ruby-identifier">pattern</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">host</span> }
+1076:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inherited-method" class="method-detail ">
+				<a name="M000119"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inherited</span><span
+						class="method-args">(subclass)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="inherited-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1293</span>
+1293:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inherited</span>(<span class="ruby-identifier">subclass</span>)
+1294:         <span class="ruby-identifier">subclass</span>.<span class="ruby-identifier">reset!</span>
+1295:         <span class="ruby-keyword kw">super</span>
+1296:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inline-templates--method" class="method-detail ">
+				<a name="M000083"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inline_templates=</span><span
+						class="method-args">(file=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Load embeded templates from the file; uses the caller&#8217;s <em>FILE</em>
+when no file is specified.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="inline-templates--source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 995</span>
+ 995:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inline_templates=</span>(<span class="ruby-identifier">file</span>=<span class="ruby-keyword kw">nil</span>)
+ 996:         <span class="ruby-identifier">file</span> = (<span class="ruby-identifier">file</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">file</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">caller_files</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">||</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">$0</span>)) <span class="ruby-operator">:</span> <span class="ruby-identifier">file</span>
+ 997: 
+ 998:         <span class="ruby-keyword kw">begin</span>
+ 999:           <span class="ruby-identifier">io</span> = <span class="ruby-operator">::</span><span class="ruby-constant">IO</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:binread</span>) <span class="ruby-operator">?</span> <span class="ruby-operator">::</span><span class="ruby-constant">IO</span>.<span class="ruby-identifier">binread</span>(<span class="ruby-identifier">file</span>) <span class="ruby-operator">:</span> <span class="ruby-operator">::</span><span class="ruby-constant">IO</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">file</span>)
+1000:           <span class="ruby-identifier">app</span>, <span class="ruby-identifier">data</span> = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;\r\n&quot;</span>, <span class="ruby-value str">&quot;\n&quot;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/^__END__$/</span>, <span class="ruby-value">2</span>)
+1001:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+1002:           <span class="ruby-identifier">app</span>, <span class="ruby-identifier">data</span> = <span class="ruby-keyword kw">nil</span>
+1003:         <span class="ruby-keyword kw">end</span>
+1004: 
+1005:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>
+1006:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">app</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">app</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/([^\n]*\n)?#[^\n]*coding: *(\S+)/</span>
+1007:             <span class="ruby-identifier">encoding</span> = <span class="ruby-node">$2</span>
+1008:           <span class="ruby-keyword kw">else</span>
+1009:             <span class="ruby-identifier">encoding</span> = <span class="ruby-identifier">settings</span>.<span class="ruby-identifier">default_encoding</span>
+1010:           <span class="ruby-keyword kw">end</span>
+1011:           <span class="ruby-identifier">lines</span> = <span class="ruby-identifier">app</span>.<span class="ruby-identifier">count</span>(<span class="ruby-value str">&quot;\n&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+1012:           <span class="ruby-identifier">template</span> = <span class="ruby-keyword kw">nil</span>
+1013:           <span class="ruby-identifier">force_encoding</span> <span class="ruby-identifier">data</span>, <span class="ruby-identifier">encoding</span>
+1014:           <span class="ruby-identifier">data</span>.<span class="ruby-identifier">each_line</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+1015:             <span class="ruby-identifier">lines</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+1016:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^@@\s*(.*\S)\s*$/</span>
+1017:               <span class="ruby-identifier">template</span> = <span class="ruby-identifier">force_encoding</span>(<span class="ruby-value str">''</span>, <span class="ruby-identifier">encoding</span>)
+1018:               <span class="ruby-identifier">templates</span>[<span class="ruby-node">$1</span>.<span class="ruby-identifier">to_sym</span>] = [<span class="ruby-identifier">template</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">lines</span>]
+1019:             <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">template</span>
+1020:               <span class="ruby-identifier">template</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>
+1021:             <span class="ruby-keyword kw">end</span>
+1022:           <span class="ruby-keyword kw">end</span>
+1023:         <span class="ruby-keyword kw">end</span>
+1024:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="invoke-hook-method" class="method-detail ">
+				<a name="M000100"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">invoke_hook</span><span
+						class="method-args">(name, *args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="invoke-hook-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1136</span>
+1136:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">invoke_hook</span>(<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>)
+1137:         <span class="ruby-identifier">extensions</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">name</span>) }
+1138:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="layout-method" class="method-detail ">
+				<a name="M000082"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">layout</span><span
+						class="method-args">(name=:layout, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Define the layout template. The block must return the template source.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="layout-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 989</span>
+989:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">layout</span>(<span class="ruby-identifier">name</span>=<span class="ruby-value">:layout</span>, &amp;<span class="ruby-identifier">block</span>)
+990:         <span class="ruby-identifier">template</span> <span class="ruby-identifier">name</span>, &amp;<span class="ruby-identifier">block</span>
+991:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="metadef-method" class="method-detail ">
+				<a name="M000121"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">metadef</span><span
+						class="method-args">(message, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="metadef-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1307</span>
+1307:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">metadef</span>(<span class="ruby-identifier">message</span>, &amp;<span class="ruby-identifier">block</span>)
+1308:         (<span class="ruby-keyword kw">class</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>; <span class="ruby-keyword kw">self</span>; <span class="ruby-keyword kw">end</span>).
+1309:           <span class="ruby-identifier">send</span> <span class="ruby-value">:define_method</span>, <span class="ruby-identifier">message</span>, &amp;<span class="ruby-identifier">block</span>
+1310:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="middleware-method" class="method-detail ">
+				<a name="M000075"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">middleware</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Middleware used in this class and all superclasses.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="middleware-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 932</span>
+932:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">middleware</span>
+933:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">superclass</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:middleware</span>)
+934:           <span class="ruby-identifier">superclass</span>.<span class="ruby-identifier">middleware</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@middleware</span>
+935:         <span class="ruby-keyword kw">else</span>
+936:           <span class="ruby-ivar">@middleware</span>
+937:         <span class="ruby-keyword kw">end</span>
+938:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mime-type-method" class="method-detail ">
+				<a name="M000084"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mime_type</span><span
+						class="method-args">(type, value=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Lookup or register a mime type in Rack&#8217;s mime registry.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="mime-type-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1027</span>
+1027:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mime_type</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">value</span>=<span class="ruby-keyword kw">nil</span>)
+1028:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">type</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value str">'/'</span>)
+1029:         <span class="ruby-identifier">type</span> = <span class="ruby-node">&quot;.#{type}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">to_s</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">..</span>
+1030:         <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Mime</span>.<span class="ruby-identifier">mime_type</span>(<span class="ruby-identifier">type</span>, <span class="ruby-keyword kw">nil</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">value</span>
+1031:         <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Mime</span><span class="ruby-operator">::</span><span class="ruby-constant">MIME_TYPES</span>[<span class="ruby-identifier">type</span>] = <span class="ruby-identifier">value</span>
+1032:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mime-types-method" class="method-detail ">
+				<a name="M000085"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mime_types</span><span
+						class="method-args">(type)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+provides all mime types matching type, including deprecated types:
+</p>
+<pre>
+  mime_types :html # =&gt; ['text/html']
+  mime_types :js   # =&gt; ['application/javascript', 'text/javascript']</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="mime-types-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1037</span>
+1037:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mime_types</span>(<span class="ruby-identifier">type</span>)
+1038:         <span class="ruby-identifier">type</span> = <span class="ruby-identifier">mime_type</span> <span class="ruby-identifier">type</span>
+1039:         <span class="ruby-identifier">type</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^application\/(xml|javascript)$/</span> <span class="ruby-operator">?</span> [<span class="ruby-identifier">type</span>, <span class="ruby-node">&quot;text/#$1&quot;</span>] <span class="ruby-operator">:</span> [<span class="ruby-identifier">type</span>]
+1040:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="not-found-method" class="method-detail ">
+				<a name="M000080"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">not_found</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sugar for `error(404) { &#8230; }`
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="not-found-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 978</span>
+978:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">not_found</span>(&amp;<span class="ruby-identifier">block</span>)
+979:         <span class="ruby-identifier">error</span> <span class="ruby-value">404</span>, &amp;<span class="ruby-identifier">block</span>
+980:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="provides-method" class="method-detail ">
+				<a name="M000092"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">provides</span><span
+						class="method-args">(*types)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Condition for matching mimetypes. Accepts file extensions.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="provides-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1093</span>
+1093:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">provides</span>(*<span class="ruby-identifier">types</span>)
+1094:         <span class="ruby-identifier">types</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">mime_types</span>(<span class="ruby-identifier">t</span>) }
+1095:         <span class="ruby-identifier">types</span>.<span class="ruby-identifier">flatten!</span>
+1096:         <span class="ruby-identifier">condition</span> <span class="ruby-keyword kw">do</span>
+1097:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span> = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">preferred_type</span>(<span class="ruby-identifier">types</span>)
+1098:             <span class="ruby-identifier">content_type</span>(<span class="ruby-identifier">type</span>)
+1099:             <span class="ruby-keyword kw">true</span>
+1100:           <span class="ruby-keyword kw">else</span>
+1101:             <span class="ruby-keyword kw">false</span>
+1102:           <span class="ruby-keyword kw">end</span>
+1103:         <span class="ruby-keyword kw">end</span>
+1104:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reset--method" class="method-detail ">
+				<a name="M000073"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reset!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Removes all routes, filters, middleware and extension hooks from the
+current class (not routes/filters/... defined by its superclass).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="reset--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 906</span>
+906:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reset!</span>
+907:         <span class="ruby-ivar">@conditions</span>     = []
+908:         <span class="ruby-ivar">@routes</span>         = {}
+909:         <span class="ruby-ivar">@filters</span>        = {<span class="ruby-value">:before</span> =<span class="ruby-operator">&gt;</span> [], <span class="ruby-value">:after</span> =<span class="ruby-operator">&gt;</span> []}
+910:         <span class="ruby-ivar">@errors</span>         = {}
+911:         <span class="ruby-ivar">@middleware</span>     = []
+912:         <span class="ruby-ivar">@prototype</span>      = <span class="ruby-keyword kw">nil</span>
+913:         <span class="ruby-ivar">@extensions</span>     = []
+914: 
+915:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">superclass</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:templates</span>)
+916:           <span class="ruby-ivar">@templates</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">hash</span>,<span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">superclass</span>.<span class="ruby-identifier">templates</span>[<span class="ruby-identifier">key</span>] }
+917:         <span class="ruby-keyword kw">else</span>
+918:           <span class="ruby-ivar">@templates</span> = {}
+919:         <span class="ruby-keyword kw">end</span>
+920:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="route-method" class="method-detail ">
+				<a name="M000099"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">route</span><span
+						class="method-args">(verb, path, options={}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="route-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1124</span>
+1124:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">route</span>(<span class="ruby-identifier">verb</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">options</span>={}, &amp;<span class="ruby-identifier">block</span>)
+1125:         <span class="ruby-comment cmt"># Because of self.options.host</span>
+1126:         <span class="ruby-identifier">host_name</span>(<span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:host</span>)) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-value">:host</span>)
+1127:         <span class="ruby-identifier">enable</span> <span class="ruby-value">:empty_path_info</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">empty_path_info</span>.<span class="ruby-identifier">nil?</span>
+1128: 
+1129:         <span class="ruby-identifier">block</span>, <span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">conditions</span> = <span class="ruby-identifier">compile!</span> <span class="ruby-identifier">verb</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">block</span>, <span class="ruby-identifier">options</span>
+1130:         <span class="ruby-identifier">invoke_hook</span>(<span class="ruby-value">:route_added</span>, <span class="ruby-identifier">verb</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">block</span>)
+1131: 
+1132:         (<span class="ruby-ivar">@routes</span>[<span class="ruby-identifier">verb</span>] <span class="ruby-operator">||=</span> []).
+1133:           <span class="ruby-identifier">push</span>([<span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">conditions</span>, <span class="ruby-identifier">block</span>]).<span class="ruby-identifier">last</span>
+1134:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-method" class="method-detail ">
+				<a name="M000076"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set</span><span
+						class="method-args">(option, value = (not_set = true), &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sets an option to the given value.  If the value is a proc, the proc will
+be called every time the option is accessed.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 942</span>
+942:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set</span>(<span class="ruby-identifier">option</span>, <span class="ruby-identifier">value</span> = (<span class="ruby-identifier">not_set</span> = <span class="ruby-keyword kw">true</span>), &amp;<span class="ruby-identifier">block</span>)
+943:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block</span> <span class="ruby-keyword kw">and</span> <span class="ruby-operator">!</span><span class="ruby-identifier">not_set</span>
+944:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">block</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block</span>
+945:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Proc</span>)
+946:           <span class="ruby-identifier">metadef</span>(<span class="ruby-identifier">option</span>, &amp;<span class="ruby-identifier">value</span>)
+947:           <span class="ruby-identifier">metadef</span>(<span class="ruby-node">&quot;#{option}?&quot;</span>) { <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">option</span>) }
+948:           <span class="ruby-identifier">metadef</span>(<span class="ruby-node">&quot;#{option}=&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-identifier">metadef</span>(<span class="ruby-identifier">option</span>, &amp;<span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-identifier">val</span>}) }
+949:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">not_set</span>
+950:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:each</span>)
+951:           <span class="ruby-identifier">option</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">set</span>(<span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span>) }
+952:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-node">&quot;#{option}=&quot;</span>)
+953:           <span class="ruby-identifier">__send__</span> <span class="ruby-node">&quot;#{option}=&quot;</span>, <span class="ruby-identifier">value</span>
+954:         <span class="ruby-keyword kw">else</span>
+955:           <span class="ruby-identifier">set</span> <span class="ruby-identifier">option</span>, <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>{<span class="ruby-identifier">value</span>}
+956:         <span class="ruby-keyword kw">end</span>
+957:         <span class="ruby-keyword kw">self</span>
+958:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="setup-sessions-method" class="method-detail ">
+				<a name="M000117"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">setup_sessions</span><span
+						class="method-args">(builder)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="setup-sessions-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1276</span>
+1276:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup_sessions</span>(<span class="ruby-identifier">builder</span>)
+1277:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">sessions?</span>
+1278:         <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">use</span> <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Session</span><span class="ruby-operator">::</span><span class="ruby-constant">Cookie</span>, <span class="ruby-value">:secret</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">session_secret</span>
+1279:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="synchronize-method" class="method-detail ">
+				<a name="M000120"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">synchronize</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="synchronize-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1299</span>
+1299:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">synchronize</span>(&amp;<span class="ruby-identifier">block</span>)
+1300:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">lock?</span>
+1301:           <span class="ruby-identifier">@@mutex</span>.<span class="ruby-identifier">synchronize</span>(&amp;<span class="ruby-identifier">block</span>)
+1302:         <span class="ruby-keyword kw">else</span>
+1303:           <span class="ruby-keyword kw">yield</span>
+1304:         <span class="ruby-keyword kw">end</span>
+1305:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="template-method" class="method-detail ">
+				<a name="M000081"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">template</span><span
+						class="method-args">(name, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Define a named template. The block must return the template source.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="template-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 983</span>
+983:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">template</span>(<span class="ruby-identifier">name</span>, &amp;<span class="ruby-identifier">block</span>)
+984:         <span class="ruby-identifier">filename</span>, <span class="ruby-identifier">line</span> = <span class="ruby-identifier">caller_locations</span>.<span class="ruby-identifier">first</span>
+985:         <span class="ruby-identifier">templates</span>[<span class="ruby-identifier">name</span>] = [<span class="ruby-identifier">block</span>, <span class="ruby-identifier">filename</span>, <span class="ruby-identifier">line</span>.<span class="ruby-identifier">to_i</span>]
+986:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="user-agent-method" class="method-detail ">
+				<a name="M000091"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">user_agent</span><span
+						class="method-args">(pattern)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Condition for matching user agent. Parameter should be Regexp. Will set
+params[:agent].
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="user-agent-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1080</span>
+1080:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">user_agent</span>(<span class="ruby-identifier">pattern</span>)
+1081:         <span class="ruby-identifier">condition</span> <span class="ruby-keyword kw">do</span>
+1082:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">user_agent</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">pattern</span>
+1083:             <span class="ruby-ivar">@params</span>[<span class="ruby-value">:agent</span>] = <span class="ruby-identifier">$~</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+1084:             <span class="ruby-keyword kw">true</span>
+1085:           <span class="ruby-keyword kw">else</span>
+1086:             <span class="ruby-keyword kw">false</span>
+1087:           <span class="ruby-keyword kw">end</span>
+1088:         <span class="ruby-keyword kw">end</span>
+1089:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="build-method" class="method-detail ">
+				<a name="M000115"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build</span><span
+						class="method-args">(*args, &bk)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a Rack::Builder instance with all the middleware set up and an
+instance of this class as end point.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="build-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1259</span>
+1259:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">bk</span>)
+1260:         <span class="ruby-identifier">builder</span> = <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Builder</span>.<span class="ruby-identifier">new</span>
+1261:         <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">use</span> <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">MethodOverride</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method_override?</span>
+1262:         <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">use</span> <span class="ruby-constant">ShowExceptions</span>       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">show_exceptions?</span>
+1263:         <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">use</span> <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">CommonLogger</span>   <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">logging?</span>
+1264:         <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">use</span> <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Head</span>
+1265:         <span class="ruby-identifier">setup_sessions</span> <span class="ruby-identifier">builder</span>
+1266:         <span class="ruby-identifier">middleware</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span>,<span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">use</span>(<span class="ruby-identifier">c</span>, *<span class="ruby-identifier">a</span>, &amp;<span class="ruby-identifier">b</span>) }
+1267:         <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">run</span> <span class="ruby-identifier">new!</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">bk</span>)
+1268:         <span class="ruby-identifier">builder</span>
+1269:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="call-method" class="method-detail ">
+				<a name="M000116"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call</span><span
+						class="method-args">(env)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="call-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1271</span>
+1271:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call</span>(<span class="ruby-identifier">env</span>)
+1272:         <span class="ruby-identifier">synchronize</span> { <span class="ruby-identifier">prototype</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">env</span>) }
+1273:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="caller-files-method" class="method-detail ">
+				<a name="M000122"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">caller_files</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Like Kernel#caller but excluding certain magic entries and without line /
+method information; the resulting array contains filenames only.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="caller-files-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1328</span>
+1328:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">caller_files</span>
+1329:         <span class="ruby-identifier">caller_locations</span>.
+1330:           <span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span>,<span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span> }
+1331:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="caller-locations-method" class="method-detail ">
+				<a name="M000123"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">caller_locations</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Like <a href="Base.html#M000122">caller_files</a>, but containing Arrays
+rather than strings with the first element being the file, and the second
+being the line.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="caller-locations-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1335</span>
+1335:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">caller_locations</span>
+1336:         <span class="ruby-identifier">caller</span>(<span class="ruby-value">1</span>).
+1337:           <span class="ruby-identifier">map</span>    { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/:(?=\d|in )/</span>)[<span class="ruby-value">0</span>,<span class="ruby-value">2</span>] }.
+1338:           <span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span>,<span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-constant">CALLERS_TO_IGNORE</span>.<span class="ruby-identifier">any?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">pattern</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">pattern</span> } }
+1339:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="configure-method" class="method-detail ">
+				<a name="M000108"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">configure</span><span
+						class="method-args">(*envs, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Set configuration options for <a href="../Sinatra.html">Sinatra</a> and/or
+the app. Allows scoping of settings for certain environments.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="configure-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1210</span>
+1210:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">configure</span>(*<span class="ruby-identifier">envs</span>, &amp;<span class="ruby-identifier">block</span>)
+1211:         <span class="ruby-keyword kw">yield</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">envs</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">envs</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">environment</span>.<span class="ruby-identifier">to_sym</span>)
+1212:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="delete-method" class="method-detail ">
+				<a name="M000096"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">delete</span><span
+						class="method-args">(path, opts={}, &bk)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="delete-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1119</span>
+1119:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delete</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">bk</span>)  <span class="ruby-identifier">route</span> <span class="ruby-value str">'DELETE'</span>,  <span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">bk</span> <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="development--method" class="method-detail ">
+				<a name="M000105"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">development?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="development--source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1204</span>
+1204:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">development?</span>; <span class="ruby-identifier">environment</span> <span class="ruby-operator">==</span> <span class="ruby-value">:development</span> <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-method" class="method-detail ">
+				<a name="M000093"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get</span><span
+						class="method-args">(path, opts={}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Defining a `GET` handler also automatically defines a `HEAD` handler.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1109</span>
+1109:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">block</span>)
+1110:         <span class="ruby-identifier">conditions</span> = <span class="ruby-ivar">@conditions</span>.<span class="ruby-identifier">dup</span>
+1111:         <span class="ruby-identifier">route</span>(<span class="ruby-value str">'GET'</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">block</span>)
+1112: 
+1113:         <span class="ruby-ivar">@conditions</span> = <span class="ruby-identifier">conditions</span>
+1114:         <span class="ruby-identifier">route</span>(<span class="ruby-value str">'HEAD'</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">block</span>)
+1115:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="head-method" class="method-detail ">
+				<a name="M000097"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">head</span><span
+						class="method-args">(path, opts={}, &bk)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="head-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1120</span>
+1120:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">head</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">bk</span>)    <span class="ruby-identifier">route</span> <span class="ruby-value str">'HEAD'</span>,    <span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">bk</span> <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="helpers-method" class="method-detail ">
+				<a name="M000103"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">helpers</span><span
+						class="method-args">(*extensions, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Makes the methods defined in the block and in the Modules given in
+`extensions` available to the handlers and templates
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="helpers-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1188</span>
+1188:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">helpers</span>(*<span class="ruby-identifier">extensions</span>, &amp;<span class="ruby-identifier">block</span>)
+1189:         <span class="ruby-identifier">class_eval</span>(&amp;<span class="ruby-identifier">block</span>)  <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+1190:         <span class="ruby-identifier">include</span>(*<span class="ruby-identifier">extensions</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">extensions</span>.<span class="ruby-identifier">any?</span>
+1191:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000113"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(*args, &bk)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Create a new instance of the class fronted by its middleware pipeline. The
+object is guaranteed to respond to <a href="Base.html#M000050">call</a> but
+may not be an instance of the class new was called on.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1253</span>
+1253:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">bk</span>)
+1254:         <span class="ruby-identifier">build</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">bk</span>).<span class="ruby-identifier">to_app</span>
+1255:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Base.html#M000114">new!</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000049"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(app=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 621</span>
+621:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">app</span>=<span class="ruby-keyword kw">nil</span>)
+622:       <span class="ruby-ivar">@app</span> = <span class="ruby-identifier">app</span>
+623:       <span class="ruby-ivar">@template_cache</span> = <span class="ruby-constant">Tilt</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">new</span>
+624:       <span class="ruby-keyword kw">yield</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+625:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new--method" class="method-detail method-alias">
+				<a name="M000114"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new!</span><span
+						class="method-args">(*args, &bk)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Create a new instance without middleware in front of it.
+</p>
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Base.html#M000113">new</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="options-method" class="method-detail ">
+				<a name="M000098"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">options</span><span
+						class="method-args">(path, opts={}, &bk)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="options-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1121</span>
+1121:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">options</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">bk</span>) <span class="ruby-identifier">route</span> <span class="ruby-value str">'OPTIONS'</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">bk</span> <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="post-method" class="method-detail ">
+				<a name="M000095"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">post</span><span
+						class="method-args">(path, opts={}, &bk)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="post-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1118</span>
+1118:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">post</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">bk</span>)    <span class="ruby-identifier">route</span> <span class="ruby-value str">'POST'</span>,    <span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">bk</span> <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="production--method" class="method-detail ">
+				<a name="M000106"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">production?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="production--source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1205</span>
+1205:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production?</span>;  <span class="ruby-identifier">environment</span> <span class="ruby-operator">==</span> <span class="ruby-value">:production</span>  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="prototype-method" class="method-detail ">
+				<a name="M000112"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">prototype</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The prototype instance used to process requests.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="prototype-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1243</span>
+1243:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">prototype</span>
+1244:         <span class="ruby-ivar">@prototype</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">new</span>
+1245:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="put-method" class="method-detail ">
+				<a name="M000094"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">put</span><span
+						class="method-args">(path, opts={}, &bk)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="put-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1117</span>
+1117:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">put</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>={}, &amp;<span class="ruby-identifier">bk</span>)     <span class="ruby-identifier">route</span> <span class="ruby-value str">'PUT'</span>,     <span class="ruby-identifier">path</span>, <span class="ruby-identifier">opts</span>, &amp;<span class="ruby-identifier">bk</span> <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="quit--method" class="method-detail ">
+				<a name="M000110"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">quit!</span><span
+						class="method-args">(server, handler_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="quit--source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1220</span>
+1220:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">quit!</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">handler_name</span>)
+1221:         <span class="ruby-comment cmt"># Use Thin's hard #stop! if available, otherwise just #stop.</span>
+1222:         <span class="ruby-identifier">server</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:stop!</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">server</span>.<span class="ruby-identifier">stop!</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">server</span>.<span class="ruby-identifier">stop</span>
+1223:         <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;\n== Sinatra has ended his set (crowd applauds)&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">handler_name</span> <span class="ruby-operator">=~</span><span class="ruby-regexp re">/cgi/</span>
+1224:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="register-method" class="method-detail ">
+				<a name="M000104"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">register</span><span
+						class="method-args">(*extensions, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Register an extension. Alternatively take a block from which an extension
+will be created and registered on the fly.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="register-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1195</span>
+1195:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">register</span>(*<span class="ruby-identifier">extensions</span>, &amp;<span class="ruby-identifier">block</span>)
+1196:         <span class="ruby-identifier">extensions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Module</span>.<span class="ruby-identifier">new</span>(&amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+1197:         <span class="ruby-ivar">@extensions</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">extensions</span>
+1198:         <span class="ruby-identifier">extensions</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">extension</span><span class="ruby-operator">|</span>
+1199:           <span class="ruby-identifier">extend</span> <span class="ruby-identifier">extension</span>
+1200:           <span class="ruby-identifier">extension</span>.<span class="ruby-identifier">registered</span>(<span class="ruby-keyword kw">self</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">extension</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:registered</span>)
+1201:         <span class="ruby-keyword kw">end</span>
+1202:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="run--method" class="method-detail ">
+				<a name="M000111"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run!</span><span
+						class="method-args">(options={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Run the <a href="../Sinatra.html">Sinatra</a> app as a self-hosted server
+using Thin, Mongrel or WEBrick (in that order)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="run--source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1228</span>
+1228:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run!</span>(<span class="ruby-identifier">options</span>={})
+1229:         <span class="ruby-identifier">set</span> <span class="ruby-identifier">options</span>
+1230:         <span class="ruby-identifier">handler</span>      = <span class="ruby-identifier">detect_rack_handler</span>
+1231:         <span class="ruby-identifier">handler_name</span> = <span class="ruby-identifier">handler</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/.*::/</span>, <span class="ruby-value str">''</span>)
+1232:         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;== Sinatra/#{Sinatra::VERSION} has taken the stage &quot;</span> <span class="ruby-operator">+</span>
+1233:           <span class="ruby-node">&quot;on #{port} for #{environment} with backup from #{handler_name}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">handler_name</span> <span class="ruby-operator">=~</span><span class="ruby-regexp re">/cgi/</span>
+1234:         <span class="ruby-identifier">handler</span>.<span class="ruby-identifier">run</span> <span class="ruby-keyword kw">self</span>, <span class="ruby-value">:Host</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">bind</span>, <span class="ruby-value">:Port</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">port</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">server</span><span class="ruby-operator">|</span>
+1235:           [<span class="ruby-value">:INT</span>, <span class="ruby-value">:TERM</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">sig</span><span class="ruby-operator">|</span> <span class="ruby-identifier">trap</span>(<span class="ruby-identifier">sig</span>) { <span class="ruby-identifier">quit!</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">handler_name</span>) } }
+1236:           <span class="ruby-identifier">set</span> <span class="ruby-value">:running</span>, <span class="ruby-keyword kw">true</span>
+1237:         <span class="ruby-keyword kw">end</span>
+1238:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EADDRINUSE</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+1239:         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;== Someone is already performing on port #{port}!&quot;</span>
+1240:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="settings-method" class="method-detail ">
+				<a name="M000052"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">settings</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Access settings defined with <a href="Base.html#M000076">Base.set</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="settings-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 658</span>
+658:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">settings</span>
+659:       <span class="ruby-keyword kw">self</span>
+660:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test--method" class="method-detail ">
+				<a name="M000107"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="test--source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1206</span>
+1206:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test?</span>;        <span class="ruby-identifier">environment</span> <span class="ruby-operator">==</span> <span class="ruby-value">:test</span>        <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="use-method" class="method-detail ">
+				<a name="M000109"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">use</span><span
+						class="method-args">(middleware, *args, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Use the specified Rack middleware
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="use-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1215</span>
+1215:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">use</span>(<span class="ruby-identifier">middleware</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+1216:         <span class="ruby-ivar">@prototype</span> = <span class="ruby-keyword kw">nil</span>
+1217:         <span class="ruby-ivar">@middleware</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">middleware</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">block</span>]
+1218:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

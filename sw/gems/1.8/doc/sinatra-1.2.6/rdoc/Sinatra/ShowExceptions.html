@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sinatra::ShowExceptions</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/sinatra/showexceptions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sinatra/showexceptions.rb">lib/sinatra/showexceptions.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Rack::ShowExceptions</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000133">::new</a></li>
+					
+					<li><a href="#M000134">#call</a></li>
+					
+					<li><a href="#M000135">#frame_class</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_de_rdoc.html">README.de.rdoc</a></li>
+				
+					<li class="file"><a href="../README_es_rdoc.html">README.es.rdoc</a></li>
+				
+					<li class="file"><a href="../README_fr_rdoc.html">README.fr.rdoc</a></li>
+				
+					<li class="file"><a href="../README_hu_rdoc.html">README.hu.rdoc</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Sinatra.html">Sinatra</a></li>
+				
+					<li><a href="../Sinatra/Application.html">Sinatra::Application</a></li>
+				
+					<li><a href="../Sinatra/Base.html">Sinatra::Base</a></li>
+				
+					<li><a href="../Sinatra/Helpers.html">Sinatra::Helpers</a></li>
+				
+					<li><a href="../Sinatra/Request.html">Sinatra::Request</a></li>
+				
+					<li><a href="../Sinatra/Response.html">Sinatra::Response</a></li>
+				
+					<li><a href="../Sinatra/ShowExceptions.html">Sinatra::ShowExceptions</a></li>
+				
+					<li><a href="../Sinatra/Templates.html">Sinatra::Templates</a></li>
+				
+					<li><a href="../Sinatra/Templates/ContentTyped.html">Sinatra::Templates::ContentTyped</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sinatra::ShowExceptions</h1>
+
+		<div id="description">
+			<p>
+<a href="ShowExceptions.html">Sinatra::ShowExceptions</a> catches all
+exceptions raised from the app it wraps. It shows a useful backtrace with
+the sourcefile and clickable context, the whole Rack environment and the
+request data.
+</p>
+<p>
+Be careful when you use this on public-facing sites as it could reveal
+information helpful to attackers.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="frame-class-method" class="method-detail ">
+				<a name="M000135"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">frame_class</span><span
+						class="method-args">(frame)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="frame-class-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/showexceptions.rb, line 43</span>
+43:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">frame_class</span>(<span class="ruby-identifier">frame</span>)
+44:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">frame</span>.<span class="ruby-identifier">filename</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/lib\/sinatra.*\.rb/</span>
+45:         <span class="ruby-value str">&quot;framework&quot;</span>
+46:       <span class="ruby-keyword kw">elsif</span> (<span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">Gem</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">frame</span>.<span class="ruby-identifier">filename</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">Gem</span>.<span class="ruby-identifier">dir</span>)) <span class="ruby-operator">||</span>
+47:             <span class="ruby-identifier">frame</span>.<span class="ruby-identifier">filename</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\/bin\/(\w+)$/</span>
+48:         <span class="ruby-value str">&quot;system&quot;</span>
+49:       <span class="ruby-keyword kw">else</span>
+50:         <span class="ruby-value str">&quot;app&quot;</span>
+51:       <span class="ruby-keyword kw">end</span>
+52:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="call-method" class="method-detail ">
+				<a name="M000134"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call</span><span
+						class="method-args">(env)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="call-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/showexceptions.rb, line 20</span>
+20:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call</span>(<span class="ruby-identifier">env</span>)
+21:       <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">env</span>)
+22:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+23:       <span class="ruby-identifier">errors</span>, <span class="ruby-identifier">env</span>[<span class="ruby-value str">&quot;rack.errors&quot;</span>] = <span class="ruby-identifier">env</span>[<span class="ruby-value str">&quot;rack.errors&quot;</span>], <span class="ruby-identifier">@@eats_errors</span>
+24: 
+25:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:prefers_plain_text?</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">prefers_plain_text?</span>(<span class="ruby-identifier">env</span>)
+26:         <span class="ruby-identifier">content_type</span> = <span class="ruby-value str">&quot;text/plain&quot;</span>
+27:         <span class="ruby-identifier">body</span> = [<span class="ruby-identifier">dump_exception</span>(<span class="ruby-identifier">e</span>)]
+28:       <span class="ruby-keyword kw">else</span>
+29:         <span class="ruby-identifier">content_type</span> = <span class="ruby-value str">&quot;text/html&quot;</span>
+30:         <span class="ruby-identifier">body</span> = <span class="ruby-identifier">pretty</span>(<span class="ruby-identifier">env</span>, <span class="ruby-identifier">e</span>)
+31:       <span class="ruby-keyword kw">end</span>
+32: 
+33:       <span class="ruby-identifier">env</span>[<span class="ruby-value str">&quot;rack.errors&quot;</span>] = <span class="ruby-identifier">errors</span>
+34: 
+35:       [<span class="ruby-value">500</span>,
+36:        {<span class="ruby-value str">&quot;Content-Type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">content_type</span>,
+37:         <span class="ruby-value str">&quot;Content-Length&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Utils</span>.<span class="ruby-identifier">bytesize</span>(<span class="ruby-identifier">body</span>.<span class="ruby-identifier">join</span>).<span class="ruby-identifier">to_s</span>},
+38:        <span class="ruby-identifier">body</span>]
+39:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000133"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(app)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/showexceptions.rb, line 15</span>
+15:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">app</span>)
+16:       <span class="ruby-ivar">@app</span>      = <span class="ruby-identifier">app</span>
+17:       <span class="ruby-ivar">@template</span> = <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">TEMPLATE</span>)
+18:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: EventMachine::Deferrable</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/em/deferrable_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/em/deferrable.rb">lib/em/deferrable.rb</a></li>
+					
+						<li><a href="../lib/em/future_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/em/future.rb">lib/em/future.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000087">::future</a></li>
+					
+					<li><a href="#M000072">#callback</a></li>
+					
+					<li><a href="#M000076">#cancel_timeout</a></li>
+					
+					<li><a href="#M000073">#errback</a></li>
+					
+					<li><a href="#M000079">#fail</a></li>
+					
+					<li><a href="#M000080">#set_deferred_failure</a></li>
+					
+					<li><a href="#M000074">#set_deferred_status</a></li>
+					
+					<li><a href="#M000078">#set_deferred_success</a></li>
+					
+					<li><a href="#M000077">#succeed</a></li>
+					
+					<li><a href="#M000075">#timeout</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../EventMachine.html">EventMachine</a></li>
+				
+					<li><a href="../EventMachine/Channel.html">EventMachine::Channel</a></li>
+				
+					<li><a href="../EventMachine/Connection.html">EventMachine::Connection</a></li>
+				
+					<li><a href="../EventMachine/ConnectionNotBound.html">EventMachine::ConnectionNotBound</a></li>
+				
+					<li><a href="../EventMachine/DatagramObject.html">EventMachine::DatagramObject</a></li>
+				
+					<li><a href="../EventMachine/DefaultDeferrable.html">EventMachine::DefaultDeferrable</a></li>
+				
+					<li><a href="../EventMachine/Deferrable.html">EventMachine::Deferrable</a></li>
+				
+					<li><a href="../EventMachine/DeferrableChildProcess.html">EventMachine::DeferrableChildProcess</a></li>
+				
+					<li><a href="../EventMachine/Error.html">EventMachine::Error</a></li>
+				
+					<li><a href="../EventMachine/EvmaKeyboard.html">EventMachine::EvmaKeyboard</a></li>
+				
+					<li><a href="../EventMachine/EvmaTCPClient.html">EventMachine::EvmaTCPClient</a></li>
+				
+					<li><a href="../EventMachine/EvmaTCPServer.html">EventMachine::EvmaTCPServer</a></li>
+				
+					<li><a href="../EventMachine/EvmaUDPSocket.html">EventMachine::EvmaUDPSocket</a></li>
+				
+					<li><a href="../EventMachine/EvmaUNIXClient.html">EventMachine::EvmaUNIXClient</a></li>
+				
+					<li><a href="../EventMachine/EvmaUNIXServer.html">EventMachine::EvmaUNIXServer</a></li>
+				
+					<li><a href="../EventMachine/FileStreamer.html">EventMachine::FileStreamer</a></li>
+				
+					<li><a href="../EventMachine/FileWatch.html">EventMachine::FileWatch</a></li>
+				
+					<li><a href="../EventMachine/JEM.html">EventMachine::JEM</a></li>
+				
+					<li><a href="../EventMachine/LoopbreakReader.html">EventMachine::LoopbreakReader</a></li>
+				
+					<li><a href="../EventMachine/PeriodicTimer.html">EventMachine::PeriodicTimer</a></li>
+				
+					<li><a href="../EventMachine/ProcessWatch.html">EventMachine::ProcessWatch</a></li>
+				
+					<li><a href="../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../EventMachine/Protocols.html">EventMachine::Protocols</a></li>
+				
+					<li><a href="../EventMachine/Protocols/HeaderAndContentProtocol.html">EventMachine::Protocols::HeaderAndContentProtocol</a></li>
+				
+					<li><a href="../EventMachine/Protocols/HttpClient.html">EventMachine::Protocols::HttpClient</a></li>
+				
+					<li><a href="../EventMachine/Protocols/HttpClient2.html">EventMachine::Protocols::HttpClient2</a></li>
+				
+					<li><a href="../EventMachine/Protocols/LineAndTextProtocol.html">EventMachine::Protocols::LineAndTextProtocol</a></li>
+				
+					<li><a href="../EventMachine/Protocols/LineText2.html">EventMachine::Protocols::LineText2</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Memcache.html">EventMachine::Protocols::Memcache</a></li>
+				
+					<li><a href="../EventMachine/Protocols/ObjectProtocol.html">EventMachine::Protocols::ObjectProtocol</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Postgres3.html">EventMachine::Protocols::Postgres3</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SASLauth.html">EventMachine::Protocols::SASLauth</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SASLauthclient.html">EventMachine::Protocols::SASLauthclient</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SmtpClient.html">EventMachine::Protocols::SmtpClient</a></li>
+				
+					<li><a href="../EventMachine/Protocols/SmtpServer.html">EventMachine::Protocols::SmtpServer</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Socks4.html">EventMachine::Protocols::Socks4</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Stomp.html">EventMachine::Protocols::Stomp</a></li>
+				
+					<li><a href="../EventMachine/Protocols/Stomp/Message.html">EventMachine::Protocols::Stomp::Message</a></li>
+				
+					<li><a href="../EventMachine/Queue.html">EventMachine::Queue</a></li>
+				
+					<li><a href="../EventMachine/Reactor.html">EventMachine::Reactor</a></li>
+				
+					<li><a href="../EventMachine/Selectable.html">EventMachine::Selectable</a></li>
+				
+					<li><a href="../EventMachine/SpawnedProcess.html">EventMachine::SpawnedProcess</a></li>
+				
+					<li><a href="../EventMachine/StreamObject.html">EventMachine::StreamObject</a></li>
+				
+					<li><a href="../EventMachine/Timer.html">EventMachine::Timer</a></li>
+				
+					<li><a href="../EventMachine/UnknownTimerFired.html">EventMachine::UnknownTimerFired</a></li>
+				
+					<li><a href="../EventMachine/Unsupported.html">EventMachine::Unsupported</a></li>
+				
+					<li><a href="../EventMachine/UuidGenerator.html">EventMachine::UuidGenerator</a></li>
+				
+					<li><a href="../Evma.html">Evma</a></li>
+				
+					<li><a href="../Evma/Container.html">Evma::Container</a></li>
+				
+					<li><a href="../Evma/ContainerHasObject.html">Evma::ContainerHasObject</a></li>
+				
+					<li><a href="../Evma/DatagramProtocol.html">Evma::DatagramProtocol</a></li>
+				
+					<li><a href="../Evma/Protocol.html">Evma::Protocol</a></li>
+				
+					<li><a href="../Evma/ProtocolFactory.html">Evma::ProtocolFactory</a></li>
+				
+					<li><a href="../Evma/Reactor.html">Evma::Reactor</a></li>
+				
+					<li><a href="../Evma/StreamProtocol.html">Evma::StreamProtocol</a></li>
+				
+					<li><a href="../Evma/TcpServerFactory.html">Evma::TcpServerFactory</a></li>
+				
+					<li><a href="../Evma/TcpSocket.html">Evma::TcpSocket</a></li>
+				
+					<li><a href="../Evma/UnknownTarget.html">Evma::UnknownTarget</a></li>
+				
+					<li><a href="../Evma/UnsupportedCallback.html">Evma::UnsupportedCallback</a></li>
+				
+					<li><a href="../BufferedTokenizer.html">BufferedTokenizer</a></li>
+				
+					<li><a href="../IO.html">IO</a></li>
+				
+					<li><a href="../JavaFields.html">JavaFields</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">EventMachine::Deferrable</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="callback-method" class="method-detail ">
+				<a name="M000072"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">callback</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Specify a block to be executed if and when the <a
+href="Deferrable.html">Deferrable</a> object receives a status of
+:succeeded. See <a href="Deferrable.html#M000074">set_deferred_status</a>
+for more information.
+</p>
+<p>
+Calling this method on a <a href="Deferrable.html">Deferrable</a> object
+whose status is not yet known will cause the callback block to be stored on
+an internal list. If you call this method on a <a
+href="Deferrable.html">Deferrable</a> whose status is :succeeded, the block
+will be executed immediately, receiving the parameters given to the prior
+<a href="Deferrable.html#M000074">set_deferred_status</a> call.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="callback-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/em/deferrable.rb, line 43</span>
+43:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">callback</span> &amp;<span class="ruby-identifier">block</span>
+44:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block</span>
+45:       <span class="ruby-ivar">@deferred_status</span> <span class="ruby-operator">||=</span> <span class="ruby-value">:unknown</span>
+46:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@deferred_status</span> <span class="ruby-operator">==</span> <span class="ruby-value">:succeeded</span>
+47:         <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(*<span class="ruby-ivar">@deferred_args</span>)
+48:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@deferred_status</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:failed</span>
+49:         <span class="ruby-ivar">@callbacks</span> <span class="ruby-operator">||=</span> []
+50:         <span class="ruby-ivar">@callbacks</span>.<span class="ruby-identifier">unshift</span> <span class="ruby-identifier">block</span> <span class="ruby-comment cmt"># &lt;&lt; block</span>
+51:       <span class="ruby-keyword kw">end</span>
+52:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="cancel-timeout-method" class="method-detail ">
+				<a name="M000076"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cancel_timeout</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Cancels an outstanding timeout if any. Undoes the action of <a
+href="Deferrable.html#M000075">timeout</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="cancel-timeout-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/deferrable.rb, line 161</span>
+161:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cancel_timeout</span>
+162:       <span class="ruby-ivar">@deferred_timeout</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">nil</span>
+163:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@deferred_timeout</span>
+164:         <span class="ruby-ivar">@deferred_timeout</span>.<span class="ruby-identifier">cancel</span>
+165:         <span class="ruby-ivar">@deferred_timeout</span> = <span class="ruby-keyword kw">nil</span>
+166:       <span class="ruby-keyword kw">end</span>
+167:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="errback-method" class="method-detail ">
+				<a name="M000073"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">errback</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Specify a block to be executed if and when the <a
+href="Deferrable.html">Deferrable</a> object receives a status of :failed.
+See <a href="Deferrable.html#M000074">set_deferred_status</a> for more
+information.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="errback-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/em/deferrable.rb, line 61</span>
+61:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">errback</span> &amp;<span class="ruby-identifier">block</span>
+62:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block</span>
+63:       <span class="ruby-ivar">@deferred_status</span> <span class="ruby-operator">||=</span> <span class="ruby-value">:unknown</span>
+64:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@deferred_status</span> <span class="ruby-operator">==</span> <span class="ruby-value">:failed</span>
+65:         <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(*<span class="ruby-ivar">@deferred_args</span>)
+66:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@deferred_status</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:succeeded</span>
+67:         <span class="ruby-ivar">@errbacks</span> <span class="ruby-operator">||=</span> []
+68:         <span class="ruby-ivar">@errbacks</span>.<span class="ruby-identifier">unshift</span> <span class="ruby-identifier">block</span> <span class="ruby-comment cmt"># &lt;&lt; block</span>
+69:       <span class="ruby-keyword kw">end</span>
+70:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="fail-method" class="method-detail ">
+				<a name="M000079"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fail</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sugar for <a
+href="Deferrable.html#M000074">set_deferred_status</a>(:failed, &#8230;)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="fail-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/deferrable.rb, line 179</span>
+179:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fail</span> *<span class="ruby-identifier">args</span>
+180:       <span class="ruby-identifier">set_deferred_status</span> <span class="ruby-value">:failed</span>, *<span class="ruby-identifier">args</span>
+181:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Deferrable.html#M000080">set_deferred_failure</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="set-deferred-failure-method" class="method-detail method-alias">
+				<a name="M000080"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_deferred_failure</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Deferrable.html#M000079">fail</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="set-deferred-status-method" class="method-detail ">
+				<a name="M000074"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_deferred_status</span><span
+						class="method-args">(status, *args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sets the &#8220;disposition&#8221; (status) of the <a
+href="Deferrable.html">Deferrable</a> object. See also the large set of
+sugarings for this method. Note that if you call this method without
+arguments, no arguments will be passed to the callback/errback. If the user
+has coded these with arguments, then the user code will throw an argument
+exception. Implementors of deferrable classes <b>must</b> document the
+arguments they will supply to user callbacks.
+</p>
+<p>
+OBSERVE SOMETHING VERY SPECIAL here: you may call this method even on the
+INSIDE of a callback. This is very useful when a previously-registered
+callback wants to change the parameters that will be passed to
+subsequently-registered ones.
+</p>
+<p>
+You may give either :succeeded or :failed as the status argument.
+</p>
+<p>
+If you pass :succeeded, then all of the blocks passed to the object using
+the <a href="Deferrable.html#M000072">callback</a> method (if any) will be
+executed BEFORE the <a
+href="Deferrable.html#M000074">set_deferred_status</a> method returns. All
+of the blocks passed to the object using <a
+href="Deferrable.html#M000073">errback</a> will be discarded.
+</p>
+<p>
+If you pass :failed, then all of the blocks passed to the object using the
+<a href="Deferrable.html#M000073">errback</a> method (if any) will be
+executed BEFORE the <a
+href="Deferrable.html#M000074">set_deferred_status</a> method returns. All
+of the blocks passed to the object using # callback will be discarded.
+</p>
+<p>
+If you pass any arguments to <a
+href="Deferrable.html#M000074">set_deferred_status</a> in addition to the
+status argument, they will be passed as arguments to any callbacks or
+errbacks that are executed. It&#8217;s your responsibility to ensure that
+the argument lists specified in your callbacks and errbacks match the
+arguments given in calls to <a
+href="Deferrable.html#M000074">set_deferred_status</a>, otherwise Ruby will
+raise an ArgumentError.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-deferred-status-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/deferrable.rb, line 124</span>
+124:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_deferred_status</span> <span class="ruby-identifier">status</span>, *<span class="ruby-identifier">args</span>
+125:       <span class="ruby-identifier">cancel_timeout</span>
+126:       <span class="ruby-ivar">@errbacks</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">nil</span>
+127:       <span class="ruby-ivar">@callbacks</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">nil</span>
+128:       <span class="ruby-ivar">@deferred_status</span> = <span class="ruby-identifier">status</span>
+129:       <span class="ruby-ivar">@deferred_args</span> = <span class="ruby-identifier">args</span>
+130:       <span class="ruby-keyword kw">case</span> <span class="ruby-ivar">@deferred_status</span>
+131:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:succeeded</span>
+132:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@callbacks</span>
+133:           <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">cb</span> = <span class="ruby-ivar">@callbacks</span>.<span class="ruby-identifier">pop</span>
+134:             <span class="ruby-identifier">cb</span>.<span class="ruby-identifier">call</span>(*<span class="ruby-ivar">@deferred_args</span>)
+135:           <span class="ruby-keyword kw">end</span>
+136:         <span class="ruby-keyword kw">end</span>
+137:         <span class="ruby-ivar">@errbacks</span>.<span class="ruby-identifier">clear</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@errbacks</span>
+138:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:failed</span>
+139:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@errbacks</span>
+140:           <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">eb</span> = <span class="ruby-ivar">@errbacks</span>.<span class="ruby-identifier">pop</span>
+141:             <span class="ruby-identifier">eb</span>.<span class="ruby-identifier">call</span>(*<span class="ruby-ivar">@deferred_args</span>)
+142:           <span class="ruby-keyword kw">end</span>
+143:         <span class="ruby-keyword kw">end</span>
+144:         <span class="ruby-ivar">@callbacks</span>.<span class="ruby-identifier">clear</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@callbacks</span>
+145:       <span class="ruby-keyword kw">end</span>
+146:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-deferred-success-method" class="method-detail method-alias">
+				<a name="M000078"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_deferred_success</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Deferrable.html#M000077">succeed</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="succeed-method" class="method-detail ">
+				<a name="M000077"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">succeed</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sugar for <a
+href="Deferrable.html#M000074">set_deferred_status</a>(:succeeded, &#8230;)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="succeed-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/deferrable.rb, line 172</span>
+172:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">succeed</span> *<span class="ruby-identifier">args</span>
+173:       <span class="ruby-identifier">set_deferred_status</span> <span class="ruby-value">:succeeded</span>, *<span class="ruby-identifier">args</span>
+174:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Deferrable.html#M000078">set_deferred_success</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="timeout-method" class="method-detail ">
+				<a name="M000075"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">timeout</span><span
+						class="method-args">(seconds)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Setting a timeout on a <a href="Deferrable.html">Deferrable</a> causes it
+to go into the failed state after the Timeout expires (passing no arguments
+to the object&#8217;s errbacks). Setting the status at any time prior to a
+call to the expiration of the timeout will cause the timer to be cancelled.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="timeout-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/em/deferrable.rb, line 153</span>
+153:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">timeout</span> <span class="ruby-identifier">seconds</span>
+154:       <span class="ruby-identifier">cancel_timeout</span>
+155:       <span class="ruby-identifier">me</span> = <span class="ruby-keyword kw">self</span>
+156:       <span class="ruby-ivar">@deferred_timeout</span> = <span class="ruby-constant">EventMachine</span><span class="ruby-operator">::</span><span class="ruby-constant">Timer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">seconds</span>) {<span class="ruby-identifier">me</span>.<span class="ruby-identifier">fail</span>}
+157:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="future-method" class="method-detail ">
+				<a name="M000087"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">future</span><span
+						class="method-args">(arg, cb=nil, eb=nil, &blk)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+A future is a sugaring of a typical deferrable usage.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="future-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/em/future.rb, line 44</span>
+44:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">future</span> <span class="ruby-identifier">arg</span>, <span class="ruby-identifier">cb</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">eb</span>=<span class="ruby-keyword kw">nil</span>, &amp;<span class="ruby-identifier">blk</span>
+45:         <span class="ruby-identifier">arg</span> = <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">call</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:call</span>)
+46: 
+47:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:set_deferred_status</span>)
+48:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">cb</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">eb</span>
+49:             <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">callback</span>(&amp;<span class="ruby-identifier">cb</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">cb</span>
+50:             <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">errback</span>(&amp;<span class="ruby-identifier">eb</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">eb</span>
+51:           <span class="ruby-keyword kw">else</span>
+52:             <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">callback</span>(&amp;<span class="ruby-identifier">blk</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">blk</span>
+53:           <span class="ruby-keyword kw">end</span>
+54:         <span class="ruby-keyword kw">end</span>
+55: 
+56:         <span class="ruby-identifier">arg</span>
+57:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
