@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Rack::Multipart::Parser</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/rack/multipart/parser_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rack/multipart/parser.rb">lib/rack/multipart/parser.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000183">::new</a></li>
+					
+					<li><a href="#M000188">#fast_forward_to_first_boundary</a></li>
+					
+					<li><a href="#M000186">#full_boundary</a></li>
+					
+					<li><a href="#M000189">#get_current_head_and_filename_and_content_type_and_name_and_body</a></li>
+					
+					<li><a href="#M000191">#get_data</a></li>
+					
+					<li><a href="#M000190">#get_filename</a></li>
+					
+					<li><a href="#M000184">#parse</a></li>
+					
+					<li><a href="#M000187">#rx</a></li>
+					
+					<li><a href="#M000185">#setup_parse</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Rack.html">Rack</a></li>
+				
+					<li><a href="../../Rack/Auth.html">Rack::Auth</a></li>
+				
+					<li><a href="../../Rack/Auth/AbstractHandler.html">Rack::Auth::AbstractHandler</a></li>
+				
+					<li><a href="../../Rack/Auth/AbstractRequest.html">Rack::Auth::AbstractRequest</a></li>
+				
+					<li><a href="../../Rack/Auth/Basic.html">Rack::Auth::Basic</a></li>
+				
+					<li><a href="../../Rack/Auth/Basic/Request.html">Rack::Auth::Basic::Request</a></li>
+				
+					<li><a href="../../Rack/Auth/Digest.html">Rack::Auth::Digest</a></li>
+				
+					<li><a href="../../Rack/Auth/Digest/MD5.html">Rack::Auth::Digest::MD5</a></li>
+				
+					<li><a href="../../Rack/Auth/Digest/Nonce.html">Rack::Auth::Digest::Nonce</a></li>
+				
+					<li><a href="../../Rack/Auth/Digest/Params.html">Rack::Auth::Digest::Params</a></li>
+				
+					<li><a href="../../Rack/Auth/Digest/Request.html">Rack::Auth::Digest::Request</a></li>
+				
+					<li><a href="../../Rack/Builder.html">Rack::Builder</a></li>
+				
+					<li><a href="../../Rack/Cascade.html">Rack::Cascade</a></li>
+				
+					<li><a href="../../Rack/Chunked.html">Rack::Chunked</a></li>
+				
+					<li><a href="../../Rack/Chunked/Body.html">Rack::Chunked::Body</a></li>
+				
+					<li><a href="../../Rack/CommonLogger.html">Rack::CommonLogger</a></li>
+				
+					<li><a href="../../Rack/ConditionalGet.html">Rack::ConditionalGet</a></li>
+				
+					<li><a href="../../Rack/Config.html">Rack::Config</a></li>
+				
+					<li><a href="../../Rack/ContentLength.html">Rack::ContentLength</a></li>
+				
+					<li><a href="../../Rack/ContentType.html">Rack::ContentType</a></li>
+				
+					<li><a href="../../Rack/Deflater.html">Rack::Deflater</a></li>
+				
+					<li><a href="../../Rack/Deflater/DeflateStream.html">Rack::Deflater::DeflateStream</a></li>
+				
+					<li><a href="../../Rack/Deflater/GzipStream.html">Rack::Deflater::GzipStream</a></li>
+				
+					<li><a href="../../Rack/Directory.html">Rack::Directory</a></li>
+				
+					<li><a href="../../Rack/ETag.html">Rack::ETag</a></li>
+				
+					<li><a href="../../Rack/File.html">Rack::File</a></li>
+				
+					<li><a href="../../Rack/ForwardRequest.html">Rack::ForwardRequest</a></li>
+				
+					<li><a href="../../Rack/Handler.html">Rack::Handler</a></li>
+				
+					<li><a href="../../Rack/Handler/CGI.html">Rack::Handler::CGI</a></li>
+				
+					<li><a href="../../Rack/Handler/EventedMongrel.html">Rack::Handler::EventedMongrel</a></li>
+				
+					<li><a href="../../Rack/Handler/FastCGI.html">Rack::Handler::FastCGI</a></li>
+				
+					<li><a href="../../Rack/Handler/LSWS.html">Rack::Handler::LSWS</a></li>
+				
+					<li><a href="../../Rack/Handler/Mongrel.html">Rack::Handler::Mongrel</a></li>
+				
+					<li><a href="../../Rack/Handler/SCGI.html">Rack::Handler::SCGI</a></li>
+				
+					<li><a href="../../Rack/Handler/SwiftipliedMongrel.html">Rack::Handler::SwiftipliedMongrel</a></li>
+				
+					<li><a href="../../Rack/Handler/Thin.html">Rack::Handler::Thin</a></li>
+				
+					<li><a href="../../Rack/Handler/WEBrick.html">Rack::Handler::WEBrick</a></li>
+				
+					<li><a href="../../Rack/Head.html">Rack::Head</a></li>
+				
+					<li><a href="../../Rack/Lint.html">Rack::Lint</a></li>
+				
+					<li><a href="../../Rack/Lobster.html">Rack::Lobster</a></li>
+				
+					<li><a href="../../Rack/Lock.html">Rack::Lock</a></li>
+				
+					<li><a href="../../Rack/Logger.html">Rack::Logger</a></li>
+				
+					<li><a href="../../Rack/MethodOverride.html">Rack::MethodOverride</a></li>
+				
+					<li><a href="../../Rack/Mime.html">Rack::Mime</a></li>
+				
+					<li><a href="../../Rack/MockRequest.html">Rack::MockRequest</a></li>
+				
+					<li><a href="../../Rack/MockRequest/FatalWarner.html">Rack::MockRequest::FatalWarner</a></li>
+				
+					<li><a href="../../Rack/MockRequest/FatalWarning.html">Rack::MockRequest::FatalWarning</a></li>
+				
+					<li><a href="../../Rack/MockResponse.html">Rack::MockResponse</a></li>
+				
+					<li><a href="../../Rack/Multipart.html">Rack::Multipart</a></li>
+				
+					<li><a href="../../Rack/Multipart.html">Rack::Multipart</a></li>
+				
+					<li><a href="../../Rack/Multipart/Generator.html">Rack::Multipart::Generator</a></li>
+				
+					<li><a href="../../Rack/Multipart/Parser.html">Rack::Multipart::Parser</a></li>
+				
+					<li><a href="../../Rack/Multipart/UploadedFile.html">Rack::Multipart::UploadedFile</a></li>
+				
+					<li><a href="../../Rack/NullLogger.html">Rack::NullLogger</a></li>
+				
+					<li><a href="../../Rack/Recursive.html">Rack::Recursive</a></li>
+				
+					<li><a href="../../Rack/Reloader.html">Rack::Reloader</a></li>
+				
+					<li><a href="../../Rack/Reloader/Stat.html">Rack::Reloader::Stat</a></li>
+				
+					<li><a href="../../Rack/Request.html">Rack::Request</a></li>
+				
+					<li><a href="../../Rack/Response.html">Rack::Response</a></li>
+				
+					<li><a href="../../Rack/Response/Helpers.html">Rack::Response::Helpers</a></li>
+				
+					<li><a href="../../Rack/RewindableInput.html">Rack::RewindableInput</a></li>
+				
+					<li><a href="../../Rack/RewindableInput/Tempfile.html">Rack::RewindableInput::Tempfile</a></li>
+				
+					<li><a href="../../Rack/Runtime.html">Rack::Runtime</a></li>
+				
+					<li><a href="../../Rack/Sendfile.html">Rack::Sendfile</a></li>
+				
+					<li><a href="../../Rack/Server.html">Rack::Server</a></li>
+				
+					<li><a href="../../Rack/Server/Options.html">Rack::Server::Options</a></li>
+				
+					<li><a href="../../Rack/Session.html">Rack::Session</a></li>
+				
+					<li><a href="../../Rack/Session/Abstract.html">Rack::Session::Abstract</a></li>
+				
+					<li><a href="../../Rack/Session/Abstract/ID.html">Rack::Session::Abstract::ID</a></li>
+				
+					<li><a href="../../Rack/Session/Abstract/SessionHash.html">Rack::Session::Abstract::SessionHash</a></li>
+				
+					<li><a href="../../Rack/Session/Cookie.html">Rack::Session::Cookie</a></li>
+				
+					<li><a href="../../Rack/Session/Cookie/Base64.html">Rack::Session::Cookie::Base64</a></li>
+				
+					<li><a href="../../Rack/Session/Cookie/Base64/Marshal.html">Rack::Session::Cookie::Base64::Marshal</a></li>
+				
+					<li><a href="../../Rack/Session/Cookie/Identity.html">Rack::Session::Cookie::Identity</a></li>
+				
+					<li><a href="../../Rack/Session/Cookie/Reverse.html">Rack::Session::Cookie::Reverse</a></li>
+				
+					<li><a href="../../Rack/Session/Memcache.html">Rack::Session::Memcache</a></li>
+				
+					<li><a href="../../Rack/Session/Pool.html">Rack::Session::Pool</a></li>
+				
+					<li><a href="../../Rack/ShowExceptions.html">Rack::ShowExceptions</a></li>
+				
+					<li><a href="../../Rack/ShowStatus.html">Rack::ShowStatus</a></li>
+				
+					<li><a href="../../Rack/Static.html">Rack::Static</a></li>
+				
+					<li><a href="../../Rack/URLMap.html">Rack::URLMap</a></li>
+				
+					<li><a href="../../Rack/Utils.html">Rack::Utils</a></li>
+				
+					<li><a href="../../Rack/Utils/Context.html">Rack::Utils::Context</a></li>
+				
+					<li><a href="../../Rack/Utils/HeaderHash.html">Rack::Utils::HeaderHash</a></li>
+				
+					<li><a href="../../FCGI.html">FCGI</a></li>
+				
+					<li><a href="../../FCGI/Stream.html">FCGI::Stream</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Rack::Multipart::Parser</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="BUFSIZE">BUFSIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="fast-forward-to-first-boundary-method" class="method-detail ">
+				<a name="M000188"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fast_forward_to_first_boundary</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="fast-forward-to-first-boundary-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/multipart/parser.rb, line 69</span>
+69:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fast_forward_to_first_boundary</span>
+70:         <span class="ruby-identifier">loop</span> <span class="ruby-keyword kw">do</span>
+71:           <span class="ruby-identifier">read_buffer</span> = <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">gets</span>
+72:           <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">read_buffer</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">full_boundary</span>
+73:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">EOFError</span>, <span class="ruby-value str">&quot;bad content body&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">read_buffer</span>.<span class="ruby-identifier">nil?</span>
+74:         <span class="ruby-keyword kw">end</span>
+75:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="full-boundary-method" class="method-detail ">
+				<a name="M000186"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">full_boundary</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="full-boundary-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/multipart/parser.rb, line 61</span>
+61:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">full_boundary</span>
+62:         <span class="ruby-ivar">@boundary</span> <span class="ruby-operator">+</span> <span class="ruby-constant">EOL</span>
+63:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-current-head-and-filename-and-content-type-and-name-and-body-method" class="method-detail ">
+				<a name="M000189"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_current_head_and_filename_and_content_type_and_name_and_body</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-current-head-and-filename-and-content-type-and-name-and-body-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rack/multipart/parser.rb, line 77</span>
+ 77:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_current_head_and_filename_and_content_type_and_name_and_body</span>
+ 78:         <span class="ruby-identifier">head</span> = <span class="ruby-keyword kw">nil</span>
+ 79:         <span class="ruby-identifier">body</span> = <span class="ruby-value str">''</span>
+ 80:         <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">content_type</span> = <span class="ruby-identifier">name</span> = <span class="ruby-keyword kw">nil</span>
+ 81:         <span class="ruby-identifier">content</span> = <span class="ruby-keyword kw">nil</span>
+ 82: 
+ 83:         <span class="ruby-keyword kw">until</span> <span class="ruby-identifier">head</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@buf</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">rx</span>
+ 84:           <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">head</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">i</span> = <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">index</span>(<span class="ruby-constant">EOL</span><span class="ruby-operator">+</span><span class="ruby-constant">EOL</span>)
+ 85:             <span class="ruby-identifier">head</span> = <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">2</span>) <span class="ruby-comment cmt"># First \r\n</span>
+ 86: 
+ 87:             <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span>, <span class="ruby-value">2</span>)          <span class="ruby-comment cmt"># Second \r\n</span>
+ 88: 
+ 89:             <span class="ruby-identifier">content_type</span> = <span class="ruby-identifier">head</span>[<span class="ruby-constant">MULTIPART_CONTENT_TYPE</span>, <span class="ruby-value">1</span>]
+ 90:             <span class="ruby-identifier">name</span> = <span class="ruby-identifier">head</span>[<span class="ruby-constant">MULTIPART_CONTENT_DISPOSITION</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">head</span>[<span class="ruby-constant">MULTIPART_CONTENT_ID</span>, <span class="ruby-value">1</span>]
+ 91: 
+ 92:             <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">get_filename</span>(<span class="ruby-identifier">head</span>)
+ 93: 
+ 94:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">filename</span>
+ 95:               <span class="ruby-identifier">body</span> = <span class="ruby-constant">Tempfile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;RackMultipart&quot;</span>)
+ 96:               <span class="ruby-identifier">body</span>.<span class="ruby-identifier">binmode</span>  <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">body</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:binmode</span>)
+ 97:             <span class="ruby-keyword kw">end</span>
+ 98: 
+ 99:             <span class="ruby-keyword kw">next</span>
+100:           <span class="ruby-keyword kw">end</span>
+101: 
+102:           <span class="ruby-comment cmt"># Save the read body part.</span>
+103:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">head</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-ivar">@boundary_size</span><span class="ruby-operator">+</span><span class="ruby-value">4</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">size</span>)
+104:             <span class="ruby-identifier">body</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span>, <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> (<span class="ruby-ivar">@boundary_size</span><span class="ruby-operator">+</span><span class="ruby-value">4</span>))
+105:           <span class="ruby-keyword kw">end</span>
+106: 
+107:           <span class="ruby-identifier">content</span> = <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-constant">BUFSIZE</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@content_length</span> <span class="ruby-operator">?</span> <span class="ruby-constant">BUFSIZE</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@content_length</span>)
+108:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">EOFError</span>, <span class="ruby-value str">&quot;bad content body&quot;</span>  <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">empty?</span>
+109: 
+110:           <span class="ruby-ivar">@buf</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">content</span>
+111:           <span class="ruby-ivar">@content_length</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">size</span>
+112:         <span class="ruby-keyword kw">end</span>
+113: 
+114:         [<span class="ruby-identifier">head</span>, <span class="ruby-identifier">filename</span>, <span class="ruby-identifier">content_type</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">body</span>]
+115:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-data-method" class="method-detail ">
+				<a name="M000191"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_data</span><span
+						class="method-args">(filename, body, content_type, name, head)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-data-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rack/multipart/parser.rb, line 134</span>
+134:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_data</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">body</span>, <span class="ruby-identifier">content_type</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">head</span>)
+135:         <span class="ruby-identifier">data</span> = <span class="ruby-keyword kw">nil</span>
+136:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">filename</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>
+137:           <span class="ruby-comment cmt"># filename is blank which means no file has been selected</span>
+138:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">data</span>
+139:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">filename</span>
+140:           <span class="ruby-identifier">body</span>.<span class="ruby-identifier">rewind</span>
+141: 
+142:           <span class="ruby-comment cmt"># Take the basename of the upload's original filename.</span>
+143:           <span class="ruby-comment cmt"># This handles the full Windows paths given by Internet Explorer</span>
+144:           <span class="ruby-comment cmt"># (and perhaps other broken user agents) without affecting</span>
+145:           <span class="ruby-comment cmt"># those which give the lone filename.</span>
+146:           <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">filename</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/[\/\\]/</span>).<span class="ruby-identifier">last</span>
+147: 
+148:           <span class="ruby-identifier">data</span> = {<span class="ruby-value">:filename</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">filename</span>, <span class="ruby-value">:type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">content_type</span>,
+149:                   <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">name</span>, <span class="ruby-value">:tempfile</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">body</span>, <span class="ruby-value">:head</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">head</span>}
+150:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">filename</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">content_type</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">body</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">IO</span>)
+151:           <span class="ruby-identifier">body</span>.<span class="ruby-identifier">rewind</span>
+152: 
+153:           <span class="ruby-comment cmt"># Generic multipart cases, not coming from a form</span>
+154:           <span class="ruby-identifier">data</span> = {<span class="ruby-value">:type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">content_type</span>,
+155:                   <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">name</span>, <span class="ruby-value">:tempfile</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">body</span>, <span class="ruby-value">:head</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">head</span>}
+156:         <span class="ruby-keyword kw">else</span>
+157:           <span class="ruby-identifier">data</span> = <span class="ruby-identifier">body</span>
+158:         <span class="ruby-keyword kw">end</span>
+159: 
+160:         [<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">data</span>]
+161:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-filename-method" class="method-detail ">
+				<a name="M000190"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_filename</span><span
+						class="method-args">(head)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-filename-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rack/multipart/parser.rb, line 117</span>
+117:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_filename</span>(<span class="ruby-identifier">head</span>)
+118:         <span class="ruby-identifier">filename</span> = <span class="ruby-keyword kw">nil</span>
+119:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">head</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">RFC2183</span>
+120:           <span class="ruby-identifier">filename</span> = <span class="ruby-constant">Hash</span>[<span class="ruby-identifier">head</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-constant">DISPPARM</span>)][<span class="ruby-value str">'filename'</span>]
+121:           <span class="ruby-identifier">filename</span> = <span class="ruby-node">$1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">filename</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">filename</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^&quot;(.*)&quot;$/</span>
+122:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">head</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">BROKEN_QUOTED</span>
+123:           <span class="ruby-identifier">filename</span> = <span class="ruby-node">$1</span>
+124:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">head</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">BROKEN_UNQUOTED</span>
+125:           <span class="ruby-identifier">filename</span> = <span class="ruby-node">$1</span>
+126:         <span class="ruby-keyword kw">end</span>
+127: 
+128:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">filename</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">filename</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp re">/\\[^\\&quot;]/</span>
+129:           <span class="ruby-identifier">filename</span> = <span class="ruby-constant">Utils</span>.<span class="ruby-identifier">unescape</span>(<span class="ruby-identifier">filename</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\\(.)/</span>, <span class="ruby-value str">'\1'</span>)
+130:         <span class="ruby-keyword kw">end</span>
+131:         <span class="ruby-identifier">filename</span>
+132:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rx-method" class="method-detail ">
+				<a name="M000187"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rx</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="rx-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/multipart/parser.rb, line 65</span>
+65:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rx</span>
+66:         <span class="ruby-ivar">@rx</span> <span class="ruby-operator">||=</span> <span class="ruby-node">/(?:#{EOL})?#{Regexp.quote(@boundary)}(#{EOL}|--)/</span>
+67:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="setup-parse-method" class="method-detail ">
+				<a name="M000185"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">setup_parse</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="setup-parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/multipart/parser.rb, line 43</span>
+43:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup_parse</span>
+44:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@env</span>[<span class="ruby-value str">'CONTENT_TYPE'</span>] <span class="ruby-operator">=~</span> <span class="ruby-constant">MULTIPART</span>
+45: 
+46:         <span class="ruby-ivar">@boundary</span> = <span class="ruby-node">&quot;--#{$1}&quot;</span>
+47: 
+48:         <span class="ruby-ivar">@buf</span> = <span class="ruby-value str">&quot;&quot;</span>
+49:         <span class="ruby-ivar">@params</span> = {}
+50: 
+51:         <span class="ruby-ivar">@content_length</span> = <span class="ruby-ivar">@env</span>[<span class="ruby-value str">'CONTENT_LENGTH'</span>].<span class="ruby-identifier">to_i</span>
+52:         <span class="ruby-ivar">@io</span> = <span class="ruby-ivar">@env</span>[<span class="ruby-value str">'rack.input'</span>]
+53:         <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">rewind</span>
+54: 
+55:         <span class="ruby-ivar">@boundary_size</span> = <span class="ruby-constant">Utils</span>.<span class="ruby-identifier">bytesize</span>(<span class="ruby-ivar">@boundary</span>) <span class="ruby-operator">+</span> <span class="ruby-constant">EOL</span>.<span class="ruby-identifier">size</span>
+56: 
+57:         <span class="ruby-ivar">@content_length</span> <span class="ruby-operator">-=</span> <span class="ruby-ivar">@boundary_size</span>
+58:         <span class="ruby-keyword kw">true</span>
+59:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="M000184"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/multipart/parser.rb, line 12</span>
+12:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>
+13:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">setup_parse</span>
+14: 
+15:         <span class="ruby-identifier">fast_forward_to_first_boundary</span>
+16: 
+17:         <span class="ruby-identifier">loop</span> <span class="ruby-keyword kw">do</span>
+18:           <span class="ruby-identifier">head</span>, <span class="ruby-identifier">filename</span>, <span class="ruby-identifier">content_type</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">body</span> = 
+19:             <span class="ruby-identifier">get_current_head_and_filename_and_content_type_and_name_and_body</span>
+20: 
+21:           <span class="ruby-comment cmt"># Save the rest.</span>
+22:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">i</span> = <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">rx</span>)
+23:             <span class="ruby-identifier">body</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">i</span>)
+24:             <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span>, <span class="ruby-ivar">@boundary_size</span><span class="ruby-operator">+</span><span class="ruby-value">2</span>)
+25: 
+26:             <span class="ruby-ivar">@content_length</span> = <span class="ruby-value">1</span>  <span class="ruby-keyword kw">if</span> <span class="ruby-node">$1</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;--&quot;</span>
+27:           <span class="ruby-keyword kw">end</span>
+28: 
+29:           <span class="ruby-identifier">filename</span>, <span class="ruby-identifier">data</span> = <span class="ruby-identifier">get_data</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">body</span>, <span class="ruby-identifier">content_type</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">head</span>)
+30: 
+31:           <span class="ruby-constant">Utils</span>.<span class="ruby-identifier">normalize_params</span>(<span class="ruby-ivar">@params</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">data</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">nil?</span>
+32: 
+33:           <span class="ruby-comment cmt"># break if we're at the end of a buffer, but not if it is the end of a field</span>
+34:           <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-node">$1</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">EOL</span>) <span class="ruby-operator">||</span> <span class="ruby-ivar">@content_length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+35:         <span class="ruby-keyword kw">end</span>
+36: 
+37:         <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">rewind</span>
+38: 
+39:         <span class="ruby-ivar">@params</span>
+40:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000183"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(env)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/multipart/parser.rb, line 8</span>
+ 8:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">env</span>)
+ 9:         <span class="ruby-ivar">@env</span> = <span class="ruby-identifier">env</span>
+10:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

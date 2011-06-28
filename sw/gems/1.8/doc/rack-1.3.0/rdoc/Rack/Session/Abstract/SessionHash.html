@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Rack::Session::Abstract::SessionHash</title>
+
+	<link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../../lib/rack/session/abstract/id_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rack/session/abstract/id.rb">lib/rack/session/abstract/id.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Hash</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000327">::new</a></li>
+					
+					<li><a href="#M000328">#[]</a></li>
+					
+					<li><a href="#M000332">#[]=</a></li>
+					
+					<li><a href="#M000333">#clear</a></li>
+					
+					<li><a href="#M000336">#delete</a></li>
+					
+					<li><a href="#M000338">#exists?</a></li>
+					
+					<li><a href="#M000329">#has_key?</a></li>
+					
+					<li><a href="#M000331">#include?</a></li>
+					
+					<li><a href="#M000337">#inspect</a></li>
+					
+					<li><a href="#M000330">#key?</a></li>
+					
+					<li><a href="#M000342">#load!</a></li>
+					
+					<li><a href="#M000340">#load_for_read!</a></li>
+					
+					<li><a href="#M000341">#load_for_write!</a></li>
+					
+					<li><a href="#M000339">#loaded?</a></li>
+					
+					<li><a href="#M000343">#stringify_keys</a></li>
+					
+					<li><a href="#M000334">#to_hash</a></li>
+					
+					<li><a href="#M000335">#update</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../../Rack.html">Rack</a></li>
+				
+					<li><a href="../../../Rack/Auth.html">Rack::Auth</a></li>
+				
+					<li><a href="../../../Rack/Auth/AbstractHandler.html">Rack::Auth::AbstractHandler</a></li>
+				
+					<li><a href="../../../Rack/Auth/AbstractRequest.html">Rack::Auth::AbstractRequest</a></li>
+				
+					<li><a href="../../../Rack/Auth/Basic.html">Rack::Auth::Basic</a></li>
+				
+					<li><a href="../../../Rack/Auth/Basic/Request.html">Rack::Auth::Basic::Request</a></li>
+				
+					<li><a href="../../../Rack/Auth/Digest.html">Rack::Auth::Digest</a></li>
+				
+					<li><a href="../../../Rack/Auth/Digest/MD5.html">Rack::Auth::Digest::MD5</a></li>
+				
+					<li><a href="../../../Rack/Auth/Digest/Nonce.html">Rack::Auth::Digest::Nonce</a></li>
+				
+					<li><a href="../../../Rack/Auth/Digest/Params.html">Rack::Auth::Digest::Params</a></li>
+				
+					<li><a href="../../../Rack/Auth/Digest/Request.html">Rack::Auth::Digest::Request</a></li>
+				
+					<li><a href="../../../Rack/Builder.html">Rack::Builder</a></li>
+				
+					<li><a href="../../../Rack/Cascade.html">Rack::Cascade</a></li>
+				
+					<li><a href="../../../Rack/Chunked.html">Rack::Chunked</a></li>
+				
+					<li><a href="../../../Rack/Chunked/Body.html">Rack::Chunked::Body</a></li>
+				
+					<li><a href="../../../Rack/CommonLogger.html">Rack::CommonLogger</a></li>
+				
+					<li><a href="../../../Rack/ConditionalGet.html">Rack::ConditionalGet</a></li>
+				
+					<li><a href="../../../Rack/Config.html">Rack::Config</a></li>
+				
+					<li><a href="../../../Rack/ContentLength.html">Rack::ContentLength</a></li>
+				
+					<li><a href="../../../Rack/ContentType.html">Rack::ContentType</a></li>
+				
+					<li><a href="../../../Rack/Deflater.html">Rack::Deflater</a></li>
+				
+					<li><a href="../../../Rack/Deflater/DeflateStream.html">Rack::Deflater::DeflateStream</a></li>
+				
+					<li><a href="../../../Rack/Deflater/GzipStream.html">Rack::Deflater::GzipStream</a></li>
+				
+					<li><a href="../../../Rack/Directory.html">Rack::Directory</a></li>
+				
+					<li><a href="../../../Rack/ETag.html">Rack::ETag</a></li>
+				
+					<li><a href="../../../Rack/File.html">Rack::File</a></li>
+				
+					<li><a href="../../../Rack/ForwardRequest.html">Rack::ForwardRequest</a></li>
+				
+					<li><a href="../../../Rack/Handler.html">Rack::Handler</a></li>
+				
+					<li><a href="../../../Rack/Handler/CGI.html">Rack::Handler::CGI</a></li>
+				
+					<li><a href="../../../Rack/Handler/EventedMongrel.html">Rack::Handler::EventedMongrel</a></li>
+				
+					<li><a href="../../../Rack/Handler/FastCGI.html">Rack::Handler::FastCGI</a></li>
+				
+					<li><a href="../../../Rack/Handler/LSWS.html">Rack::Handler::LSWS</a></li>
+				
+					<li><a href="../../../Rack/Handler/Mongrel.html">Rack::Handler::Mongrel</a></li>
+				
+					<li><a href="../../../Rack/Handler/SCGI.html">Rack::Handler::SCGI</a></li>
+				
+					<li><a href="../../../Rack/Handler/SwiftipliedMongrel.html">Rack::Handler::SwiftipliedMongrel</a></li>
+				
+					<li><a href="../../../Rack/Handler/Thin.html">Rack::Handler::Thin</a></li>
+				
+					<li><a href="../../../Rack/Handler/WEBrick.html">Rack::Handler::WEBrick</a></li>
+				
+					<li><a href="../../../Rack/Head.html">Rack::Head</a></li>
+				
+					<li><a href="../../../Rack/Lint.html">Rack::Lint</a></li>
+				
+					<li><a href="../../../Rack/Lobster.html">Rack::Lobster</a></li>
+				
+					<li><a href="../../../Rack/Lock.html">Rack::Lock</a></li>
+				
+					<li><a href="../../../Rack/Logger.html">Rack::Logger</a></li>
+				
+					<li><a href="../../../Rack/MethodOverride.html">Rack::MethodOverride</a></li>
+				
+					<li><a href="../../../Rack/Mime.html">Rack::Mime</a></li>
+				
+					<li><a href="../../../Rack/MockRequest.html">Rack::MockRequest</a></li>
+				
+					<li><a href="../../../Rack/MockRequest/FatalWarner.html">Rack::MockRequest::FatalWarner</a></li>
+				
+					<li><a href="../../../Rack/MockRequest/FatalWarning.html">Rack::MockRequest::FatalWarning</a></li>
+				
+					<li><a href="../../../Rack/MockResponse.html">Rack::MockResponse</a></li>
+				
+					<li><a href="../../../Rack/Multipart.html">Rack::Multipart</a></li>
+				
+					<li><a href="../../../Rack/Multipart.html">Rack::Multipart</a></li>
+				
+					<li><a href="../../../Rack/Multipart/Generator.html">Rack::Multipart::Generator</a></li>
+				
+					<li><a href="../../../Rack/Multipart/Parser.html">Rack::Multipart::Parser</a></li>
+				
+					<li><a href="../../../Rack/Multipart/UploadedFile.html">Rack::Multipart::UploadedFile</a></li>
+				
+					<li><a href="../../../Rack/NullLogger.html">Rack::NullLogger</a></li>
+				
+					<li><a href="../../../Rack/Recursive.html">Rack::Recursive</a></li>
+				
+					<li><a href="../../../Rack/Reloader.html">Rack::Reloader</a></li>
+				
+					<li><a href="../../../Rack/Reloader/Stat.html">Rack::Reloader::Stat</a></li>
+				
+					<li><a href="../../../Rack/Request.html">Rack::Request</a></li>
+				
+					<li><a href="../../../Rack/Response.html">Rack::Response</a></li>
+				
+					<li><a href="../../../Rack/Response/Helpers.html">Rack::Response::Helpers</a></li>
+				
+					<li><a href="../../../Rack/RewindableInput.html">Rack::RewindableInput</a></li>
+				
+					<li><a href="../../../Rack/RewindableInput/Tempfile.html">Rack::RewindableInput::Tempfile</a></li>
+				
+					<li><a href="../../../Rack/Runtime.html">Rack::Runtime</a></li>
+				
+					<li><a href="../../../Rack/Sendfile.html">Rack::Sendfile</a></li>
+				
+					<li><a href="../../../Rack/Server.html">Rack::Server</a></li>
+				
+					<li><a href="../../../Rack/Server/Options.html">Rack::Server::Options</a></li>
+				
+					<li><a href="../../../Rack/Session.html">Rack::Session</a></li>
+				
+					<li><a href="../../../Rack/Session/Abstract.html">Rack::Session::Abstract</a></li>
+				
+					<li><a href="../../../Rack/Session/Abstract/ID.html">Rack::Session::Abstract::ID</a></li>
+				
+					<li><a href="../../../Rack/Session/Abstract/SessionHash.html">Rack::Session::Abstract::SessionHash</a></li>
+				
+					<li><a href="../../../Rack/Session/Cookie.html">Rack::Session::Cookie</a></li>
+				
+					<li><a href="../../../Rack/Session/Cookie/Base64.html">Rack::Session::Cookie::Base64</a></li>
+				
+					<li><a href="../../../Rack/Session/Cookie/Base64/Marshal.html">Rack::Session::Cookie::Base64::Marshal</a></li>
+				
+					<li><a href="../../../Rack/Session/Cookie/Identity.html">Rack::Session::Cookie::Identity</a></li>
+				
+					<li><a href="../../../Rack/Session/Cookie/Reverse.html">Rack::Session::Cookie::Reverse</a></li>
+				
+					<li><a href="../../../Rack/Session/Memcache.html">Rack::Session::Memcache</a></li>
+				
+					<li><a href="../../../Rack/Session/Pool.html">Rack::Session::Pool</a></li>
+				
+					<li><a href="../../../Rack/ShowExceptions.html">Rack::ShowExceptions</a></li>
+				
+					<li><a href="../../../Rack/ShowStatus.html">Rack::ShowStatus</a></li>
+				
+					<li><a href="../../../Rack/Static.html">Rack::Static</a></li>
+				
+					<li><a href="../../../Rack/URLMap.html">Rack::URLMap</a></li>
+				
+					<li><a href="../../../Rack/Utils.html">Rack::Utils</a></li>
+				
+					<li><a href="../../../Rack/Utils/Context.html">Rack::Utils::Context</a></li>
+				
+					<li><a href="../../../Rack/Utils/HeaderHash.html">Rack::Utils::HeaderHash</a></li>
+				
+					<li><a href="../../../FCGI.html">FCGI</a></li>
+				
+					<li><a href="../../../FCGI/Stream.html">FCGI::Stream</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Rack::Session::Abstract::SessionHash</h1>
+
+		<div id="description">
+			<p>
+<a href="SessionHash.html">SessionHash</a> is responsible to lazily load
+the session from store.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="load--method" class="method-detail ">
+				<a name="M000342"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="load--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 121</span>
+121:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load!</span>
+122:           <span class="ruby-identifier">id</span>, <span class="ruby-identifier">session</span> = <span class="ruby-ivar">@by</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:load_session</span>, <span class="ruby-ivar">@env</span>)
+123:           <span class="ruby-ivar">@env</span>[<span class="ruby-constant">ENV_SESSION_OPTIONS_KEY</span>][<span class="ruby-value">:id</span>] = <span class="ruby-identifier">id</span>
+124:           <span class="ruby-identifier">replace</span>(<span class="ruby-identifier">stringify_keys</span>(<span class="ruby-identifier">session</span>))
+125:           <span class="ruby-ivar">@loaded</span> = <span class="ruby-keyword kw">true</span>
+126:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-for-read--method" class="method-detail ">
+				<a name="M000340"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_for_read!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="load-for-read--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 113</span>
+113:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_for_read!</span>
+114:           <span class="ruby-identifier">load!</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">loaded?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">exists?</span>
+115:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-for-write--method" class="method-detail ">
+				<a name="M000341"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_for_write!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="load-for-write--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 117</span>
+117:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_for_write!</span>
+118:           <span class="ruby-identifier">load!</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">loaded?</span>
+119:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stringify-keys-method" class="method-detail ">
+				<a name="M000343"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stringify_keys</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="stringify-keys-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 128</span>
+128:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stringify_keys</span>(<span class="ruby-identifier">other</span>)
+129:           <span class="ruby-identifier">hash</span> = {}
+130:           <span class="ruby-identifier">other</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+131:             <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] = <span class="ruby-identifier">value</span>
+132:           <span class="ruby-keyword kw">end</span>
+133:           <span class="ruby-identifier">hash</span>
+134:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="M000328"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">[]</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 58</span>
+58:         <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">key</span>)
+59:           <span class="ruby-identifier">load_for_read!</span>
+60:           <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)
+61:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="M000332"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">[]=</span><span
+						class="method-args">(key, value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 70</span>
+70:         <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]=</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+71:           <span class="ruby-identifier">load_for_write!</span>
+72:           <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">value</span>)
+73:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="clear-method" class="method-detail ">
+				<a name="M000333"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">clear</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="clear-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 75</span>
+75:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clear</span>
+76:           <span class="ruby-identifier">load_for_write!</span>
+77:           <span class="ruby-keyword kw">super</span>
+78:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="delete-method" class="method-detail ">
+				<a name="M000336"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">delete</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="delete-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 92</span>
+92:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>)
+93:           <span class="ruby-identifier">load_for_write!</span>
+94:           <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)
+95:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="exists--method" class="method-detail ">
+				<a name="M000338"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exists?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="exists--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 102</span>
+102:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exists?</span>
+103:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@exists</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">instance_variable_defined?</span>(<span class="ruby-value">:@exists</span>)
+104:           <span class="ruby-ivar">@exists</span> = <span class="ruby-ivar">@by</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:session_exists?</span>, <span class="ruby-ivar">@env</span>)
+105:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="has-key--method" class="method-detail ">
+				<a name="M000329"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">has_key?</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="has-key--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 63</span>
+63:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>)
+64:           <span class="ruby-identifier">load_for_read!</span>
+65:           <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)
+66:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="SessionHash.html#M000330">key?</a>, <a href="SessionHash.html#M000331">include?</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="include--method" class="method-detail method-alias">
+				<a name="M000331"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">include?</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="SessionHash.html#M000329">has_key?</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="inspect-method" class="method-detail ">
+				<a name="M000337"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inspect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="inspect-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 97</span>
+ 97:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect</span>
+ 98:           <span class="ruby-identifier">load_for_read!</span>
+ 99:           <span class="ruby-keyword kw">super</span>
+100:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="key--method" class="method-detail method-alias">
+				<a name="M000330"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">key?</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="SessionHash.html#M000329">has_key?</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="loaded--method" class="method-detail ">
+				<a name="M000339"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">loaded?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="loaded--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 107</span>
+107:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">loaded?</span>
+108:           <span class="ruby-ivar">@loaded</span>
+109:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-hash-method" class="method-detail ">
+				<a name="M000334"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_hash</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="to-hash-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 80</span>
+80:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_hash</span>
+81:           <span class="ruby-identifier">load_for_read!</span>
+82:           <span class="ruby-identifier">h</span> = {}.<span class="ruby-identifier">replace</span>(<span class="ruby-keyword kw">self</span>)
+83:           <span class="ruby-identifier">h</span>.<span class="ruby-identifier">delete_if</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">nil?</span> }
+84:           <span class="ruby-identifier">h</span>
+85:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="update-method" class="method-detail ">
+				<a name="M000335"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">update</span><span
+						class="method-args">(hash)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="update-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 87</span>
+87:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update</span>(<span class="ruby-identifier">hash</span>)
+88:           <span class="ruby-identifier">load_for_write!</span>
+89:           <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">stringify_keys</span>(<span class="ruby-identifier">hash</span>))
+90:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000327"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(by, env)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/session/abstract/id.rb, line 51</span>
+51:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">by</span>, <span class="ruby-identifier">env</span>)
+52:           <span class="ruby-keyword kw">super</span>()
+53:           <span class="ruby-ivar">@by</span> = <span class="ruby-identifier">by</span>
+54:           <span class="ruby-ivar">@env</span> = <span class="ruby-identifier">env</span>
+55:           <span class="ruby-ivar">@loaded</span> = <span class="ruby-keyword kw">false</span>
+56:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

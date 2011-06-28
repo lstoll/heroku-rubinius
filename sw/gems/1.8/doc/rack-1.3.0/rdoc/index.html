@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>rack-1.3.0 Documentation</title>
+
+	<link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+	
+	<h1>rack-1.3.0 Documentation</h1>
+
+	
+	<p>This is the API documentation for 'rack-1.3.0 Documentation'.</p>
+	
+
+	
+	
+
+	<h2 id="classes">Classes/Modules</h2>
+	<ul>
+		
+		<li class="module"><a href="Rack.html">Rack</a></li>
+		
+		<li class="module"><a href="Rack/Auth.html">Rack::Auth</a></li>
+		
+		<li class="class"><a href="Rack/Auth/AbstractHandler.html">Rack::Auth::AbstractHandler</a></li>
+		
+		<li class="class"><a href="Rack/Auth/AbstractRequest.html">Rack::Auth::AbstractRequest</a></li>
+		
+		<li class="class"><a href="Rack/Auth/Basic.html">Rack::Auth::Basic</a></li>
+		
+		<li class="class"><a href="Rack/Auth/Basic/Request.html">Rack::Auth::Basic::Request</a></li>
+		
+		<li class="module"><a href="Rack/Auth/Digest.html">Rack::Auth::Digest</a></li>
+		
+		<li class="class"><a href="Rack/Auth/Digest/MD5.html">Rack::Auth::Digest::MD5</a></li>
+		
+		<li class="class"><a href="Rack/Auth/Digest/Nonce.html">Rack::Auth::Digest::Nonce</a></li>
+		
+		<li class="class"><a href="Rack/Auth/Digest/Params.html">Rack::Auth::Digest::Params</a></li>
+		
+		<li class="class"><a href="Rack/Auth/Digest/Request.html">Rack::Auth::Digest::Request</a></li>
+		
+		<li class="class"><a href="Rack/Builder.html">Rack::Builder</a></li>
+		
+		<li class="class"><a href="Rack/Cascade.html">Rack::Cascade</a></li>
+		
+		<li class="class"><a href="Rack/Chunked.html">Rack::Chunked</a></li>
+		
+		<li class="class"><a href="Rack/Chunked/Body.html">Rack::Chunked::Body</a></li>
+		
+		<li class="class"><a href="Rack/CommonLogger.html">Rack::CommonLogger</a></li>
+		
+		<li class="class"><a href="Rack/ConditionalGet.html">Rack::ConditionalGet</a></li>
+		
+		<li class="class"><a href="Rack/Config.html">Rack::Config</a></li>
+		
+		<li class="class"><a href="Rack/ContentLength.html">Rack::ContentLength</a></li>
+		
+		<li class="class"><a href="Rack/ContentType.html">Rack::ContentType</a></li>
+		
+		<li class="class"><a href="Rack/Deflater.html">Rack::Deflater</a></li>
+		
+		<li class="class"><a href="Rack/Deflater/DeflateStream.html">Rack::Deflater::DeflateStream</a></li>
+		
+		<li class="class"><a href="Rack/Deflater/GzipStream.html">Rack::Deflater::GzipStream</a></li>
+		
+		<li class="class"><a href="Rack/Directory.html">Rack::Directory</a></li>
+		
+		<li class="class"><a href="Rack/ETag.html">Rack::ETag</a></li>
+		
+		<li class="class"><a href="Rack/File.html">Rack::File</a></li>
+		
+		<li class="class"><a href="Rack/ForwardRequest.html">Rack::ForwardRequest</a></li>
+		
+		<li class="module"><a href="Rack/Handler.html">Rack::Handler</a></li>
+		
+		<li class="class"><a href="Rack/Handler/CGI.html">Rack::Handler::CGI</a></li>
+		
+		<li class="class"><a href="Rack/Handler/EventedMongrel.html">Rack::Handler::EventedMongrel</a></li>
+		
+		<li class="class"><a href="Rack/Handler/FastCGI.html">Rack::Handler::FastCGI</a></li>
+		
+		<li class="class"><a href="Rack/Handler/LSWS.html">Rack::Handler::LSWS</a></li>
+		
+		<li class="class"><a href="Rack/Handler/Mongrel.html">Rack::Handler::Mongrel</a></li>
+		
+		<li class="class"><a href="Rack/Handler/SCGI.html">Rack::Handler::SCGI</a></li>
+		
+		<li class="class"><a href="Rack/Handler/SwiftipliedMongrel.html">Rack::Handler::SwiftipliedMongrel</a></li>
+		
+		<li class="class"><a href="Rack/Handler/Thin.html">Rack::Handler::Thin</a></li>
+		
+		<li class="class"><a href="Rack/Handler/WEBrick.html">Rack::Handler::WEBrick</a></li>
+		
+		<li class="class"><a href="Rack/Head.html">Rack::Head</a></li>
+		
+		<li class="class"><a href="Rack/Lint.html">Rack::Lint</a></li>
+		
+		<li class="class"><a href="Rack/Lobster.html">Rack::Lobster</a></li>
+		
+		<li class="class"><a href="Rack/Lock.html">Rack::Lock</a></li>
+		
+		<li class="class"><a href="Rack/Logger.html">Rack::Logger</a></li>
+		
+		<li class="class"><a href="Rack/MethodOverride.html">Rack::MethodOverride</a></li>
+		
+		<li class="module"><a href="Rack/Mime.html">Rack::Mime</a></li>
+		
+		<li class="class"><a href="Rack/MockRequest.html">Rack::MockRequest</a></li>
+		
+		<li class="class"><a href="Rack/MockRequest/FatalWarner.html">Rack::MockRequest::FatalWarner</a></li>
+		
+		<li class="class"><a href="Rack/MockRequest/FatalWarning.html">Rack::MockRequest::FatalWarning</a></li>
+		
+		<li class="class"><a href="Rack/MockResponse.html">Rack::MockResponse</a></li>
+		
+		<li class="module"><a href="Rack/Multipart.html">Rack::Multipart</a></li>
+		
+		<li class="module"><a href="Rack/Multipart.html">Rack::Multipart</a></li>
+		
+		<li class="class"><a href="Rack/Multipart/Generator.html">Rack::Multipart::Generator</a></li>
+		
+		<li class="class"><a href="Rack/Multipart/Parser.html">Rack::Multipart::Parser</a></li>
+		
+		<li class="class"><a href="Rack/Multipart/UploadedFile.html">Rack::Multipart::UploadedFile</a></li>
+		
+		<li class="class"><a href="Rack/NullLogger.html">Rack::NullLogger</a></li>
+		
+		<li class="class"><a href="Rack/Recursive.html">Rack::Recursive</a></li>
+		
+		<li class="class"><a href="Rack/Reloader.html">Rack::Reloader</a></li>
+		
+		<li class="module"><a href="Rack/Reloader/Stat.html">Rack::Reloader::Stat</a></li>
+		
+		<li class="class"><a href="Rack/Request.html">Rack::Request</a></li>
+		
+		<li class="class"><a href="Rack/Response.html">Rack::Response</a></li>
+		
+		<li class="module"><a href="Rack/Response/Helpers.html">Rack::Response::Helpers</a></li>
+		
+		<li class="class"><a href="Rack/RewindableInput.html">Rack::RewindableInput</a></li>
+		
+		<li class="class"><a href="Rack/RewindableInput/Tempfile.html">Rack::RewindableInput::Tempfile</a></li>
+		
+		<li class="class"><a href="Rack/Runtime.html">Rack::Runtime</a></li>
+		
+		<li class="class"><a href="Rack/Sendfile.html">Rack::Sendfile</a></li>
+		
+		<li class="class"><a href="Rack/Server.html">Rack::Server</a></li>
+		
+		<li class="class"><a href="Rack/Server/Options.html">Rack::Server::Options</a></li>
+		
+		<li class="module"><a href="Rack/Session.html">Rack::Session</a></li>
+		
+		<li class="module"><a href="Rack/Session/Abstract.html">Rack::Session::Abstract</a></li>
+		
+		<li class="class"><a href="Rack/Session/Abstract/ID.html">Rack::Session::Abstract::ID</a></li>
+		
+		<li class="class"><a href="Rack/Session/Abstract/SessionHash.html">Rack::Session::Abstract::SessionHash</a></li>
+		
+		<li class="class"><a href="Rack/Session/Cookie.html">Rack::Session::Cookie</a></li>
+		
+		<li class="class"><a href="Rack/Session/Cookie/Base64.html">Rack::Session::Cookie::Base64</a></li>
+		
+		<li class="class"><a href="Rack/Session/Cookie/Base64/Marshal.html">Rack::Session::Cookie::Base64::Marshal</a></li>
+		
+		<li class="class"><a href="Rack/Session/Cookie/Identity.html">Rack::Session::Cookie::Identity</a></li>
+		
+		<li class="class"><a href="Rack/Session/Cookie/Reverse.html">Rack::Session::Cookie::Reverse</a></li>
+		
+		<li class="class"><a href="Rack/Session/Memcache.html">Rack::Session::Memcache</a></li>
+		
+		<li class="class"><a href="Rack/Session/Pool.html">Rack::Session::Pool</a></li>
+		
+		<li class="class"><a href="Rack/ShowExceptions.html">Rack::ShowExceptions</a></li>
+		
+		<li class="class"><a href="Rack/ShowStatus.html">Rack::ShowStatus</a></li>
+		
+		<li class="class"><a href="Rack/Static.html">Rack::Static</a></li>
+		
+		<li class="class"><a href="Rack/URLMap.html">Rack::URLMap</a></li>
+		
+		<li class="module"><a href="Rack/Utils.html">Rack::Utils</a></li>
+		
+		<li class="class"><a href="Rack/Utils/Context.html">Rack::Utils::Context</a></li>
+		
+		<li class="class"><a href="Rack/Utils/HeaderHash.html">Rack::Utils::HeaderHash</a></li>
+		
+		<li class="module"><a href="FCGI.html">FCGI</a></li>
+		
+		<li class="class"><a href="FCGI/Stream.html">FCGI::Stream</a></li>
+		
+	</ul>
+
+	<h2 id="methods">Methods</h2>
+	<ul>
+		
+			<li><a href="Rack/Builder.html#M000055">::app &mdash; Rack::Builder</a></li>
+		
+			<li><a href="Rack/Multipart.html#M000197">::build_multipart &mdash; Rack::Multipart</a></li>
+		
+			<li><a href="Rack/Multipart.html#M000197">::build_multipart &mdash; Rack::Multipart</a></li>
+		
+			<li><a href="Rack/Utils.html#M000413">::build_nested_query &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000412">::build_query &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000421">::byte_ranges &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000418">::bytesize &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000419">::bytesize &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Handler.html#M000147">::default &mdash; Rack::Handler</a></li>
+		
+			<li><a href="Rack/Utils.html#M000417">::delete_cookie_header! &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Params.html#M000040">::dequote &mdash; Rack::Auth::Digest::Params</a></li>
+		
+			<li><a href="Rack/MockRequest.html#M000171">::env_for &mdash; Rack::MockRequest</a></li>
+		
+			<li><a href="Rack/Utils.html#M000406">::escape &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000414">::escape_html &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000407">::escape_path &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Handler.html#M000146">::get &mdash; Rack::Handler</a></li>
+		
+			<li><a href="Rack/Server.html#M000316">::logging_middleware &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Server.html#M000317">::middleware &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Mime.html#M000160">::mime_type &mdash; Rack::Mime</a></li>
+		
+			<li><a href="Rack/Multipart/UploadedFile.html#M000192">::new &mdash; Rack::Multipart::UploadedFile</a></li>
+		
+			<li><a href="Rack/Handler/Mongrel.html#M000133">::new &mdash; Rack::Handler::Mongrel</a></li>
+		
+			<li><a href="Rack/Session/Cookie.html#M000371">::new &mdash; Rack::Session::Cookie</a></li>
+		
+			<li><a href="Rack/Cascade.html#M000061">::new &mdash; Rack::Cascade</a></li>
+		
+			<li><a href="Rack/Handler/WEBrick.html#M000144">::new &mdash; Rack::Handler::WEBrick</a></li>
+		
+			<li><a href="Rack/ETag.html#M000104">::new &mdash; Rack::ETag</a></li>
+		
+			<li><a href="Rack/Multipart/Parser.html#M000183">::new &mdash; Rack::Multipart::Parser</a></li>
+		
+			<li><a href="Rack/CommonLogger.html#M000071">::new &mdash; Rack::CommonLogger</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000426">::new &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000427">::new &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Deflater/GzipStream.html#M000089">::new &mdash; Rack::Deflater::GzipStream</a></li>
+		
+			<li><a href="Rack/Server.html#M000312">::new &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Deflater/DeflateStream.html#M000092">::new &mdash; Rack::Deflater::DeflateStream</a></li>
+		
+			<li><a href="Rack/ShowExceptions.html#M000392">::new &mdash; Rack::ShowExceptions</a></li>
+		
+			<li><a href="Rack/Recursive.html#M000206">::new &mdash; Rack::Recursive</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Params.html#M000042">::new &mdash; Rack::Auth::Digest::Params</a></li>
+		
+			<li><a href="Rack/Head.html#M000150">::new &mdash; Rack::Head</a></li>
+		
+			<li><a href="Rack/Sendfile.html#M000305">::new &mdash; Rack::Sendfile</a></li>
+		
+			<li><a href="Rack/ContentType.html#M000085">::new &mdash; Rack::ContentType</a></li>
+		
+			<li><a href="Rack/Logger.html#M000156">::new &mdash; Rack::Logger</a></li>
+		
+			<li><a href="Rack/Config.html#M000081">::new &mdash; Rack::Config</a></li>
+		
+			<li><a href="Rack/Multipart/Generator.html#M000177">::new &mdash; Rack::Multipart::Generator</a></li>
+		
+			<li><a href="Rack/NullLogger.html#M000198">::new &mdash; Rack::NullLogger</a></li>
+		
+			<li><a href="Rack/MethodOverride.html#M000158">::new &mdash; Rack::MethodOverride</a></li>
+		
+			<li><a href="Rack/ConditionalGet.html#M000075">::new &mdash; Rack::ConditionalGet</a></li>
+		
+			<li><a href="Rack/Auth/AbstractRequest.html#M000003">::new &mdash; Rack::Auth::AbstractRequest</a></li>
+		
+			<li><a href="Rack/Handler/SCGI.html#M000137">::new &mdash; Rack::Handler::SCGI</a></li>
+		
+			<li><a href="Rack/Chunked/Body.html#M000066">::new &mdash; Rack::Chunked::Body</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000327">::new &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Reloader.html#M000210">::new &mdash; Rack::Reloader</a></li>
+		
+			<li><a href="Rack/Auth/AbstractHandler.html#M000000">::new &mdash; Rack::Auth::AbstractHandler</a></li>
+		
+			<li><a href="Rack/ShowStatus.html#M000398">::new &mdash; Rack::ShowStatus</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Nonce.html#M000033">::new &mdash; Rack::Auth::Digest::Nonce</a></li>
+		
+			<li><a href="Rack/Static.html#M000401">::new &mdash; Rack::Static</a></li>
+		
+			<li><a href="Rack/MockRequest.html#M000165">::new &mdash; Rack::MockRequest</a></li>
+		
+			<li><a href="Rack/Request.html#M000217">::new &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/RewindableInput.html#M000294">::new &mdash; Rack::RewindableInput</a></li>
+		
+			<li><a href="Rack/Builder.html#M000054">::new &mdash; Rack::Builder</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000344">::new &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/ContentLength.html#M000083">::new &mdash; Rack::ContentLength</a></li>
+		
+			<li><a href="Rack/Session/Pool.html#M000386">::new &mdash; Rack::Session::Pool</a></li>
+		
+			<li><a href="Rack/Response.html#M000267">::new &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/File.html#M000110">::new &mdash; Rack::File</a></li>
+		
+			<li><a href="Rack/MockResponse.html#M000172">::new &mdash; Rack::MockResponse</a></li>
+		
+			<li><a href="Rack/Utils/Context.html#M000422">::new &mdash; Rack::Utils::Context</a></li>
+		
+			<li><a href="Rack/ForwardRequest.html#M000205">::new &mdash; Rack::ForwardRequest</a></li>
+		
+			<li><a href="Rack/Directory.html#M000094">::new &mdash; Rack::Directory</a></li>
+		
+			<li><a href="Rack/URLMap.html#M000403">::new &mdash; Rack::URLMap</a></li>
+		
+			<li><a href="Rack/Session/Memcache.html#M000380">::new &mdash; Rack::Session::Memcache</a></li>
+		
+			<li><a href="Rack/Lint.html#M000152">::new &mdash; Rack::Lint</a></li>
+		
+			<li><a href="Rack/Chunked.html#M000069">::new &mdash; Rack::Chunked</a></li>
+		
+			<li><a href="Rack/Runtime.html#M000303">::new &mdash; Rack::Runtime</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000016">::new &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Lock.html#M000154">::new &mdash; Rack::Lock</a></li>
+		
+			<li><a href="Rack/Deflater.html#M000087">::new &mdash; Rack::Deflater</a></li>
+		
+			<li><a href="Rack/Utils.html#M000411">::normalize_params &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Params.html#M000039">::parse &mdash; Rack::Auth::Digest::Params</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Nonce.html#M000032">::parse &mdash; Rack::Auth::Digest::Nonce</a></li>
+		
+			<li><a href="Rack/Builder.html#M000053">::parse_file &mdash; Rack::Builder</a></li>
+		
+			<li><a href="Rack/Multipart.html#M000196">::parse_multipart &mdash; Rack::Multipart</a></li>
+		
+			<li><a href="Rack/Multipart.html#M000196">::parse_multipart &mdash; Rack::Multipart</a></li>
+		
+			<li><a href="Rack/Utils.html#M000410">::parse_nested_query &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000409">::parse_query &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Handler.html#M000149">::register &mdash; Rack::Handler</a></li>
+		
+			<li><a href="Rack.html#M000442">::release &mdash; Rack</a></li>
+		
+			<li><a href="Rack/Utils.html#M000420">::rfc2822 &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Handler/CGI.html#M000116">::run &mdash; Rack::Handler::CGI</a></li>
+		
+			<li><a href="Rack/Handler/Thin.html#M000139">::run &mdash; Rack::Handler::Thin</a></li>
+		
+			<li><a href="Rack/Handler/WEBrick.html#M000141">::run &mdash; Rack::Handler::WEBrick</a></li>
+		
+			<li><a href="Rack/Handler/LSWS.html#M000127">::run &mdash; Rack::Handler::LSWS</a></li>
+		
+			<li><a href="Rack/Handler/SCGI.html#M000135">::run &mdash; Rack::Handler::SCGI</a></li>
+		
+			<li><a href="Rack/Handler/FastCGI.html#M000122">::run &mdash; Rack::Handler::FastCGI</a></li>
+		
+			<li><a href="Rack/Handler/Mongrel.html#M000131">::run &mdash; Rack::Handler::Mongrel</a></li>
+		
+			<li><a href="Rack/Utils.html#M000415">::select_best_encoding &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Handler/LSWS.html#M000130">::send_body &mdash; Rack::Handler::LSWS</a></li>
+		
+			<li><a href="Rack/Handler/CGI.html#M000119">::send_body &mdash; Rack::Handler::CGI</a></li>
+		
+			<li><a href="Rack/Handler/FastCGI.html#M000126">::send_body &mdash; Rack::Handler::FastCGI</a></li>
+		
+			<li><a href="Rack/Handler/LSWS.html#M000129">::send_headers &mdash; Rack::Handler::LSWS</a></li>
+		
+			<li><a href="Rack/Handler/CGI.html#M000118">::send_headers &mdash; Rack::Handler::CGI</a></li>
+		
+			<li><a href="Rack/Handler/FastCGI.html#M000125">::send_headers &mdash; Rack::Handler::FastCGI</a></li>
+		
+			<li><a href="Rack/Handler/FastCGI.html#M000124">::serve &mdash; Rack::Handler::FastCGI</a></li>
+		
+			<li><a href="Rack/Handler/LSWS.html#M000128">::serve &mdash; Rack::Handler::LSWS</a></li>
+		
+			<li><a href="Rack/Handler/CGI.html#M000117">::serve &mdash; Rack::Handler::CGI</a></li>
+		
+			<li><a href="Rack/Utils.html#M000416">::set_cookie_header! &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Handler/WEBrick.html#M000143">::shutdown &mdash; Rack::Handler::WEBrick</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Params.html#M000041">::split_header_value &mdash; Rack::Auth::Digest::Params</a></li>
+		
+			<li><a href="Rack/Server.html#M000311">::start &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Utils.html#M000440">::status_code &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Handler.html#M000148">::try_require &mdash; Rack::Handler</a></li>
+		
+			<li><a href="Rack/Utils.html#M000408">::unescape &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Handler/Thin.html#M000140">::valid_options &mdash; Rack::Handler::Thin</a></li>
+		
+			<li><a href="Rack/Handler/FastCGI.html#M000123">::valid_options &mdash; Rack::Handler::FastCGI</a></li>
+		
+			<li><a href="Rack/Handler/Mongrel.html#M000132">::valid_options &mdash; Rack::Handler::Mongrel</a></li>
+		
+			<li><a href="Rack/Handler/SCGI.html#M000136">::valid_options &mdash; Rack::Handler::SCGI</a></li>
+		
+			<li><a href="Rack/Handler/WEBrick.html#M000142">::valid_options &mdash; Rack::Handler::WEBrick</a></li>
+		
+			<li><a href="Rack.html#M000441">::version &mdash; Rack</a></li>
+		
+			<li><a href="Rack/Cascade.html#M000065">#<< &mdash; Rack::Cascade</a></li>
+		
+			<li><a href="Rack/MockResponse.html#M000173">#=~ &mdash; Rack::MockResponse</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000029">#A1 &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000030">#A2 &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Request.html#M000248">#GET &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000027">#H &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000028">#KD &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Request.html#M000249">#POST &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Response.html#M000268">#[] &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/Request.html#M000251">#[] &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000328">#[] &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000430">#[] &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Params.html#M000043">#[] &mdash; Rack::Auth::Digest::Params</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Params.html#M000044">#[]= &mdash; Rack::Auth::Digest::Params</a></li>
+		
+			<li><a href="Rack/Request.html#M000252">#[]= &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Response.html#M000269">#[]= &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000431">#[]= &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000332">#[]= &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Recursive.html#M000208">#_call &mdash; Rack::Recursive</a></li>
+		
+			<li><a href="Rack/File.html#M000112">#_call &mdash; Rack::File</a></li>
+		
+			<li><a href="Rack/Directory.html#M000096">#_call &mdash; Rack::Directory</a></li>
+		
+			<li><a href="Rack/RewindableInput/Tempfile.html#M000300">#_close &mdash; Rack::RewindableInput::Tempfile</a></li>
+		
+			<li><a href="FCGI/Stream.html#M000121">#_rack_read_without_buffer &mdash; FCGI::Stream</a></li>
+		
+			<li><a href="Rack/Request.html#M000263">#accept_encoding &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Cascade.html#M000063">#add &mdash; Rack::Cascade</a></li>
+		
+			<li><a href="Rack/Server.html#M000315">#app &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Auth/AbstractRequest.html#M000009">#authorization_key &mdash; Rack::Auth::AbstractRequest</a></li>
+		
+			<li><a href="Rack/Auth/AbstractHandler.html#M000002">#bad_request &mdash; Rack::Auth::AbstractHandler</a></li>
+		
+			<li><a href="Rack/Request.html#M000259">#base_url &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Auth/Basic/Request.html#M000013">#basic? &mdash; Rack::Auth::Basic::Request</a></li>
+		
+			<li><a href="Rack/MockResponse.html#M000175">#body &mdash; Rack::MockResponse</a></li>
+		
+			<li><a href="Rack/Request.html#M000218">#body &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Server.html#M000323">#build_app &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Utils.html#M000413">#build_nested_query &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000412">#build_query &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000421">#byte_ranges &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000418">#bytesize &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000419">#bytesize &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/File.html#M000111">#call &mdash; Rack::File</a></li>
+		
+			<li><a href="Rack/Runtime.html#M000304">#call &mdash; Rack::Runtime</a></li>
+		
+			<li><a href="Rack.html#M000153">#call &mdash; Rack</a></li>
+		
+			<li><a href="Rack/Recursive.html#M000207">#call &mdash; Rack::Recursive</a></li>
+		
+			<li><a href="Rack/Sendfile.html#M000306">#call &mdash; Rack::Sendfile</a></li>
+		
+			<li><a href="Rack/Config.html#M000082">#call &mdash; Rack::Config</a></li>
+		
+			<li><a href="Rack/Logger.html#M000157">#call &mdash; Rack::Logger</a></li>
+		
+			<li><a href="Rack/ContentLength.html#M000084">#call &mdash; Rack::ContentLength</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000018">#call &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Utils/Context.html#M000423">#call &mdash; Rack::Utils::Context</a></li>
+		
+			<li><a href="Rack/Cascade.html#M000062">#call &mdash; Rack::Cascade</a></li>
+		
+			<li><a href="Rack/MethodOverride.html#M000159">#call &mdash; Rack::MethodOverride</a></li>
+		
+			<li><a href="Rack/Chunked.html#M000070">#call &mdash; Rack::Chunked</a></li>
+		
+			<li><a href="Rack/Reloader.html#M000211">#call &mdash; Rack::Reloader</a></li>
+		
+			<li><a href="Rack/ETag.html#M000105">#call &mdash; Rack::ETag</a></li>
+		
+			<li><a href="Rack/ShowExceptions.html#M000393">#call &mdash; Rack::ShowExceptions</a></li>
+		
+			<li><a href="Rack/Head.html#M000151">#call &mdash; Rack::Head</a></li>
+		
+			<li><a href="Rack/Static.html#M000402">#call &mdash; Rack::Static</a></li>
+		
+			<li><a href="Rack/URLMap.html#M000405">#call &mdash; Rack::URLMap</a></li>
+		
+			<li><a href="Rack/Directory.html#M000095">#call &mdash; Rack::Directory</a></li>
+		
+			<li><a href="Rack/ConditionalGet.html#M000076">#call &mdash; Rack::ConditionalGet</a></li>
+		
+			<li><a href="Rack/Lock.html#M000155">#call &mdash; Rack::Lock</a></li>
+		
+			<li><a href="Rack/Auth/Basic.html#M000010">#call &mdash; Rack::Auth::Basic</a></li>
+		
+			<li><a href="Rack/ContentType.html#M000086">#call &mdash; Rack::ContentType</a></li>
+		
+			<li><a href="Rack/ShowStatus.html#M000399">#call &mdash; Rack::ShowStatus</a></li>
+		
+			<li><a href="Rack/CommonLogger.html#M000072">#call &mdash; Rack::CommonLogger</a></li>
+		
+			<li><a href="Rack/Builder.html#M000060">#call &mdash; Rack::Builder</a></li>
+		
+			<li><a href="Rack/Deflater.html#M000088">#call &mdash; Rack::Deflater</a></li>
+		
+			<li><a href="Rack/NullLogger.html#M000199">#call &mdash; Rack::NullLogger</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000345">#call &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000020">#challenge &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Auth/Basic.html#M000011">#challenge &mdash; Rack::Auth::Basic</a></li>
+		
+			<li><a href="Rack/Directory.html#M000097">#check_forbidden &mdash; Rack::Directory</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000333">#clear &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000284">#client_error? &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/RewindableInput.html#M000299">#close &mdash; Rack::RewindableInput</a></li>
+		
+			<li><a href="Rack/Chunked/Body.html#M000068">#close &mdash; Rack::Chunked::Body</a></li>
+		
+			<li><a href="Rack/Response.html#M000278">#close &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000358">#commit_session &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000354">#commit_session? &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Request.html#M000230">#content_charset &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Multipart/Generator.html#M000182">#content_for_other &mdash; Rack::Multipart::Generator</a></li>
+		
+			<li><a href="Rack/Multipart/Generator.html#M000181">#content_for_tempfile &mdash; Rack::Multipart::Generator</a></li>
+		
+			<li><a href="Rack/Request.html#M000223">#content_length &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000292">#content_length &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Request.html#M000224">#content_type &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000291">#content_type &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000346">#context &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Utils/Context.html#M000425">#context &mdash; Rack::Utils::Context</a></li>
+		
+			<li><a href="Rack/Request.html#M000257">#cookies &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Request.html#M000049">#correct_uri? &mdash; Rack::Auth::Digest::Request</a></li>
+		
+			<li><a href="Rack/Auth/Basic/Request.html#M000014">#credentials &mdash; Rack::Auth::Basic::Request</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000352">#current_session_id &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Server.html#M000325">#daemonize_app &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/NullLogger.html#M000201">#debug &mdash; Rack::NullLogger</a></li>
+		
+			<li><a href="Rack/Session/Cookie/Base64/Marshal.html#M000366">#decode &mdash; Rack::Session::Cookie::Base64::Marshal</a></li>
+		
+			<li><a href="Rack/Session/Cookie/Base64.html#M000364">#decode &mdash; Rack::Session::Cookie::Base64</a></li>
+		
+			<li><a href="Rack/Session/Cookie/Reverse.html#M000370">#decode &mdash; Rack::Session::Cookie::Reverse</a></li>
+		
+			<li><a href="Rack/Session/Cookie/Identity.html#M000368">#decode &mdash; Rack::Session::Cookie::Identity</a></li>
+		
+			<li><a href="Rack/Server.html#M000314">#default_options &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/MockRequest.html#M000169">#delete &mdash; Rack::MockRequest</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000432">#delete &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000336">#delete &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Request.html#M000238">#delete? &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Response.html#M000271">#delete_cookie &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/Utils.html#M000417">#delete_cookie_header! &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000362">#destroy_session &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Session/Pool.html#M000390">#destroy_session &mdash; Rack::Session::Pool</a></li>
+		
+			<li><a href="Rack/Session/Cookie.html#M000378">#destroy_session &mdash; Rack::Session::Cookie</a></li>
+		
+			<li><a href="Rack/Session/Memcache.html#M000384">#destroy_session &mdash; Rack::Session::Memcache</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000031">#digest &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Nonce.html#M000035">#digest &mdash; Rack::Auth::Digest::Nonce</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Request.html#M000048">#digest? &mdash; Rack::Auth::Digest::Request</a></li>
+		
+			<li><a href="Rack/ETag.html#M000109">#digest_body &mdash; Rack::ETag</a></li>
+		
+			<li><a href="Rack/Multipart/Generator.html#M000178">#dump &mdash; Rack::Multipart::Generator</a></li>
+		
+			<li><a href="Rack/ShowExceptions.html#M000395">#dump_exception &mdash; Rack::ShowExceptions</a></li>
+		
+			<li><a href="Rack/Deflater/DeflateStream.html#M000093">#each &mdash; Rack::Deflater::DeflateStream</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000428">#each &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Directory.html#M000102">#each &mdash; Rack::Directory</a></li>
+		
+			<li><a href="Rack/Response.html#M000276">#each &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/Deflater/GzipStream.html#M000090">#each &mdash; Rack::Deflater::GzipStream</a></li>
+		
+			<li><a href="Rack/RewindableInput.html#M000297">#each &mdash; Rack::RewindableInput</a></li>
+		
+			<li><a href="Rack/File.html#M000114">#each &mdash; Rack::File</a></li>
+		
+			<li><a href="Rack/Chunked/Body.html#M000067">#each &mdash; Rack::Chunked::Body</a></li>
+		
+			<li><a href="Rack/Response.html#M000279">#empty? &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/MockResponse.html#M000176">#empty? &mdash; Rack::MockResponse</a></li>
+		
+			<li><a href="Rack/Session/Cookie/Identity.html#M000367">#encode &mdash; Rack::Session::Cookie::Identity</a></li>
+		
+			<li><a href="Rack/Session/Cookie/Reverse.html#M000369">#encode &mdash; Rack::Session::Cookie::Reverse</a></li>
+		
+			<li><a href="Rack/Session/Cookie/Base64/Marshal.html#M000365">#encode &mdash; Rack::Session::Cookie::Base64::Marshal</a></li>
+		
+			<li><a href="Rack/Session/Cookie/Base64.html#M000363">#encode &mdash; Rack::Session::Cookie::Base64</a></li>
+		
+			<li><a href="Rack/Directory.html#M000101">#entity_not_found &mdash; Rack::Directory</a></li>
+		
+			<li><a href="Rack/NullLogger.html#M000203">#error &mdash; Rack::NullLogger</a></li>
+		
+			<li><a href="Rack/Utils.html#M000406">#escape &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000414">#escape_html &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Utils.html#M000407">#escape_path &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/ETag.html#M000107">#etag_body? &mdash; Rack::ETag</a></li>
+		
+			<li><a href="Rack/ConditionalGet.html#M000078">#etag_matches? &mdash; Rack::ConditionalGet</a></li>
+		
+			<li><a href="Rack/ETag.html#M000106">#etag_status? &mdash; Rack::ETag</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000338">#exists? &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/CommonLogger.html#M000074">#extract_content_length &mdash; Rack::CommonLogger</a></li>
+		
+			<li><a href="Rack/Session/Cookie.html#M000373">#extract_session_id &mdash; Rack::Session::Cookie</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000351">#extract_session_id &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/File.html#M000115">#fail &mdash; Rack::File</a></li>
+		
+			<li><a href="Rack/Multipart/Parser.html#M000188">#fast_forward_to_first_boundary &mdash; Rack::Multipart::Parser</a></li>
+		
+			<li><a href="Rack/NullLogger.html#M000204">#fatal &mdash; Rack::NullLogger</a></li>
+		
+			<li><a href="Rack/Reloader/Stat.html#M000215">#figure_path &mdash; Rack::Reloader::Stat</a></li>
+		
+			<li><a href="Rack/Directory.html#M000103">#filesize_format &mdash; Rack::Directory</a></li>
+		
+			<li><a href="Rack/RewindableInput.html#M000302">#filesystem_has_posix_semantics? &mdash; Rack::RewindableInput</a></li>
+		
+			<li><a href="Rack/Response.html#M000273">#finish &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/Multipart/Generator.html#M000180">#flattened_params &mdash; Rack::Multipart::Generator</a></li>
+		
+			<li><a href="Rack/MockRequest/FatalWarner.html#M000163">#flush &mdash; Rack::MockRequest::FatalWarner</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000287">#forbidden? &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000356">#force_options? &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Request.html#M000246">#form_data? &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Nonce.html#M000038">#fresh? &mdash; Rack::Auth::Digest::Nonce</a></li>
+		
+			<li><a href="Rack/ConditionalGet.html#M000077">#fresh? &mdash; Rack::ConditionalGet</a></li>
+		
+			<li><a href="Rack/Multipart/Parser.html#M000186">#full_boundary &mdash; Rack::Multipart::Parser</a></li>
+		
+			<li><a href="Rack/Request.html#M000262">#fullpath &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Session/Cookie.html#M000379">#generate_hmac &mdash; Rack::Session::Cookie</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000348">#generate_sid &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Session/Memcache.html#M000381">#generate_sid &mdash; Rack::Session::Memcache</a></li>
+		
+			<li><a href="Rack/Session/Pool.html#M000387">#generate_sid &mdash; Rack::Session::Pool</a></li>
+		
+			<li><a href="Rack/MockRequest.html#M000166">#get &mdash; Rack::MockRequest</a></li>
+		
+			<li><a href="Rack/Request.html#M000239">#get? &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Multipart/Parser.html#M000189">#get_current_head_and_filename_and_content_type_and_name_and_body &mdash; Rack::Multipart::Parser</a></li>
+		
+			<li><a href="Rack/Multipart/Parser.html#M000191">#get_data &mdash; Rack::Multipart::Parser</a></li>
+		
+			<li><a href="Rack/Multipart/Parser.html#M000190">#get_filename &mdash; Rack::Multipart::Parser</a></li>
+		
+			<li><a href="Rack/Session/Pool.html#M000388">#get_session &mdash; Rack::Session::Pool</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000360">#get_session &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Session/Memcache.html#M000382">#get_session &mdash; Rack::Session::Memcache</a></li>
+		
+			<li><a href="Rack/RewindableInput.html#M000295">#gets &mdash; Rack::RewindableInput</a></li>
+		
+			<li><a href="Rack/Server/Options.html#M000310">#handler_opts &mdash; Rack::Server::Options</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000434">#has_key? &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000329">#has_key? &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Request.html#M000240">#head? &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Request.html#M000235">#host &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Request.html#M000233">#host_with_port &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Recursive.html#M000209">#include &mdash; Rack::Recursive</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000433">#include? &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000331">#include? &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000290">#include? &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Cascade.html#M000064">#include? &mdash; Rack::Cascade</a></li>
+		
+			<li><a href="Rack/NullLogger.html#M000200">#info &mdash; Rack::NullLogger</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000281">#informational? &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000347">#initialize_sid &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000337">#inspect &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000280">#invalid? &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Request.html#M000264">#ip &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000436">#key? &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000330">#key? &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Directory.html#M000098">#list_directory &mdash; Rack::Directory</a></li>
+		
+			<li><a href="Rack/Directory.html#M000100">#list_path &mdash; Rack::Directory</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000342">#load! &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000340">#load_for_read! &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000341">#load_for_write! &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000350">#load_session &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Session/Cookie.html#M000372">#load_session &mdash; Rack::Session::Cookie</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000339">#loaded? &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000355">#loaded_session? &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Multipart/UploadedFile.html#M000194">#local_path &mdash; Rack::Multipart::UploadedFile</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000293">#location &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/CommonLogger.html#M000073">#log &mdash; Rack::CommonLogger</a></li>
+		
+			<li><a href="Rack/Request.html#M000227">#logger &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/RewindableInput.html#M000301">#make_rewindable &mdash; Rack::RewindableInput</a></li>
+		
+			<li><a href="Rack/Builder.html#M000058">#map &mdash; Rack::Builder</a></li>
+		
+			<li><a href="Rack/Sendfile.html#M000308">#map_accel_path &mdash; Rack::Sendfile</a></li>
+		
+			<li><a href="Rack/MockResponse.html#M000174">#match &mdash; Rack::MockResponse</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000026">#md5 &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Request.html#M000228">#media_type &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Request.html#M000229">#media_type_params &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000435">#member? &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000438">#merge &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000437">#merge! &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Request.html#M000047">#method &mdash; Rack::Auth::Digest::Request</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Request.html#M000052">#method_missing &mdash; Rack::Auth::Digest::Request</a></li>
+		
+			<li><a href="Rack/Server.html#M000318">#middleware &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Mime.html#M000160">#mime_type &mdash; Rack::Mime</a></li>
+		
+			<li><a href="Rack/ConditionalGet.html#M000079">#modified_since? &mdash; Rack::ConditionalGet</a></li>
+		
+			<li><a href="Rack/Multipart/Generator.html#M000179">#multipart? &mdash; Rack::Multipart::Generator</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Request.html#M000050">#nonce &mdash; Rack::Auth::Digest::Request</a></li>
+		
+			<li><a href="Rack/Utils.html#M000411">#normalize_params &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000288">#not_found? &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000286">#ok? &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Server.html#M000322">#opt_parser &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Server.html#M000313">#options &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Request.html#M000241">#options? &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000019">#params &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Auth/AbstractRequest.html#M000008">#params &mdash; Rack::Auth::AbstractRequest</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Request.html#M000051">#params &mdash; Rack::Auth::Digest::Request</a></li>
+		
+			<li><a href="Rack/Request.html#M000250">#params &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Multipart/Parser.html#M000184">#parse &mdash; Rack::Multipart::Parser</a></li>
+		
+			<li><a href="Rack/Server/Options.html#M000309">#parse! &mdash; Rack::Server::Options</a></li>
+		
+			<li><a href="Rack/Request.html#M000266">#parse_multipart &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Utils.html#M000410">#parse_nested_query &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Server.html#M000321">#parse_options &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Utils.html#M000409">#parse_query &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Request.html#M000265">#parse_query &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Request.html#M000247">#parseable_data? &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Auth/AbstractRequest.html#M000006">#parts &mdash; Rack::Auth::AbstractRequest</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000017">#passwords_hashed? &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Request.html#M000242">#patch? &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Multipart/UploadedFile.html#M000193">#path &mdash; Rack::Multipart::UploadedFile</a></li>
+		
+			<li><a href="Rack/Request.html#M000261">#path &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Request.html#M000220">#path_info &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Request.html#M000237">#path_info= &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Session/Cookie.html#M000375">#persistent_session_id! &mdash; Rack::Session::Cookie</a></li>
+		
+			<li><a href="Rack/Request.html#M000234">#port &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/MockRequest.html#M000167">#post &mdash; Rack::MockRequest</a></li>
+		
+			<li><a href="Rack/Request.html#M000243">#post? &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/ShowExceptions.html#M000394">#prefers_plain_text? &mdash; Rack::ShowExceptions</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000349">#prepare_session &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/ShowExceptions.html#M000396">#pretty &mdash; Rack::ShowExceptions</a></li>
+		
+			<li><a href="Rack/Handler/Mongrel.html#M000134">#process &mdash; Rack::Handler::Mongrel</a></li>
+		
+			<li><a href="Rack/Handler/SCGI.html#M000138">#process_request &mdash; Rack::Handler::SCGI</a></li>
+		
+			<li><a href="Rack/Auth/AbstractRequest.html#M000005">#provided? &mdash; Rack::Auth::AbstractRequest</a></li>
+		
+			<li><a href="Rack/MockRequest.html#M000168">#put &mdash; Rack::MockRequest</a></li>
+		
+			<li><a href="Rack/Request.html#M000244">#put? &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/MockRequest/FatalWarner.html#M000161">#puts &mdash; Rack::MockRequest::FatalWarner</a></li>
+		
+			<li><a href="Rack/Request.html#M000222">#query_string &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Params.html#M000046">#quote &mdash; Rack::Auth::Digest::Params</a></li>
+		
+			<li><a href="Rack/RewindableInput.html#M000296">#read &mdash; Rack::RewindableInput</a></li>
+		
+			<li><a href="FCGI/Stream.html#M000120">#read &mdash; FCGI::Stream</a></li>
+		
+			<li><a href="Rack/Utils/Context.html#M000424">#recontext &mdash; Rack::Utils::Context</a></li>
+		
+			<li><a href="Rack/Response.html#M000272">#redirect &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000289">#redirect? &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000283">#redirection? &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Request.html#M000254">#referer &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Request.html#M000255">#referrer &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Reloader.html#M000212">#reload! &mdash; Rack::Reloader</a></li>
+		
+			<li><a href="Rack/URLMap.html#M000404">#remap &mdash; Rack::URLMap</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000439">#replace &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Auth/AbstractRequest.html#M000004">#request &mdash; Rack::Auth::AbstractRequest</a></li>
+		
+			<li><a href="Rack/MockRequest.html#M000170">#request &mdash; Rack::MockRequest</a></li>
+		
+			<li><a href="Rack/Request.html#M000221">#request_method &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/RewindableInput.html#M000298">#rewind &mdash; Rack::RewindableInput</a></li>
+		
+			<li><a href="Rack/Utils.html#M000420">#rfc2822 &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Reloader/Stat.html#M000214">#rotation &mdash; Rack::Reloader::Stat</a></li>
+		
+			<li><a href="Rack/Builder.html#M000057">#run &mdash; Rack::Builder</a></li>
+		
+			<li><a href="Rack/Multipart/Parser.html#M000187">#rx &mdash; Rack::Multipart::Parser</a></li>
+		
+			<li><a href="Rack/Reloader.html#M000213">#safe_load &mdash; Rack::Reloader</a></li>
+		
+			<li><a href="Rack/Reloader/Stat.html#M000216">#safe_stat &mdash; Rack::Reloader::Stat</a></li>
+		
+			<li><a href="Rack/Auth/AbstractRequest.html#M000007">#scheme &mdash; Rack::Auth::AbstractRequest</a></li>
+		
+			<li><a href="Rack/Request.html#M000231">#scheme &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Request.html#M000219">#script_name &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Request.html#M000236">#script_name= &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000357">#secure_session? &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Utils.html#M000415">#select_best_encoding &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Server.html#M000320">#server &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000285">#server_error? &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Handler/WEBrick.html#M000145">#service &mdash; Rack::Handler::WEBrick</a></li>
+		
+			<li><a href="Rack/File.html#M000113">#serving &mdash; Rack::File</a></li>
+		
+			<li><a href="Rack/Request.html#M000225">#session &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000353">#session_exists? &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Request.html#M000226">#session_options &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000359">#set_cookie &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Session/Cookie.html#M000376">#set_cookie &mdash; Rack::Session::Cookie</a></li>
+		
+			<li><a href="Rack/Response.html#M000270">#set_cookie &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/Utils.html#M000416">#set_cookie_header! &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Session/Memcache.html#M000383">#set_session &mdash; Rack::Session::Memcache</a></li>
+		
+			<li><a href="Rack/Session/Cookie.html#M000377">#set_session &mdash; Rack::Session::Cookie</a></li>
+		
+			<li><a href="Rack/Session/Abstract/ID.html#M000361">#set_session &mdash; Rack::Session::Abstract::ID</a></li>
+		
+			<li><a href="Rack/Session/Pool.html#M000389">#set_session &mdash; Rack::Session::Pool</a></li>
+		
+			<li><a href="Rack/Multipart/Parser.html#M000185">#setup_parse &mdash; Rack::Multipart::Parser</a></li>
+		
+			<li><a href="Rack/ETag.html#M000108">#skip_caching? &mdash; Rack::ETag</a></li>
+		
+			<li><a href="Rack/Request.html#M000232">#ssl? &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Nonce.html#M000037">#stale? &mdash; Rack::Auth::Digest::Nonce</a></li>
+		
+			<li><a href="Rack/Server.html#M000319">#start &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Directory.html#M000099">#stat &mdash; Rack::Directory</a></li>
+		
+			<li><a href="Rack/Utils.html#M000440">#status_code &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/MockRequest/FatalWarner.html#M000164">#string &mdash; Rack::MockRequest::FatalWarner</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000343">#stringify_keys &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Response/Helpers.html#M000282">#successful? &mdash; Rack::Response::Helpers</a></li>
+		
+			<li><a href="Rack/Response.html#M000274">#to_a &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/Builder.html#M000059">#to_app &mdash; Rack::Builder</a></li>
+		
+			<li><a href="Rack/Response.html#M000275">#to_ary &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/Utils/HeaderHash.html#M000429">#to_hash &mdash; Rack::Utils::HeaderHash</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000334">#to_hash &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/ConditionalGet.html#M000080">#to_rfc2822 &mdash; Rack::ConditionalGet</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Nonce.html#M000034">#to_s &mdash; Rack::Auth::Digest::Nonce</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Params.html#M000045">#to_s &mdash; Rack::Auth::Digest::Params</a></li>
+		
+			<li><a href="Rack/Request.html#M000245">#trace? &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Auth/AbstractHandler.html#M000001">#unauthorized &mdash; Rack::Auth::AbstractHandler</a></li>
+		
+			<li><a href="Rack/Utils.html#M000408">#unescape &mdash; Rack::Utils</a></li>
+		
+			<li><a href="Rack/Session/Cookie.html#M000374">#unpacked_cookie_data &mdash; Rack::Session::Cookie</a></li>
+		
+			<li><a href="Rack/Session/Abstract/SessionHash.html#M000335">#update &mdash; Rack::Session::Abstract::SessionHash</a></li>
+		
+			<li><a href="Rack/Request.html#M000260">#url &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Builder.html#M000056">#use &mdash; Rack::Builder</a></li>
+		
+			<li><a href="Rack/Request.html#M000256">#user_agent &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Auth/Basic/Request.html#M000015">#username &mdash; Rack::Auth::Basic::Request</a></li>
+		
+			<li><a href="Rack/Auth/Digest/Nonce.html#M000036">#valid? &mdash; Rack::Auth::Digest::Nonce</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000021">#valid? &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Auth/Basic.html#M000012">#valid? &mdash; Rack::Auth::Basic</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000025">#valid_digest? &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000024">#valid_nonce? &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000023">#valid_opaque? &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Auth/Digest/MD5.html#M000022">#valid_qop? &mdash; Rack::Auth::Digest::MD5</a></li>
+		
+			<li><a href="Rack/Request.html#M000253">#values_at &mdash; Rack::Request</a></li>
+		
+			<li><a href="Rack/Sendfile.html#M000307">#variation &mdash; Rack::Sendfile</a></li>
+		
+			<li><a href="Rack/NullLogger.html#M000202">#warn &mdash; Rack::NullLogger</a></li>
+		
+			<li><a href="Rack/Session/Memcache.html#M000385">#with_lock &mdash; Rack::Session::Memcache</a></li>
+		
+			<li><a href="Rack/Session/Pool.html#M000391">#with_lock &mdash; Rack::Session::Pool</a></li>
+		
+			<li><a href="Rack/Server.html#M000324">#wrapped_app &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Response.html#M000277">#write &mdash; Rack::Response</a></li>
+		
+			<li><a href="Rack/MockRequest/FatalWarner.html#M000162">#write &mdash; Rack::MockRequest::FatalWarner</a></li>
+		
+			<li><a href="Rack/Deflater/GzipStream.html#M000091">#write &mdash; Rack::Deflater::GzipStream</a></li>
+		
+			<li><a href="Rack/Server.html#M000326">#write_pid &mdash; Rack::Server</a></li>
+		
+			<li><a href="Rack/Request.html#M000258">#xhr? &mdash; Rack::Request</a></li>
+		
+	</ul>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>

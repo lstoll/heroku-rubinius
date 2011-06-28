@@ -1,0 +1,2371 @@
+!RBIX
+4472690874163217065
+18
+M
+1
+n
+n
+x
+10
+__script__
+i
+64
+5
+7
+0
+64
+47
+49
+1
+1
+15
+5
+7
+2
+64
+47
+49
+1
+1
+15
+5
+7
+3
+64
+47
+49
+1
+1
+15
+5
+7
+4
+64
+47
+49
+1
+1
+15
+99
+7
+5
+65
+49
+6
+2
+13
+99
+12
+7
+7
+12
+7
+8
+12
+65
+12
+49
+9
+4
+15
+49
+7
+0
+15
+2
+11
+I
+6
+I
+0
+I
+0
+I
+0
+I
+0
+n
+p
+10
+s
+7
+ostruct
+x
+7
+require
+s
+3
+erb
+s
+12
+rack/request
+s
+10
+rack/utils
+x
+4
+Rack
+x
+11
+open_module
+x
+15
+__module_init__
+M
+1
+n
+n
+x
+4
+Rack
+i
+29
+5
+66
+99
+7
+0
+1
+65
+49
+1
+3
+13
+99
+12
+7
+2
+12
+7
+3
+12
+65
+12
+49
+4
+4
+15
+49
+2
+0
+11
+I
+6
+I
+0
+I
+0
+I
+0
+I
+0
+n
+p
+5
+x
+14
+ShowExceptions
+x
+10
+open_class
+x
+14
+__class_init__
+M
+1
+n
+n
+x
+14
+ShowExceptions
+i
+105
+5
+66
+65
+7
+0
+4
+7
+49
+1
+2
+15
+99
+7
+2
+7
+3
+65
+67
+49
+4
+0
+49
+5
+4
+15
+99
+7
+6
+7
+7
+65
+67
+49
+4
+0
+49
+5
+4
+15
+99
+7
+8
+7
+9
+65
+67
+49
+4
+0
+49
+5
+4
+15
+99
+7
+10
+7
+11
+65
+67
+49
+4
+0
+49
+5
+4
+15
+99
+7
+12
+7
+13
+65
+67
+49
+4
+0
+49
+5
+4
+15
+99
+7
+14
+7
+15
+65
+67
+49
+4
+0
+49
+5
+4
+15
+65
+7
+16
+7
+17
+64
+49
+1
+2
+11
+I
+5
+I
+0
+I
+0
+I
+0
+I
+0
+n
+p
+18
+x
+7
+CONTEXT
+x
+9
+const_set
+x
+10
+initialize
+M
+1
+n
+n
+x
+10
+initialize
+i
+38
+20
+0
+38
+0
+15
+45
+1
+2
+13
+71
+3
+47
+9
+29
+47
+49
+4
+0
+13
+45
+5
+6
+47
+49
+7
+1
+15
+8
+35
+45
+5
+8
+49
+3
+1
+38
+9
+11
+I
+4
+I
+1
+I
+1
+I
+0
+I
+1
+n
+p
+10
+x
+4
+@app
+x
+3
+ERB
+n
+x
+3
+new
+x
+8
+allocate
+x
+8
+TEMPLATE
+n
+x
+10
+initialize
+n
+x
+9
+@template
+p
+7
+I
+-1
+I
+12
+I
+0
+I
+13
+I
+5
+I
+14
+I
+26
+x
+59
+/app/sw/gems/1.8/gems/rack-1.3.0/lib/rack/showexceptions.rb
+p
+1
+x
+3
+app
+x
+17
+method_visibility
+x
+15
+add_defn_method
+x
+4
+call
+M
+1
+n
+n
+x
+4
+call
+i
+195
+26
+93
+0
+15
+29
+17
+0
+39
+0
+20
+0
+49
+1
+1
+30
+8
+191
+26
+93
+1
+15
+24
+13
+45
+2
+3
+12
+49
+4
+1
+10
+54
+13
+45
+5
+6
+12
+49
+4
+1
+10
+54
+13
+45
+7
+8
+12
+49
+4
+1
+10
+54
+8
+186
+15
+24
+19
+1
+15
+5
+20
+1
+47
+49
+9
+1
+19
+2
+15
+20
+0
+7
+10
+64
+49
+11
+1
+20
+2
+49
+12
+1
+15
+20
+0
+7
+10
+64
+49
+11
+1
+49
+13
+0
+15
+5
+20
+0
+47
+49
+14
+1
+9
+118
+7
+15
+64
+19
+3
+15
+20
+2
+35
+1
+19
+4
+8
+135
+7
+16
+64
+19
+3
+15
+5
+20
+0
+20
+1
+47
+49
+17
+2
+19
+4
+15
+7
+18
+44
+43
+19
+80
+49
+20
+1
+13
+7
+21
+64
+20
+3
+49
+22
+2
+15
+13
+7
+23
+64
+45
+24
+25
+43
+26
+20
+4
+49
+27
+0
+49
+28
+1
+49
+29
+0
+49
+22
+2
+15
+20
+4
+35
+3
+25
+8
+191
+15
+92
+1
+27
+34
+92
+0
+27
+11
+I
+d
+I
+5
+I
+1
+I
+0
+I
+1
+n
+p
+30
+x
+4
+@app
+x
+4
+call
+x
+13
+StandardError
+n
+x
+3
+===
+x
+9
+LoadError
+n
+x
+11
+SyntaxError
+n
+x
+14
+dump_exception
+s
+11
+rack.errors
+x
+2
+[]
+x
+4
+puts
+x
+5
+flush
+x
+19
+prefers_plain_text?
+s
+10
+text/plain
+s
+9
+text/html
+x
+6
+pretty
+I
+1f4
+x
+4
+Hash
+x
+16
+new_from_literal
+s
+12
+Content-Type
+x
+3
+[]=
+s
+14
+Content-Length
+x
+4
+Rack
+n
+x
+5
+Utils
+x
+4
+join
+x
+8
+bytesize
+x
+4
+to_s
+p
+43
+I
+-1
+I
+17
+I
+0
+I
+18
+I
+11
+I
+0
+I
+16
+I
+19
+I
+37
+I
+2b
+I
+38
+I
+19
+I
+3b
+I
+1a
+I
+45
+I
+1c
+I
+53
+I
+1d
+I
+5f
+I
+1f
+I
+68
+I
+20
+I
+6e
+I
+21
+I
+76
+I
+23
+I
+7c
+I
+24
+I
+87
+I
+0
+I
+88
+I
+27
+I
+8a
+I
+29
+I
+92
+I
+28
+I
+9c
+I
+29
+I
+b3
+I
+2a
+I
+bf
+I
+0
+I
+c3
+x
+59
+/app/sw/gems/1.8/gems/rack-1.3.0/lib/rack/showexceptions.rb
+p
+5
+x
+3
+env
+x
+1
+e
+x
+16
+exception_string
+x
+12
+content_type
+x
+4
+body
+x
+19
+prefers_plain_text?
+M
+1
+n
+n
+x
+19
+prefers_plain_text?
+i
+56
+20
+0
+7
+0
+64
+49
+1
+1
+7
+2
+64
+83
+3
+13
+9
+55
+15
+20
+0
+7
+4
+64
+49
+1
+1
+10
+30
+2
+8
+31
+3
+13
+10
+55
+15
+20
+0
+7
+4
+64
+49
+1
+1
+7
+5
+64
+49
+6
+1
+10
+54
+2
+8
+55
+3
+11
+I
+3
+I
+1
+I
+1
+I
+0
+I
+1
+n
+p
+7
+s
+21
+HTTP_X_REQUESTED_WITH
+x
+2
+[]
+s
+14
+XMLHttpRequest
+x
+2
+==
+s
+11
+HTTP_ACCEPT
+s
+9
+text/html
+x
+8
+include?
+p
+5
+I
+-1
+I
+2d
+I
+0
+I
+2e
+I
+38
+x
+59
+/app/sw/gems/1.8/gems/rack-1.3.0/lib/rack/showexceptions.rb
+p
+1
+x
+3
+env
+x
+14
+dump_exception
+M
+1
+n
+n
+x
+14
+dump_exception
+i
+50
+20
+0
+49
+0
+0
+47
+101
+1
+7
+2
+20
+0
+49
+3
+0
+47
+101
+1
+7
+4
+63
+4
+19
+1
+15
+20
+1
+20
+0
+49
+5
+0
+56
+6
+50
+7
+0
+7
+4
+64
+49
+8
+1
+49
+9
+1
+15
+20
+1
+11
+I
+6
+I
+2
+I
+1
+I
+0
+I
+1
+n
+p
+10
+x
+5
+class
+x
+4
+to_s
+s
+2
+: 
+x
+7
+message
+s
+1
+
+
+x
+9
+backtrace
+M
+1
+p
+2
+x
+9
+for_block
+t
+n
+x
+14
+dump_exception
+i
+14
+57
+19
+0
+15
+7
+0
+20
+0
+47
+101
+1
+63
+2
+11
+I
+4
+I
+1
+I
+1
+I
+0
+I
+1
+n
+p
+2
+s
+1
+	
+x
+4
+to_s
+p
+3
+I
+0
+I
+33
+I
+e
+x
+59
+/app/sw/gems/1.8/gems/rack-1.3.0/lib/rack/showexceptions.rb
+p
+1
+x
+1
+l
+x
+3
+map
+x
+4
+join
+x
+2
+<<
+p
+9
+I
+-1
+I
+31
+I
+0
+I
+32
+I
+19
+I
+33
+I
+2f
+I
+34
+I
+32
+x
+59
+/app/sw/gems/1.8/gems/rack-1.3.0/lib/rack/showexceptions.rb
+p
+2
+x
+9
+exception
+x
+6
+string
+x
+6
+pretty
+M
+1
+n
+n
+x
+6
+pretty
+i
+85
+45
+0
+1
+43
+2
+13
+71
+3
+47
+9
+25
+47
+49
+4
+0
+13
+20
+0
+47
+49
+5
+1
+15
+8
+30
+20
+0
+49
+3
+1
+19
+2
+15
+20
+2
+49
+6
+0
+20
+2
+49
+7
+0
+81
+8
+7
+9
+64
+49
+10
+1
+19
+3
+19
+3
+15
+20
+1
+49
+11
+0
+56
+12
+50
+13
+0
+49
+14
+0
+19
+4
+19
+4
+15
+39
+15
+5
+48
+16
+49
+17
+1
+35
+1
+11
+I
+8
+I
+5
+I
+2
+I
+0
+I
+2
+n
+p
+18
+x
+4
+Rack
+n
+x
+7
+Request
+x
+3
+new
+x
+8
+allocate
+x
+10
+initialize
+x
+11
+script_name
+x
+9
+path_info
+x
+1
++
+s
+1
+/
+x
+7
+squeeze
+x
+9
+backtrace
+M
+1
+p
+2
+x
+9
+for_block
+t
+n
+x
+6
+pretty
+i
+309
+57
+19
+0
+15
+45
+0
+1
+13
+71
+2
+47
+9
+25
+47
+49
+3
+0
+13
+47
+49
+4
+0
+15
+8
+28
+49
+2
+0
+19
+1
+15
+20
+0
+7
+5
+13
+70
+9
+51
+15
+44
+43
+6
+7
+7
+78
+49
+2
+2
+6
+5
+49
+8
+1
+9
+307
+20
+1
+4
+5
+78
+98
+9
+2
+13
+18
+2
+49
+10
+1
+15
+15
+20
+1
+4
+5
+79
+98
+9
+2
+49
+11
+0
+13
+18
+2
+49
+12
+1
+15
+15
+20
+1
+4
+5
+4
+3
+98
+9
+2
+13
+18
+2
+49
+13
+1
+15
+15
+26
+93
+0
+15
+29
+272
+0
+20
+1
+49
+14
+0
+79
+82
+15
+19
+2
+15
+44
+43
+16
+20
+1
+49
+17
+0
+49
+18
+1
+19
+3
+15
+20
+1
+20
+2
+45
+19
+20
+82
+15
+78
+35
+2
+49
+21
+0
+13
+18
+2
+49
+22
+1
+15
+15
+20
+1
+20
+3
+44
+43
+23
+20
+1
+49
+24
+0
+20
+2
+2
+49
+2
+3
+49
+25
+1
+13
+18
+2
+49
+26
+1
+15
+15
+20
+1
+20
+3
+20
+2
+49
+25
+1
+49
+27
+0
+13
+18
+2
+49
+28
+1
+15
+15
+20
+1
+20
+2
+45
+19
+29
+81
+30
+20
+3
+49
+31
+0
+35
+2
+49
+32
+0
+13
+18
+2
+49
+33
+1
+15
+15
+20
+1
+20
+3
+44
+43
+23
+20
+2
+79
+81
+30
+20
+1
+49
+34
+0
+49
+2
+2
+49
+25
+1
+13
+18
+2
+49
+35
+1
+15
+30
+8
+299
+26
+93
+1
+15
+24
+13
+45
+36
+37
+12
+49
+38
+1
+10
+289
+8
+294
+15
+1
+25
+8
+299
+15
+92
+1
+27
+34
+92
+0
+27
+15
+20
+1
+8
+308
+1
+11
+I
+d
+I
+4
+I
+1
+I
+0
+I
+1
+n
+p
+39
+x
+10
+OpenStruct
+n
+x
+3
+new
+x
+8
+allocate
+x
+10
+initialize
+n
+x
+6
+Regexp
+s
+24
+(.*?):(\d+)(:in `(.*)')?
+x
+2
+=~
+x
+24
+regexp_last_match_result
+x
+9
+filename=
+x
+4
+to_i
+x
+7
+lineno=
+x
+9
+function=
+x
+6
+lineno
+x
+1
+-
+x
+4
+File
+x
+8
+filename
+x
+9
+readlines
+x
+7
+CONTEXT
+n
+x
+3
+max
+x
+19
+pre_context_lineno=
+x
+5
+Range
+x
+18
+pre_context_lineno
+x
+2
+[]
+x
+12
+pre_context=
+x
+5
+chomp
+x
+13
+context_line=
+n
+x
+1
++
+x
+4
+size
+x
+3
+min
+x
+20
+post_context_lineno=
+x
+19
+post_context_lineno
+x
+13
+post_context=
+x
+13
+StandardError
+n
+x
+3
+===
+p
+39
+I
+0
+I
+40
+I
+4
+I
+41
+I
+1f
+I
+42
+I
+38
+I
+43
+I
+48
+I
+44
+I
+5b
+I
+45
+I
+6c
+I
+48
+I
+7e
+I
+49
+I
+8c
+I
+4a
+I
+a3
+I
+4b
+I
+c0
+I
+4c
+I
+d4
+I
+4d
+I
+ef
+I
+4e
+I
+110
+I
+0
+I
+115
+I
+50
+I
+12b
+I
+0
+I
+12f
+I
+52
+I
+133
+I
+54
+I
+134
+I
+0
+I
+135
+x
+59
+/app/sw/gems/1.8/gems/rack-1.3.0/lib/rack/showexceptions.rb
+p
+4
+x
+4
+line
+x
+5
+frame
+x
+6
+lineno
+x
+5
+lines
+x
+3
+map
+x
+7
+compact
+x
+9
+@template
+x
+7
+binding
+x
+6
+result
+p
+11
+I
+-1
+I
+37
+I
+0
+I
+38
+I
+21
+I
+3c
+I
+38
+I
+40
+I
+4a
+I
+58
+I
+55
+x
+59
+/app/sw/gems/1.8/gems/rack-1.3.0/lib/rack/showexceptions.rb
+p
+5
+x
+3
+env
+x
+9
+exception
+x
+3
+req
+x
+4
+path
+x
+6
+frames
+x
+1
+h
+M
+1
+n
+n
+x
+1
+h
+i
+36
+20
+0
+13
+45
+0
+1
+12
+49
+2
+1
+9
+23
+15
+45
+3
+4
+20
+0
+49
+5
+1
+8
+35
+15
+45
+3
+6
+20
+0
+49
+7
+0
+49
+5
+1
+11
+I
+4
+I
+1
+I
+1
+I
+0
+I
+1
+n
+p
+8
+x
+6
+String
+n
+x
+3
+===
+x
+5
+Utils
+n
+x
+11
+escape_html
+n
+x
+7
+inspect
+p
+13
+I
+-1
+I
+5b
+I
+0
+I
+5c
+I
+2
+I
+5d
+I
+d
+I
+5e
+I
+18
+I
+60
+I
+23
+I
+0
+I
+24
+x
+59
+/app/sw/gems/1.8/gems/rack-1.3.0/lib/rack/showexceptions.rb
+p
+1
+x
+3
+obj
+x
+8
+TEMPLATE
+s
+8777
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="NONE,NOARCHIVE" />
+  <title><%=h exception.class %> at <%=h path %></title>
+  <style type="text/css">
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; }
+    h2 { margin-bottom:.8em; }
+    h2 span { font-size:80%; color:#666; font-weight:normal; }
+    h3 { margin:1em 0 .5em 0; }
+    h4 { margin:0 0 .5em 0; font-weight: normal; }
+    table {
+        border:1px solid #ccc; border-collapse: collapse; background:white; }
+    tbody td, tbody th { vertical-align:top; padding:2px 3px; }
+    thead th {
+        padding:1px 6px 1px 3px; background:#fefefe; text-align:left;
+        font-weight:normal; font-size:11px; border:1px solid #ddd; }
+    tbody th { text-align:right; color:#666; padding-right:.5em; }
+    table.vars { margin:5px 0 2px 40px; }
+    table.vars td, table.req td { font-family:monospace; }
+    table td.code { width:100%;}
+    table td.code div { overflow:hidden; }
+    table.source th { color:#666; }
+    table.source td {
+        font-family:monospace; white-space:pre; border-bottom:1px solid #eee; }
+    ul.traceback { list-style-type:none; }
+    ul.traceback li.frame { margin-bottom:1em; }
+    div.context { margin: 10px 0; }
+    div.context ol {
+        padding-left:30px; margin:0 10px; list-style-position: inside; }
+    div.context ol li {
+        font-family:monospace; white-space:pre; color:#666; cursor:pointer; }
+    div.context ol.context-line li { color:black; background-color:#ccc; }
+    div.context ol.context-line li span { float: right; }
+    div.commands { margin-left: 40px; }
+    div.commands a { color:black; text-decoration:none; }
+    #summary { background: #ffc; }
+    #summary h2 { font-weight: normal; color: #666; }
+    #summary ul#quicklinks { list-style-type: none; margin-bottom: 2em; }
+    #summary ul#quicklinks li { float: left; padding: 0 1em; }
+    #summary ul#quicklinks>li+li { border-left: 1px #666 solid; }
+    #explanation { background:#eee; }
+    #template, #template-not-exist { background:#f6f6f6; }
+    #template-not-exist ul { margin: 0 0 0 20px; }
+    #traceback { background:#eee; }
+    #requestinfo { background:#f6f6f6; padding-left:120px; }
+    #summary table { border:none; background:transparent; }
+    #requestinfo h2, #requestinfo h3 { position:relative; margin-left:-100px; }
+    #requestinfo h3 { margin-bottom:-1em; }
+    .error { background: #ffc; }
+    .specific { color:#cc3300; font-weight:bold; }
+  </style>
+  <script type="text/javascript">
+  //<!--
+    function getElementsByClassName(oElm, strTagName, strClassName){
+        // Written by Jonathan Snook, http://www.snook.ca/jon;
+        // Add-ons by Robert Nyman, http://www.robertnyman.com
+        var arrElements = (strTagName == "*" && document.all)? document.all :
+        oElm.getElementsByTagName(strTagName);
+        var arrReturnElements = new Array();
+        strClassName = strClassName.replace(/\-/g, "\\-");
+        var oRegExp = new RegExp("(^|\\s)" + strClassName + "(\\s|$$)");
+        var oElement;
+        for(var i=0; i<arrElements.length; i++){
+            oElement = arrElements[i];
+            if(oRegExp.test(oElement.className)){
+                arrReturnElements.push(oElement);
+            }
+        }
+        return (arrReturnElements)
+    }
+    function hideAll(elems) {
+      for (var e = 0; e < elems.length; e++) {
+        elems[e].style.display = 'none';
+      }
+    }
+    window.onload = function() {
+      hideAll(getElementsByClassName(document, 'table', 'vars'));
+      hideAll(getElementsByClassName(document, 'ol', 'pre-context'));
+      hideAll(getElementsByClassName(document, 'ol', 'post-context'));
+    }
+    function toggle() {
+      for (var i = 0; i < arguments.length; i++) {
+        var e = document.getElementById(arguments[i]);
+        if (e) {
+          e.style.display = e.style.display == 'none' ? 'block' : 'none';
+        }
+      }
+      return false;
+    }
+    function varToggle(link, id) {
+      toggle('v' + id);
+      var s = link.getElementsByTagName('span')[0];
+      var uarr = String.fromCharCode(0x25b6);
+      var darr = String.fromCharCode(0x25bc);
+      s.innerHTML = s.innerHTML == uarr ? darr : uarr;
+      return false;
+    }
+    //-->
+  </script>
+</head>
+<body>
+
+<div id="summary">
+  <h1><%=h exception.class %> at <%=h path %></h1>
+  <h2><%=h exception.message %></h2>
+  <table><tr>
+    <th>Ruby</th>
+    <td>
+<% if first = frames.first %>
+      <code><%=h first.filename %></code>: in <code><%=h first.function %></code>, line <%=h frames.first.lineno %>
+<% else %>
+      unknown location
+<% end %>
+    </td>
+  </tr><tr>
+    <th>Web</th>
+    <td><code><%=h req.request_method %> <%=h(req.host + path)%></code></td>
+  </tr></table>
+
+  <h3>Jump to:</h3>
+  <ul id="quicklinks">
+    <li><a href="#get-info">GET</a></li>
+    <li><a href="#post-info">POST</a></li>
+    <li><a href="#cookie-info">Cookies</a></li>
+    <li><a href="#env-info">ENV</a></li>
+  </ul>
+</div>
+
+<div id="traceback">
+  <h2>Traceback <span>(innermost first)</span></h2>
+  <ul class="traceback">
+<% frames.each { |frame| %>
+      <li class="frame">
+        <code><%=h frame.filename %></code>: in <code><%=h frame.function %></code>
+
+          <% if frame.context_line %>
+          <div class="context" id="c<%=h frame.object_id %>">
+              <% if frame.pre_context %>
+              <ol start="<%=h frame.pre_context_lineno+1 %>" class="pre-context" id="pre<%=h frame.object_id %>">
+                <% frame.pre_context.each { |line| %>
+                <li onclick="toggle('pre<%=h frame.object_id %>', 'post<%=h frame.object_id %>')"><%=h line %></li>
+                <% } %>
+              </ol>
+              <% end %>
+
+            <ol start="<%=h frame.lineno %>" class="context-line">
+              <li onclick="toggle('pre<%=h frame.object_id %>', 'post<%=h frame.object_id %>')"><%=h frame.context_line %><span>...</span></li></ol>
+
+              <% if frame.post_context %>
+              <ol start='<%=h frame.lineno+1 %>' class="post-context" id="post<%=h frame.object_id %>">
+                <% frame.post_context.each { |line| %>
+                <li onclick="toggle('pre<%=h frame.object_id %>', 'post<%=h frame.object_id %>')"><%=h line %></li>
+                <% } %>
+              </ol>
+              <% end %>
+          </div>
+          <% end %>
+      </li>
+<% } %>
+  </ul>
+</div>
+
+<div id="requestinfo">
+  <h2>Request information</h2>
+
+  <h3 id="get-info">GET</h3>
+  <% unless req.GET.empty? %>
+    <table class="req">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% req.GET.sort_by { |k, v| k.to_s }.each { |key, val| %>
+          <tr>
+            <td><%=h key %></td>
+            <td class="code"><div><%=h val.inspect %></div></td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>No GET data.</p>
+  <% end %>
+
+  <h3 id="post-info">POST</h3>
+  <% unless req.POST.empty? %>
+    <table class="req">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% req.POST.sort_by { |k, v| k.to_s }.each { |key, val| %>
+          <tr>
+            <td><%=h key %></td>
+            <td class="code"><div><%=h val.inspect %></div></td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>No POST data.</p>
+  <% end %>
+
+
+  <h3 id="cookie-info">COOKIES</h3>
+  <% unless req.cookies.empty? %>
+    <table class="req">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% req.cookies.each { |key, val| %>
+          <tr>
+            <td><%=h key %></td>
+            <td class="code"><div><%=h val.inspect %></div></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>No cookie data.</p>
+  <% end %>
+
+  <h3 id="env-info">Rack ENV</h3>
+    <table class="req">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% env.sort_by { |k, v| k.to_s }.each { |key, val| %>
+          <tr>
+            <td><%=h key %></td>
+            <td class="code"><div><%=h val %></div></td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+
+</div>
+
+<div id="explanation">
+  <p>
+    You're seeing this error because you use <code>Rack::ShowExceptions</code>.
+  </p>
+</div>
+
+</body>
+</html>
+
+p
+17
+I
+2
+I
+10
+I
+b
+I
+12
+I
+19
+I
+17
+I
+27
+I
+2d
+I
+35
+I
+31
+I
+43
+I
+37
+I
+51
+I
+5b
+I
+5f
+I
+6a
+I
+69
+x
+59
+/app/sw/gems/1.8/gems/rack-1.3.0/lib/rack/showexceptions.rb
+p
+0
+x
+13
+attach_method
+p
+3
+I
+2
+I
+f
+I
+1d
+x
+59
+/app/sw/gems/1.8/gems/rack-1.3.0/lib/rack/showexceptions.rb
+p
+0
+x
+13
+attach_method
+p
+11
+I
+0
+I
+1
+I
+9
+I
+2
+I
+12
+I
+3
+I
+1b
+I
+4
+I
+24
+I
+6
+I
+40
+x
+59
+/app/sw/gems/1.8/gems/rack-1.3.0/lib/rack/showexceptions.rb
+p
+0
